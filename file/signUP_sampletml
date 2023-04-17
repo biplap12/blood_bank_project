@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup form</title>
+   
+    <link rel="stylesheet" href="signUP.css">
+  </head>
+  
+
+  <body>
+    <form method="post" >
+    <div class="main">
+                  <h1 style="text-align: center; padding: 10px;
+                  background-color: red; border-radius: 10px;">
+                  Register Here</h1>
+                  <div class="errormassage" id="errorMassage">
+                    <p class="thank_You_OR_Error_Massage">
+                    </p> 
+                        <div class="close_button"onclick="close_error();">X
+                        </div>
+                  </div>
+          <div class="personal-details">
+            <div>
+              <label>Full Name:<span>*</span></label>
+              <input type="text" id="name" >
+            </div>
+            
+            <div>
+              <label>Phone No.:<span>*</span></label>
+              <input id="phone" type="tel" name="phone" >
+            </div>
+            <div>
+                <label>Nationality:<span>*</span></label>              
+                  <select  id="nationality">
+                  <option value=""></option>
+                  <option value="Nepal">Nepal</option>
+                  <option value="Armenian">Armenian</option>
+                  <option value="Russian">Russian</option>
+                  <option value="German">German</option>
+                  <option value="French">French</option>
+                  <option value="American">American</option>
+                  <option value="English">English</option>
+                </select>
+            </div>
+              <div>
+                  <label>Country:<span>*</span></label>  
+                  <select id="country">
+                    <option value=""> </option>
+                    <option value="Nepal">Nepal </option>
+                    <option value="Armenia">Armenia </option>
+                    <option value="Russia">Russia </option>
+                    <option value="Germany">Germany </option>
+                    <option value="France">France </option>
+                    <option value="USA">USA </option>
+                    <option value="UK">UK </option>
+                  </select>
+              </div>
+
+
+              <div>
+                <label>City:<span>*</span></label><input type="text" id="city" >
+              </div>
+              <div>
+                <label>Street:<span>*</span></label><input type="text" id="street" >
+              </div>
+              <div><label>Ward No.:<span>*</span></label><input type="tel" id="ward" >
+              </div>
+              <div>
+                <label>Blood Group:<span>*</span></label>
+                <select id="BloodGroup">
+                  <option value=""></option>
+                    <option value="A+">A +</option>
+                    <option value="A-">A -</option>
+                    <option value="B+">B +</option>
+                    <option value="B-">B -</option>
+                    <option value="O+">O +</option>
+                    <option value="O-">O -</option>
+                    <option value="AB+">AB +</option>
+                    <option value="AB-">AB -</option>
+                  </select>
+              </div>
+              <div>
+              <label>Gender:<span>*</span> </label>
+              <div class="gender">
+                <input  type="radio" value="none" id="male" name="gender" />
+                <label for="male" class="radio_btn">Male</label>
+                <input type="radio" value="none" id="female" name="gender" />
+                <label for="female" class="radio_btn">Female</label>
+              </div>
+                
+                  <div class="birthdate">
+              <label>Birthdate:<span>*</span></label>
+                <input type="date" id="dob">
+              </div>
+        </div>
+      </div>
+      <button type="button" class="signUp_btn" onclick="check()">Submit</button>    
+  </form>
+    <script src="login_signup.js"> </script>
+
+  </body>
+</html>
