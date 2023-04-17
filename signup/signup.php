@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="signup.css">
+
+<body>
+    <form action="#" method="post">
+        <div class="main">
+            <h1 style="text-align: center;margin:25px -1%; padding: 10px;
+                background-color: red; border-radius: 10px;">
+                Register Here</h1>
+            <div class="errormassage" id="errorMassage">
+                <p class="thank_You_OR_Error_Massage">
+                </p>
+                <div class="close_button" onclick="close_error();">
+                    X
+                </div>
+            </div>
+            <div>
+                <label for="name">Full Name<span>*</span></label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="phone">Phone no.<span>*</span></label>
+                <input type="tel" id="phone">
+            </div>
+            <div>
+                <label for="nationality">Nationality<span>*</span></label>
+                <select name="" id="nationality">
+                    <option value=""></option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Armenian">Armenian</option>
+                    <option value="Russian">Russian</option>
+                    <option value="German">German</option>
+                    <option value="French">French</option>
+                    <option value="American">American</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+            <div>
+                <label for="Country">Country<span>*</span></label>
+                <select name="country" id="country">
+                    <option value=""> </option>
+                    <option value="Nepal">Nepal </option>
+                    <option value="Armenia">Armenia </option>
+                    <option value="Russia">Russia </option>
+                    <option value="Germany">Germany </option>
+                    <option value="France">France </option>
+                    <option value="USA">USA </option>
+                    <option value="UK">UK </option>
+                </select>
+            </div>
+            <div>
+                <label for="City">City<span>*</span></label>
+                <input type="text" id="city">
+            </div>
+            <div>
+                <label for="Street">Street<span>*</span></label>
+                <input type="text" id="street">
+            </div>
+            <div>
+                <label for="Ward">Ward<span>*</span></label>
+                <input type="text" id="ward">
+            </div>
+            <div>
+                <label>Blood Group:<span>*</span></label>
+                <select id="BloodGroup">
+                    <option value=""></option>
+                    <option value="A+">A +</option>
+                    <option value="A-">A -</option>
+                    <option value="B+">B +</option>
+                    <option value="B-">B -</option>
+                    <option value="O+">O +</option>
+                    <option value="O-">O -</option>
+                    <option value="AB+">AB +</option>
+                    <option value="AB-">AB -</option>
+                </select>
+            </div>
+            <div>
+                <label>Gender:<span>*</span> </label>
+                <div class="gender">
+                    <input type="radio" value="none" id="male" name="gender" />
+                    <label for="male" class="radio_btn">Male</label>
+                    <input type="radio" value="none" id="female" name="gender" />
+                    <label for="female" class="radio_btn">Female</label>
+                </div>
+                <div class="birthdate">
+                    <label>Birthdate:<span>*</span></label>
+                    <input type="date" id="dob">
+                </div>
+                <button type="button" class="signUp_btn" onclick="check()">Submit</button>
+            </div>
+    </form>
+    <script src="login_signup.js"> </script>
+
+</body>
+
+</html>
