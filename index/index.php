@@ -1,10 +1,10 @@
-<?php include "header.php";
-?>
-
-<?php include "login.php";
-?>
+<?php include "../header/header.php";
 
 
-<?php 
-include "footer.php"
+ include "../login/login.php";
+
+
+
+
+include "../footer/footer.php"
 ?>
