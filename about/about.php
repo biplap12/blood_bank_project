@@ -1,17 +1,22 @@
 <?php 
 include "../header/header.php";
 ?>
-<div class="about">
+<div class="body_contain">
     <div class="heading">
         <h1>About <small>Blood Bank</small></h1>
     </div>
     <hr style="margin-top: -1.5%" />
     <div class="redirect_heading">
         <h2>
-            <a style="text-decoration: none; color: rgb(255, 0, 0)" href="">Home</a>
+            <a style="text-decoration: none; color: rgb(255, 0, 0)" href="../index/index.php">Home</a>
         </h2>
         <p>/</p>
-        <p>About us</p>
+        <p><?php 
+
+        echo substr( $_SERVER['PHP_SELF'],26,5) ?></p>
+
+
+        <!-- echo $_SERVER['PHP_SELF']; ?></p> -->
     </div>
     <div class="aboutUS_Text">
         <div class="image_about">

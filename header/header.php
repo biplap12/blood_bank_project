@@ -15,6 +15,7 @@
         <div class="nav-header">
             <div class="nav-title">Blood Bank</div>
         </div>
+        <input type="checkbox" name="nav-check" id="nav-check">
         <div class="nav-btn">
             <label for="nav-check">
                 <span></span>
@@ -23,13 +24,17 @@
             </label>
         </div>
         <div class="nav-links">
-            <a href="#"><img src="../img/home_icon.png"
+            <a href="../index/index.php"><img src="../img/home_icon.png"
                     style="max-height: 20px; position: absolute; margin: 3px 0 0 -20px" />Home</a>
             <a href="../about/about.php"><img src="../img/about_icon.png"
                     style="max-height: 20px; position: absolute; margin: 3px 0 0 -20px" />About Us</a>
             <a href="#"><img src="../img/services_icon.png"
                     style="max-height: 20px; position: absolute; margin: 3px 0 0 -20px" />Sevices</a>
-            <a href="#"><img src="../img/Admin_icon.png"
-                    style="max-height: 20px; position: absolute; margin: 3px 0 0 -20px" />Admin</a>
+            <a href="../login/loginForm.php"><img src="../img/Admin_icon.png"
+                    style="max-height: 20px; position: absolute; margin: 3px 0 0 -20px" />login</a>
+
+            <a href="../displaydata/displayuser.php"><img src="../img/home_icon.png"
+                    style="max-height: 20px; position: absolute; margin: 3px 0 0 -20px" />displaydata</a>
+
         </div>
     </div>
