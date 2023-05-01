@@ -3,14 +3,14 @@ include "../header/header.php";
 ?>
 <div class="body_contain">
     <div class="heading">
-        <h1>About <small>Blood Bank</small></h1>
+        <h1>About </h1>
     </div>
     <hr style="margin-top: -1.5%" />
     <div class="redirect_heading">
         <h2>
-            <a style="text-decoration: none; color: rgb(255, 0, 0)" href="../index/index.php">Home</a>
+            <a href="../index/index.php">Home /</a>
         </h2>
-        <p>/</p>
+
         <p><?php 
 
         echo substr( $_SERVER['PHP_SELF'],26,5) ?></p>
@@ -20,7 +20,7 @@ include "../header/header.php";
     </div>
     <div class="aboutUS_Text">
         <div class="image_about">
-            <img class="aboutImg_banner" src="../img/image-4.png" alt="" srcset="" />
+            <img class="aboutImg_banner" src="../img/image-4.png" alt="blood donet picture" />
         </div>
         <div class="image_text">
             <h2 style="font-size: 30px">About Blood Bank</h2>
@@ -39,9 +39,9 @@ include "../header/header.php";
         </div>
     </div>
     <hr />
-</div>
 
 
-<?php 
+
+    <?php 
 include "../footer/footer.php";
 ?>

@@ -4,6 +4,7 @@
 
 
 try{
+
 $name=$_POST['name'];
 $phone=$_POST['phone'];
 $email=$_POST['email'];
@@ -16,15 +17,12 @@ $status="pending";
 
 include "../database/dbConnect.php";
 
-$q="INSERT INTO `tbl_user`( `name`, `phone`, `email`, `username`, `password`, `status`) VALUES ('$name','$phone','$email','$username','$password','$status')";
+$q=" INSERT INTO `tbl_user`( `name` , `phone` , `email` , `username`, `password`, `status`) VALUES ('$name','$phone','$email','$username','$password','$status')";
 $result=mysqli_query($con,$q);
 
 
-sleep(1);
-// echo "success";
-// }else{
-// 	echo "error";
-// }
+sleep(0);
+echo "success";
 // header("location:loginForm.php");
 }
 catch(Exception $e){

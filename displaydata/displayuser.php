@@ -19,10 +19,10 @@ include "../header/header.php";
 
 
 
-        <!-- <div id="loader" style="Display:none">
-            <div class="loader"></div><br>
+        <div id="loader" style="Display:none">
+
             Please Wait..
-        </div> -->
+        </div>
 
         <script type="text/javascript">
         $(document).ready(function() {
@@ -31,7 +31,7 @@ include "../header/header.php";
             $.ajax({
                 url: "../getdata/getalluser.php",
                 type: "post",
-                // timeout: 10000,
+                timeout: 10000,
 
                 beforeSend: function() {
                     $("#loader").show();

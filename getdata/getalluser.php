@@ -2,18 +2,32 @@
 
 include "../database/dbConnect.php";
 
-$query="select * from tbl_user";
-$result=mysqli_query($con,$query);
+$q="SELECT * FROM `tbl_user`";
+$result=mysqli_query($con,$q);
 $table="";
 
 $table.="<table class='display_table'>";
 $table.= "<tr>";
-$table.="<th>UserName</th><th>Status</th><th colspan=3>Action</th> ";
+
+$table.=" <th>ID</th><th>Name</th><th>Phone</th><th>Email</th> <th> UserName </th><th> Status</th><th colspan=3>Action</th> "; 
 $table.= "</tr>";
 
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-  $id= $row["id"];
+      
+  $id=$row["id"];
   $table.= "<tr>";
+      $table.="<td>";
+      $table.=$row["id"];
+      $table.="</td>";
+      $table.="<td>"; 
+      $table.=$row["name"];
+      $table.="</td>";
+      $table.="<td>";
+      $table.=$row["phone"];
+      $table.="</td>";
+      $table.="<td>";
+      $table.=$row["email"];
+      $table.="</td>";
       $table.="<td>";
       $table.=$row["username"];
       $table.="</td>";
@@ -35,3 +49,5 @@ echo $table;
 
 
 ?>
+</div>
+</div>

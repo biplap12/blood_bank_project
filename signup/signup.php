@@ -10,7 +10,7 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
 </head>
 
@@ -124,10 +124,10 @@
         e.preventDefault();
 
         $.ajax({
-            url: "saveUser.php",
+            url: "../savedata/saveuser.php",
             type: "post",
             data: new FormData(this),
-            timeout: 20000,
+            timeout: 300,
             processData: false,
             contentType: false,
             beforeSend: function() {
@@ -154,7 +154,7 @@
 
     });
     </script>
-    <script src="../js/sweetalert.min.js"></script>
+    <!-- <script src="../js/sweetalert.min.js"></script> -->
 </body>
 
 </html>
