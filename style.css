@@ -59,6 +59,28 @@ body {
 	
 	
 }
+
+.username{
+	float: right;
+}
+.username_logout_button{
+	position: absolute;
+	text-decoration: none;	
+	padding:10px;
+	color: rgb(229, 223, 223);
+	background-color: rgb(73, 73, 91);
+	margin: 35px -90px ;
+	border-radius: 10px;
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+}
+
+.username_logout_button:hover{
+	color:white;
+	color:rgb(255, 255, 255);
+	text-decoration: underline;
+	background-color:rgb(87, 87, 108) ;
+}
 @media (max-width: 900px) {
 	.nav > .nav-links {
 		margin-right: 5%;
@@ -230,6 +252,7 @@ footer {
 
 /* signup form */
 
+
 .box-form {
   margin: 2% auto;
   width: 77%;
@@ -315,12 +338,14 @@ footer {
 
 }
 .box-form .right p {
-  font-size: 14px;
+  font-size: 16px;
   color: #B0B3B9;
-  margin-top: -10%;
+  margin-top: 5%;
 }
-.box-form .right .inputs {
+.box-form .right .login_inputs {
   overflow: hidden;
+  margin-top: 10%;
+
 }
 .box-form .right input {
   width: 100%;
@@ -345,7 +370,60 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
-
+.right button {
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    box-shadow: 0px 4px 20px 0px #c62828a6;
+    background-image: linear-gradient(135deg, #f57070 10%, #c62828 100%); 
+  }
+  
+  .stylish_checkbox {
+    display: block;
+    position: relative;
+    margin-left: 30px;
+  }
+  
+  .stylish_checkbox::before {
+    content: ' \f00c';
+    position: absolute;
+    font-family: FontAwesome;
+    background: transparent;
+    border: 3px solid #f57070;
+    border-radius: 4px;
+    color: transparent;
+    left: -30px;
+    transition: all 0.2s linear;
+  }
+  
+  .stylish_checkbox:hover::before {
+    font-family: FontAwesome;
+    content: ' \f00c';
+    color: #2714b1;
+    cursor: pointer;
+    background:red;
+  }
+  
+  .stylish_checkbox:hover::before .text-checkbox {
+    background: #8070f5;
+  }
+  
+  .stylish_checkbox span.text-checkbox {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+  
+  .stylish_checkbox input[type="checkbox"] {
+    display:none;
+  }
 
 @media screen and (max-width:600px) {
 .box-form {
@@ -356,10 +434,10 @@ footer {
 }
  /* loader */
 #loader{
-	display: flex;
+	display: block;
 	position: absolute;
-	flex-wrap: wrap;
-	 margin:0% 45%;
+	 margin:0 45%;
+	 top: 0;
    }
 .lds-spinner {
 color: official;
@@ -473,7 +551,13 @@ display user  */
 	border-collapse:collapse;
 	border: 2px solid black;
 width: 100%;
+table-layout: auto;
 	
+}
+table .display_table {
+	
+width: 100%;
+table-layout: auto;
 }
 /* .display_table_min{
 	width: 40%;
@@ -490,9 +574,6 @@ width: 100%;
 	overflow: hidden;
 
 }
-
-
-
 
 .info-msg {
 color: #059;

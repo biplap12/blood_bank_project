@@ -94,14 +94,14 @@
                     minute
                 </p>
                 <div class="inputs">
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="name" placeholder="Name" required>
                     <br>
-                    <input type="tel" name="phone" placeholder="Phone Number">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
                     <br>
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="text" name="username" placeholder="UserName">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="username" placeholder="UserName" required>
                     <br>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <br>
                 <br>

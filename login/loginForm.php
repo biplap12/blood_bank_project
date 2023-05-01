@@ -1,3 +1,8 @@
+<?php 
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +10,9 @@
     <meta charset="UTF-8">
     <title>Login Page</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+
+
 
     <script src="../js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -32,10 +39,10 @@
                     <p>Don't have an account? <a href="../signup/signup.php">Creat Your Account</a> it takes less than a
                         minute
                     </p>
-                    <div class="inputs">
-                        <input type="text" name="username" placeholder="UserName">
+                    <div class="login_inputs">
+                        <input type="text" name="username" placeholder="UserName" required>
                         <br>
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="password" placeholder="Password" required>
                     </div>
 
                     <br><br>
@@ -70,7 +77,6 @@
             <div></div>
         </div>
 
-        <div id="error-msg" style="display: none; background-color: red;"></div>
     </div>
     </div>
 
@@ -86,17 +92,16 @@
             url: "login.php",
             type: "post",
             data: new FormData(this),
-            timeout: 1000,
+            timeout: 10000,
             processData: false,
             contentType: false,
             beforeSend: function() {
-                $("#bloodBankForm").hide();
+                $("#bloodBankForm").show();
                 $("#loader").show();
             },
             success: function(data, status) {
                 $("#loader").hide();
-                $("#success-msg").html(data);
-                $("#success-msg").show();
+                // $("#success-msg").html(data);
                 location.replace("../index/index.php");
 
             },
@@ -119,6 +124,3 @@
             }
             ?>
     </div>
-</body>
-
-</html>

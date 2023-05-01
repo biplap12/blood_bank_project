@@ -19,10 +19,7 @@ include "../header/header.php";
 
 
 
-        <div id="loader" style="Display:none">
 
-            Please Wait..
-        </div>
 
         <script type="text/javascript">
         $(document).ready(function() {
