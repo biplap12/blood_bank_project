@@ -13,11 +13,10 @@ session_start();
     <link rel="stylesheet" href="../style.css">
 
 
-    <script src="../js/jquery_cookie.js"></script>
-    <script src=" ../js/jquery.min.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+
 
 </head>
 
@@ -37,8 +36,7 @@ session_start();
                 </div>
                 <div class="right">
                     <h5>Login</h5>
-                    <p>Don't have an account? <a href="../signup/signup.php">Creat Your Account</a> it takes less
-                        than a
+                    <p>Don't have an account? <a href="../signup/signup.php">Creat Your Account</a> it takes less than a
                         minute
                     </p>
                     <div class="login_inputs">
@@ -64,7 +62,7 @@ session_start();
             </div>
         </form>
 
-        <div id=" loader" class="lds-spinner" style="Display:none;">
+        <div id="loader" class="lds-spinner" style="Display:none;">
             <div></div>
             <div></div>
             <div></div>
@@ -81,9 +79,7 @@ session_start();
 
     </div>
     </div>
-    <div class="error-msg" id="error-msg" style="Display:none;">
-    </div>
-
+    <div class="error-msg" id="error-msg">check</div>
 
 
 
@@ -96,54 +92,24 @@ session_start();
             url: "login.php",
             type: "post",
             data: new FormData(this),
-            timeout: 100000,
+            timeout: 10000,
             processData: false,
             contentType: false,
             beforeSend: function() {
                 $("#bloodBankForm").show();
+                $("#loader").show();
+            },
+            success: function(data, status) {
                 $("#loader").hide();
-            },
-            success: function(response, data, status) {
-                // $.cookie("fromlogin", 1);
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top',
-                    showConfirmButton: false,
-                    timer: 2000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Signed in successfully'
-                })
+                // $("#success-msg").html(data);
                 location.replace("../index/index.php");
+
             },
-            error: function(xhr, data, response, status) {
+            error: function(xhr, data, status) {
+                $("#loader").hide();
                 $("#error-msg").html(xhr.responseText);
                 $("#error-msg").show();
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
-                    icon: 'error',
-                    title: 'error to sign in'
-                })
-
-            },
+            }
 
         });
 

@@ -11,6 +11,12 @@ include "../header/header.php";
 
 ?>
 
+<style>
+::-webkit-scrollbar {
+    width: 10px;
+    background: gray;
+}
+</style>
 
 <div class="main-content">
     <div class="title">Display Users</div>

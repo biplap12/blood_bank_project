@@ -5,12 +5,12 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 include "../database/dbConnect.php";
-$q="SELECT * FROM `tbl_user` WHERE `username`='$username' and `password`='$password'";  // and status='Active'"
+$q="SELECT * FROM `tbl_user` WHERE `username`='$username' and `password`='$password' and status='Active'";  // and status='Active'"
 
 $result=mysqli_query($con,$q)  or die(mysqli_error($con)) ;
 
 if(mysqli_fetch_array($result,MYSQLI_ASSOC)){
-   session_start();
+
    $_SESSION['username']=$username;
    
    
@@ -21,12 +21,13 @@ if(mysqli_fetch_array($result,MYSQLI_ASSOC)){
     // header("location:../index/index.php"); 
 
     // $location.replace("menu.php");
- sleep(2);
+//  sleep(2);
 }
 else{
-    http_response_code(400);
-  $_SESSION['errorMsg']="either username password is wrong or you are not active";
-
-    header("location:../login/loginForm.php");
+    // http_response_code(400);
+    http_response_code(403);
+// $_SESSION['errorMsg']="either username password is wrong or you are not active";
+ echo "either username password is wrong or you are not active";
+// header("location:../login/loginForm.php");
 }
 ?>
