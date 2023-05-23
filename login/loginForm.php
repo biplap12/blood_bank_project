@@ -119,7 +119,7 @@ session_start();
 
                 Toast.fire({
                     icon: 'success',
-                    title: 'Signed in successfully'
+                    title: 'Loged in successfully'
                 })
                 location.replace("../index/index.php");
             },
@@ -140,7 +140,7 @@ session_start();
 
                 Toast.fire({
                     icon: 'error',
-                    title: 'error to sign in'
+                    title: 'error to Log in'
                 })
 
             },
