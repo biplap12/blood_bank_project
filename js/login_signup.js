@@ -88,8 +88,10 @@ function check() {
 	let dobMili = dobObj.getTime();
 
 	let nowMili = new Date().getTime();
-	if (nowMili < dobMili) {
+	if (nowMili < dobMili && (dob = "")) {
 		massage += "<br> date of birth is grater than now";
+		document.getElementById("dob").style = "border-color:red";
+
 	}
 	// //for email validity
 	// let Email = document.getElementById("email").value;
@@ -192,22 +194,22 @@ function close_error() {
 	document.getElementById("errorMassage").style.display = "none";
 }
 
-function login() {
-	let UserNameLogin = document.getElementById("UserName").value;
-	if (UserNameLogin.length > 5) {
-		let userNamePattern = /[a-z][A-Z]/m;
-		let UserNameResult = userNamePattern.test(UserNameLogin);
-		if (UserNameResult == false) {
-			let usernameNumber = /[0-9]/m;
-			let usernamenumberResult = usernameNumber.test(UserNameLogin);
-			if (usernamenumberResult == false) {
-				document.getElementById("UserName").style =
-					"border-color:red;backgroundColor:white";
-			} else {
-				document.getElementById("UserName").style = "border-color:none";
-			}
-		}
-	} else {
-		document.getElementById("UserName").style = "border-color:red";
-	}
-}
+// function login() {
+// 	let UserNameLogin = document.getElementById("UserName").value;
+// 	if (UserNameLogin.length > 5) {
+// 		let userNamePattern = /[a-z][A-Z]/m;
+// 		let UserNameResult = userNamePattern.test(UserNameLogin);
+// 		if (UserNameResult == false) {
+// 			let usernameNumber = /[0-9]/m;
+// 			let usernamenumberResult = usernameNumber.test(UserNameLogin);
+// 			if (usernamenumberResult == false) {
+// 				document.getElementById("UserName").style =
+// 					"border-color:red;backgroundColor:white";
+// 			} else {
+// 				document.getElementById("UserName").style = "border-color:none";
+// 			}
+// 		}
+// 	} else {
+// 		document.getElementById("UserName").style = "border-color:red";
+// 	}
+// }

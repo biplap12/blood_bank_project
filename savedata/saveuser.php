@@ -21,8 +21,8 @@ $q=" INSERT INTO `tbl_user`( `name` , `phone` , `email` , `username`, `password`
 $result=mysqli_query($con,$q);
 
 
-sleep(0);
-echo "success";
+sleep(2);
+// echo "success";
 // header("location:loginForm.php");
 }
 catch(Exception $e){

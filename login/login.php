@@ -12,16 +12,16 @@ $result=mysqli_query($con,$q)  or die(mysqli_error($con)) ;
 if(mysqli_fetch_array($result,MYSQLI_ASSOC)){
 
    $_SESSION['username']=$username;
-   
-   
-   
-    // echo("Login Succesful");  
-    // header("location:menu.php"); 
-
-    // header("location:../index/index.php"); 
-
-    // $location.replace("menu.php");
-//  sleep(2);
+   if(isset($_POST['remember_user'])){
+    setcookie("username",$username,time()+60*60*24*2);
+    setcookie("password",$password,time()+60*60*24*2);
+    }
+    else 
+    {
+     setcookie("username","",time()-1);
+     setcookie("password","",-1);
+ 
+    }
 }
 else{
     // http_response_code(400);

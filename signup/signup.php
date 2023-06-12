@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up Page</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
@@ -10,114 +12,71 @@
 
     <script src="../js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
 </head>
 
 <body>
 
-    <div id="loader" class="lds-spinner" style="Display:none;">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
 
-    <div id="error-msg" style="display: none;">
-        <!-- <script>
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 2000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        })
-
-        Toast.fire({
-            icon: 'error',
-            title: 'error'
-        })
-        </script> -->
-    </div>
-    <div id="success-msg" style="display: none">
-        <!-- <script>
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 2000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        })
-
-        Toast.fire({
-            icon: 'success',
-            title: 'login successfully'
-        })
-        </script> -->
-    </div>
 
 
     <form method="post" id="bloodBankForm">
         <div class="box-form">
+            <div class="closeButtonInSigninSignup"><a href="../login/loginForm.php"><i
+                        class="fa-solid fa-circle-xmark"></i></a>
+            </div>
             <div class="left">
                 <div class="overlay">
                     <h1>Blood Bank</h1>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Curabitur et est sed felis aliquet sollicitudin</p> -->
-                    <h2>Login with social media</h2>
-
-                    <span>
-                        <a href="#"> Facebook</a>
-                        <a href="#">Google</a>
-                    </span>
                 </div>
             </div>
             <div class="right">
                 <h5>SignUP</h5>
-                <p>Already have an account? <a href="../login/loginForm.php">Login Your Account</a> it takes less than a
+                <p class="signupRedirect">Already have an account? <a href="../login/loginForm.php">Login Your
+                        Account</a> it takes less than a
                     minute
                 </p>
-                <div class="inputs">
+                <div class="login_inputs">
                     <input type="text" name="name" placeholder="Name" required>
-                    <br>
                     <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <br>
+
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="text" name="username" placeholder="UserName" required>
-                    <br>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" id="Current_password" placeholder="Password" required>
+                    <button type="button" id="passwordShowHide" onclick="showPassword()">
+                        <i class="fas fa-eye"></i></button>
                 </div>
                 <br>
-                <br>
-                <button type="submit">Sign UP</button>
+                <div class="closeButtonInSigninSignupSmallScreen"><a href="../login/loginForm.php"><i
+                            class="fa fa-arrow-left" style="font-size: 20px; color: black; "></i></a>
+                </div>
+                <button class="submitBtn" type="submit">Sign UP</button>
             </div>
 
     </form>
-
+    <div id="loader" style=" display: none; ">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
     </div>
+
+    </div>
     </div>
 
 
-
-
+    <!-- 
     <script type="text/javascript">
     $(document).ready(function() {});
     $("#bloodBankForm").submit(function(e) {
@@ -127,34 +86,73 @@
             url: "../savedata/saveuser.php",
             type: "post",
             data: new FormData(this),
-            timeout: 300,
+            timeout: 20000,
             processData: false,
             contentType: false,
             beforeSend: function() {
                 $("#bloodBankForm").show();
                 $("#loader").show();
 
+
             },
-            success: function(data, status) {
+            success: function(response, data, status) {
                 $("#loader").hide();
-                // $("#success-msg").html(data);
-                $("#success-msg").show();
-                location.replace("../login/loginForm.php");
+                //  $("#success-msg").html(data);
+                //  $("#success-msg").show();
+                swal({
+                    title: "Success!",
+                    text: "Signin successfull",
+                    icon: "success"
+                }).then(function() {
+                    // Redirect to the homepage
+                    window.location.href = "../login/loginForm.php";
+                });
+
+
 
             },
             error: function(xhr, data, status) {
-                // $("#loader").hide();
-                // $("#error-msg").html(data);
+                $("#loader").hide();
+                $("#error-msg").html(data);
                 $("#error-msg").show();
-                location.replace("../signup/signup.php");
+                // location.replace("../update/updateUserByAdmin.php")
+                // swal("Success!", "Form updated successfully!", "success"); 
+                swal({
+                    title: "Error!",
+                    text: "Something went Wrong",
+                    icon: "error"
+                }).then(function() {
+                    // Redirect to the homepage
+                    location.replace("../signup/signup.php")
+                });
+
+
 
             }
 
         });
 
     });
-    </script>
-    <!-- <script src="../js/sweetalert.min.js"></script> -->
-</body>
+    </script> -->
 
-</html>
+
+    <script>
+    function showPassword() {
+        let password = document.getElementById("Current_password");
+        var button = document.getElementById("passwordShowHide")[0];
+        if (password.type === "password") {
+            password.type = "text";
+            passwordShowHide.innerHTML = "<i class='fas fa-eye-slash'></i>";
+            passwordShowHide.style.backgroundRepeat = "no-repeat";
+            passwordShowHide.style.backgroundPosition = "center";
+        } else {
+            password.type = "password";
+            passwordShowHide.innerHTML = "<i class='fas fa-eye'></i>";
+            passwordShowHide.style.backgroundRepeat = "no-repeat";
+            passwordShowHide.style.backgroundPosition = "center";
+        }
+
+    }
+    </script>
+
+    <script src="../js/signupAJAX.js"></script>

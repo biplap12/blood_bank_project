@@ -157,25 +157,27 @@ a:hover i{
   transition: 0.5s;
 }
 
-/*Attendance List serction  */
+/*Attendance List section  */
 .attendance{
  width:100%;
   /* margin: 20px 0 0 50px; */
   text-transform: capitalize;
 }
+
 .attendance-list{
- width: 100%;
+  width: 100%;
   padding: 10px;
-  /* margin: 10px 5% 0 0; */
-  background: #fff;
+  margin: 0 ;
+  background: #6b2424;
   border-radius: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 .table{
-  border-collapse: collapse;
-  margin: 25px 0;
+  width: calc(100% - 20px);
+    border-collapse: collapse;
+  margin: 25px 10px;
   font-size: 15px;
-  max-width: max-content;
+  /* max-width: max-content; */
   overflow: hidden;
   border-radius: 5px 5px 0 0;
 }
@@ -213,4 +215,24 @@ table thead tr{
   background: #4AD489;
   color: #fff;
   transition: 0.5rem;
+}
+
+@media screen and (max-width:680px) {
+  .container{
+    display:flex;
+    position: absolute;
+   
+  }
+  nav{
+    height: 130vh;
+    min-height: 100vh;
+    max-height: 300vh;
+  }
+  .table{
+    margin: 25px 10px;
+    font-size: 10px;
+    /* max-width: max-content; */
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
 }

@@ -9,7 +9,7 @@ $table="";
 $table.="<table class='display_table'>";
 $table.= "<tr>";
 
-$table.=" <th>ID</th><th>Name</th><th>Phone</th><th>Email</th> <th> UserName </th><th> Status</th><th colspan=3>Action</th> "; 
+$table.=" <th>ID</th><th>Name</th><th>Password</th><th>Phone</th><th>Email</th> <th> UserName </th><th> Status</th><th colspan=3>Action</th> "; 
 $table.= "</tr>";
 
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -18,6 +18,9 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
   $table.= "<tr>";
       $table.="<td>";
       $table.=$row["id"];
+      $table.="</td>";
+      $table.="<td>";
+      $table.=$row["password"];
       $table.="</td>";
       $table.="<td>"; 
       $table.=$row["name"];
@@ -34,9 +37,10 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
       $table.="<td>";
       $table.=$row["status"];
       $table.="</td>";
-      $table.="<td><a onclick=\" return confirm('Are you sure you want to Activate?')\" class='dis view' href='ActivateUser.php?id=$id'>Activate</a></td>";
-    $table.="<td><a onclick=\" return confirm('Are you sure you want to Suspend?')\" class='dis deleteitem' href='suspendUser.php?id=$id'>Suspend</a></td>";
-    $table.="<td><a onclick=\" return confirm('Are you sure you want to update?')\" class='dis update  ' href='updateUserForm.php?id=$id'>Update</a></td>";
+      $table.="<td><a onclick=\" return ActivateUser($id)\" class='dis view' href='javascript:void(0)'>Activate</a></td>";
+      $table.="<td><a onclick=\" return deactivateData($id)\" class='dis deleteitem' href='javascript:void(0)'>Deactive</a></td>";
+    //   $table.="<td><a onclick=\" return confirm('Are you sure you want to update?')\" class='dis update  ' href='../update/updateUserByAdmin.php?id=$id'>Update</a></td>";
+     $table.="<td><a onclick=\" return updateUser($id)\" class='dis update' href='javascript:void(0)'>Update</a></td>";
 
 
     $table.= "</tr>";
@@ -51,3 +55,96 @@ echo $table;
 ?>
 </div>
 </div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+<script>
+function ActivateUser(id) {
+
+
+    swal({
+            title: "Are you sure you want to Activate?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((Active) => {
+            if (Active) {
+                window.location.href = '../Activate/ActivateUser.php?id=' + id;
+
+                swal("File has been Activate!", {
+                    icon: "success",
+                });
+            } else {
+                // swal("Your imaginary file is safe!");
+                swal("File has not been Activate!", {
+                    icon: "error",
+                });
+            }
+        });
+
+
+
+}
+
+function deactivateData(id) {
+
+
+    swal({
+            title: "Are you sure you want to Deactive?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((deactive) => {
+            if (deactive) {
+                window.location.href = '../Deactive/DeactiveUser.php?id=' + id;
+
+                swal("Poof! Your imaginary file has been deleted!", {
+                    icon: "success",
+                });
+            } else {
+                // swal("Your imaginary file is safe!");
+                swal("File has not been deactivate!", {
+                    icon: "error",
+                });
+            }
+
+        });
+}
+
+function updateUser(id) {
+
+
+    swal({
+            title: "Are you sure you want to Update User?",
+            text: "Once Updated, you will not be able to see this before file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((Active) => {
+            if (Active) {
+                window.location.href = '../update/updateUserByAdmin.php?id=' + id;
+
+                // swal("File has been Updated!", {
+                //     icon: "success",
+                // });
+            } else {
+                // swal("Your imaginary file is safe!");
+                swal("File has not been Updated!", {
+                    icon: "error",
+                });
+            }
+        });
+
+
+
+}
+</script>
+
+<script src="../js/sweetalert.js"></script>

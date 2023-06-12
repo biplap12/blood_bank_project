@@ -13,7 +13,7 @@ include "../header/header.php";
 
 <style>
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     background: gray;
 }
 </style>

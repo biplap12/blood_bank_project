@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        /* Main content */
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* Portfolio section */
+        .portfolio {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .portfolio-item {
+            flex-basis: 300px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>My Portfolio</h1>
+    </div>
+    <div class="content">
+        <h2>Welcome to my portfolio</h2>
+        <p>I am a passionate web developer with experience in HTML, CSS, and JavaScript.</p>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of Project 3</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; <?php echo date("Y"); ?> My Portfolio. All rights reserved.
+    </div>
+</body>
+
+</html>

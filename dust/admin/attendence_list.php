@@ -79,9 +79,3 @@ include "admin.php";
 <!-- </section> -->
 </section>
 </div>
-
-
-
-</body>
-
-</html>

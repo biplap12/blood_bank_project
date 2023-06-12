@@ -3,19 +3,20 @@ try{
 
 
 $id=$_GET['id'];
-$status="Suspend";
+$status="Deactive";
 // connection()
 // select database
 // executing query
 
-include "db_connect.php";
+include "../database/dbConnect.php";
 
 $q="UPDATE `tbl_user` SET `status`='$status' WHERE id=$id";
 $result=mysqli_query($con,$q);
 
 
 sleep(1);
-echo "success";
+// echo "success";
+header('location:../displaydata/displayUser.php');
 }
 catch(Exception $e){
 	throw $e;

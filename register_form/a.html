@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donor Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+</style>
+<body>
+  <form id="registrationForm">
+    <h2>Blood Donor Registration</h2>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="bloodGroup">Blood Group</label>
+      <select id="bloodGroup" required>
+        <option value="">Select Blood Group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea id="address" required></textarea>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    const registrationForm = document.getElementById('registrationForm');
+
+registrationForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Retrieve form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const bloodGroup = document.getElementById('bloodGroup').value;
+  const phone = document.getElementById('phone').value;
+  const address = document.getElementById('address').value;
+
+  // Perform form validation or additional logic here
+
+  // Display form values
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Blood Group:', bloodGroup);
+  console.log('Phone:', phone);
+  console.log('Address:', address);
+
+  // Reset the form
+  registrationForm.reset();
+});
+
+  </script>
+</body>
+</html>

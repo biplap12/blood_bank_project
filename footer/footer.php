@@ -1,7 +1,26 @@
 <footer>
     <h2>Copyright © Blood Bank</h2>
-    Made by Biplap Neupane.
+
 </footer>
+</div>
+<script src="../js/imageSlider.js"></script>
+<script src="../js/passwordShowHide.js"></script>
+<script src="../js/dropdown.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/login_signup.js"></script>
+<script src="../js/jquery_cookie.js"></script>
+<script src="../js/sweetalert.min.js"></script>
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 </body>
 

@@ -1,28 +1,113 @@
-body{
-    background-image: linear-gradient(140deg, #f98500  10%, #f90000  100%);
+html,
+body {
+	min-height: 100%;
+}
+body,
+div,
+form,
+input,
+select,
+p {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 14px;
+}
+h1 {
+	margin: 0;
+	font-weight: 400;
+}
+h3 {
+	margin: 12px 0;
+	color: #8ebf42;
+}
+.main-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	margin: 0 auto;
+	max-width: 60%;
+	border: 1px solid black;
+}
+form {
+	width: 100%;
+	padding: 20px;
+}
+fieldset {
+	border: none;
+	border-top: 1px solid #8ebf42;
+}
+.account-details,
+.personal-details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.account-details > div,
+.personal-details > div > div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.account-details > div,
+.personal-details > div,
+input,
+label {
+	width: 100%;
+}
+label {
+	padding: 0 5px;
+	text-align: right;
+}
+input {
+	padding: 5px;
+	vertical-align: middle;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-  }
-  
-form{
-    display: block;
-    margin: 10px 30% 5%;
-    box-shadow: 19px 30px 55px -11px;
-    font-size: 22px;
-    border-radius: 15px;
-    background-color: #ffffff;
+select,
+.Blood_Group,
+.gender {
+	width: calc(100% + 26px);
+	padding: 5px 0;
 }
-.main{
-display: block;
-margin:0% 1%;
+select {
+	background: transparent;
+}
+.gender input {
+	width: auto;
+}
+.gender label {
+	padding: 0 5px 0 0;
 }
 
+.birthdate input {
+	width: 100px;
+	vertical-align: unset;
+}
+.Blood_Group input {
+	width: 80px;
+	vertical-align: unset;
+}
+
+.signUp_btn {
+	width: 100%;
+	padding: 10px 0;
+	margin: 10px auto;
+	border-radius: 5px;
+	border: none;
+	background: #8ebf42;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+}
+.signUp_btn:hover {
+	background: #82b534;
+}
 .errormassage {
 	position: relative;
 	padding: 10px 20px;
-	display: none;
 	color: #f4f0f0;
 	border-radius: 10px;
 	font-size: 18px;
@@ -43,94 +128,20 @@ margin:0% 1%;
 	color: #fff;
 	cursor: pointer;
 }
-label{
-    display: flex;
-    margin-bottom: 10px;
-
+@media (min-width: 568px) {
+	.account-details > div,
+	.personal-details > div {
+		width: 50%;
+	}
+	label {
+		width: 40%;
+	}
+	input {
+		width: 60%;
+	}
+	select,
+	.Blood_Group,
+	.gender {
+		width: calc(60% + 16px);
+	}
 }
-span{
-    color: red;
-    font-weight: bold;
-    
-}
-
-input{
-    height: 30px;
-    width: 98%;
-    font-size: 20px;
-    border-radius: 5px;
-    border: 1px solid gray ;
-    margin-bottom: 20px;
-
-}
-select{
-    height: 35px;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 5px;
-    border-color: gray;
-    margin-bottom: 20px;
-
-}
-.radio_btn {
-	display: initial;
-
-}
-.gender {
-	align-items: baseline;
-	padding: 20px;
-}
-#male,
-#female {
-	display: initial;
-	width: 20px;
-}
-.signUp_btn {
-	width: 30%;
-	padding: 10px 0;
-	margin: 20px 0 2% 70%;
-	border-radius: 5px;
-	border: none;
-	background: #f60000;
-	font-size: 14px;
-	font-weight: 600;
-    position: relative;
-	color: #fff;
-}
-.signUp_btn:hover {
-	background: #1eff00;
-    color: rgb(221, 255, 0);
-}
-@media (max-width:1200px) {
-    form{
-        margin: 0% 20% 5%;
-    }
-}
-@media (max-width:1000px) {
-    form{
-        margin:0% 10% 5%;
-    }
-}
-@media (max-width:800px) {
-    form{
-        margin: 0% 5% 5%;
-    }
-}
-@media (max-width:480px) {
-    form{
-        margin: 0px 0px 5%;
-    }
-}
-
-
-
-.main select:focus,
-		.main input[type='text'],input[type='password']:focus,
-        .main input[type='number'],input[type='date']:focus,
-		.main input[type='checkbox'],input[type='tel']:focus,
-		.main textarea:focus{
-			outline: 2px solid skyblue;
-		}
-		
-		
-		
