@@ -22,6 +22,7 @@ $uploadphoto=$_FILES['uploadphoto']['name'];
 $status="Pending";
 
 
+
 include "../database/dbConnect.php";
 move_uploaded_file($_FILES['uploadphoto']['tmp_name'],"../img/needblood_images/$uploadphoto");//uploading files in server
 
@@ -31,7 +32,7 @@ $q="INSERT INTO `needblood`(`patientname`, `bloodgroup`, `gender`,`unitofblood`,
 $result=mysqli_query($con,$q);
 
 
-sleep(1);
+
 // echo "success";
 // header("location:loginForm.php");
 }

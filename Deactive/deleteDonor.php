@@ -4,7 +4,7 @@ include "../database/dbConnect.php";
 try {
   $id = $_POST['id'];
 
-  $query = "SELECT * FROM `donors` WHERE id = $id AND status = 'deactive'";
+  $query = "SELECT * FROM `donors` WHERE id = $id AND status = 'Pending'";
   $result = mysqli_query($con, $query);
   
   if (mysqli_num_rows($result) > 0) {

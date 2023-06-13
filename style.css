@@ -826,11 +826,13 @@ display: none;
 
 .dis{
 text-decoration: none;
+display: inline;
 color:white ; 
 padding:5px 10px;
 border-radius:5px; 
 font-weight:bold;
-text-align: center;
+text-align:center;
+align-items: center;
 
 }
 .login_signup a{
@@ -839,6 +841,7 @@ color: rgb(254, 254, 254);
 background-color: red;
 padding: 10px;
 border-radius: 5px;
+text-align: center;
 }
 .login_signup a:hover{
 background-color: #270;
@@ -913,13 +916,13 @@ background-color: rgb(255, 0, 0);
 	
   }
   
-  .massage-table td:last-child {
+  /* .massage-table td:last-child {
     white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 250px;
-	text-align: left;
-  }
+	text-align: center;
+  } */
 
 /* image slider */
 
@@ -1263,7 +1266,7 @@ background-color: rgb(255, 0, 0);
 	}
   }
   
-  .viewitem{
+   .viewitem{
 	display: flex;
 	flex-wrap: wrap;
 	gap: 5rem;
@@ -1271,14 +1274,24 @@ background-color: rgb(255, 0, 0);
 
   .viewitemsbox {
 	flex:1 1 20rem;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	/* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 	position: relative;
 	z-index: -1;
+	
+	
   }
- 
+ .viewitemhr{
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin:0 auto;
+ }
   .responsive {
-	width: 100%;
-	height:520px;
+	width: 65%;
+	display: flex;
+	margin: 0 auto;
+	align-content: center;	
+	object-fit: fill;
 	border-radius: 5px;
 	border-color: 2px  red solid;
   }
@@ -1286,35 +1299,101 @@ background-color: rgb(255, 0, 0);
   .viewitems{
 	display: flex;
 	padding: 0;
-	margin: 0;
-	margin:0 1rem;
-	text-align:start;
+	text-align: center;	
 	
   }
   
-  .viewitems h2, h3{
-	margin: 5px;
+  .viewitems h2{
 	padding: 0;
 	flex: 1;
-	text-align: start;
 	font-size: 15px;
 
   }
+  .viewitems h3{
+	padding: 0;
+	flex: 1;
+	font-size: 14px;
+
+  }
+  
   
   .activateviewbtn{
 	display: flex;
 	flex-direction: row;
 	float: right;
-	margin-top: 2%;
-	justify-content:center ;	
+	margin:20px auto;
+	justify-content:center;	
 	text-align: center;
 	padding: 10px;
-	background-color: #270;
-	width: 10REM;
+	font-size: 20px;
+	align-items: center;
 	border-radius: 5px;
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
 
 	
+  } 
+
+ 
+
+  .needbloodUpdateForm {
+	max-width: 500px;
+	padding: 20px;
+	margin-bottom:50px
+  }
+ 
+
+.form-group1 input[type="date"],
+.form-group1 select
+
+ {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: large;
+}
+  
+  .needbloodUpdateForm h1 {
+	margin: 0 0 20px 0 ;
+	text-align: start;
+  }
+  .form-groupButtons {
+	margin: 20px auto;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.form-groupButtons button[type="submit"],
+.form-groupButtons a{
+	flex: 1 1 1 ;
+	color: white;
+	width: fit-content;
+	padding: 10px;
+	border: none;
+	font-size:1.2em;
+	border-radius: 5px;
+}
+.form-groupButtons button[type="submit"]{
+	background-color: #270;
+}
+.form-groupButtons a{
+	background-color: rgb(255, 0, 0);
+	text-decoration: none;
+}
+   
+  .form-group1 label {
+	display: block;
+	font-weight: bold;
+	font-size: 16px;
+	color: red;
+	margin-bottom: 5px;
+  }
+
+  .Status{
+	font-weight: 500;
+	text-transform:capitalize;
   }

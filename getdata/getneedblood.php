@@ -38,8 +38,10 @@ $table.="</td>";
 $table.="<td>";
 $table.=$row["phone1"];
 $table.="</td>";
-$table.="<td><a onclick=\" return ActivateUser($id)\" class='dis update' href='javascript:void(0)'>Status</a></td>";
-$table.="<td><a onclick=\" return View($id)\" class='dis deleteitem' href='javascript:void(0)'>View</a></td>";
+$table.="<td class='Status' >";
+$table.=$row["status"];
+$table.="</td>";
+$table.="<td><a onclick=\" return View($id)\" class='dis view' href='javascript:void(0)'>View</a></td>";
 $table.="</tbody>";
 }
 $table.="</table>";
@@ -48,6 +50,10 @@ $table.= "</tr>";
 
 
 echo $table;
+
+
+
+
 
 ?>
 </div>
