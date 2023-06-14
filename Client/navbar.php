@@ -8,8 +8,6 @@
     <title>Blood Bank</title>
 </head>
 <link rel="stylesheet" href="style.css?v=<?php echo Time()?>">
-<!-- <link rel="stylesheet" href="../style.css?v=<?php echo Time()?>"> -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>

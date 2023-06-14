@@ -59,8 +59,17 @@
             <input type="text" id="city" name="city" required>
         </div>
         <div class="form-group">
-            <label for="street">Street:</label>
-            <input type="text" id="street" name="street" required>
+            <label for="state">State:</label>
+            <select id="state" name="state" required>
+                <option value=""></option>
+                <option value="Koshi State">Koshi State</option>
+                <option value="Madhesh State">Madhesh State</option>
+                <option value="Bagmati State">Bagmati State</option>
+                <option value="Gandaki State">Gandaki State</option>
+                <option value="Lumbini State">Lumbini State</option>
+                <option value="Karnali State">Karnali State</option>
+                <option value="Sudurpachhim State">Sudurpachhim State</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="ward">Ward No.:</label>

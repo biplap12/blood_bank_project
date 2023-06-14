@@ -18,7 +18,7 @@ include "navbar.php";
         </h2>
         <h2>/</h2>
         <h2>
-            <a href="">Search Blood</a>
+            <a href="searchblood.php">Search Blood</a>
         </h2>
     </div>
 

@@ -35,7 +35,7 @@ CREATE TABLE `donors` (
   `bloodgroup` varchar(100) NOT NULL,
   `country` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
-  `street` varchar(100) NOT NULL,
+  `state` varchar(100) NOT NULL,
   `wardno` int(100) NOT NULL,
   `address` varchar(250) NOT NULL,
   `email` varchar(100) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE `donors` (
 -- Dumping data for table `donors`
 --
 
-INSERT INTO `donors` (`id`, `fullname`, `fathername`, `gender`, `bloodgroup`, `country`, `city`, `street`, `wardno`, `address`, `email`, `phone1`, `phone2`, `birthdate`, `newdonor`, `photo`, `ihaveread`, `iagree`) VALUES
+INSERT INTO `donors` (`id`, `fullname`, `fathername`, `gender`, `bloodgroup`, `country`, `city`, `state`, `wardno`, `address`, `email`, `phone1`, `phone2`, `birthdate`, `newdonor`, `photo`, `ihaveread`, `iagree`) VALUES
 (1, 'hello', 'asa', 'Male', 'A-', 'France', 'as', 'sa', 1, 'axa', 's@a.com', 2147483647, 2147483647, '2020-02-05', 'Yes', '', 'on', 'on'),
 (2, 'as', 'as', 'Female', 'A+', 'Russia', 'asd', 'asd', 1, 'asda', 's@a.com', 12, 12, '2023-06-30', 'No', '', 'on', 'on'),
 (3, 'dsa', 'sdhas', 'Male', 'A-', 'Russia', 'as', 'as', 1, 'asda', 's@a.com', 12222222, 2147483647, '2023-06-22', 'Yes', '', 'on', 'on');

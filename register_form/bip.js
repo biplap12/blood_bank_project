@@ -54,15 +54,15 @@ function check() {
 		document.getElementById("city").style = "border-color:black";
 
 	}
-	let Street = document.getElementById("street").value;
-	let Streetpattern = /[^ a-z || A-Z]/i;
-	let StreetValidetor = Streetpattern.test(Street);
-	if (Street == "" || StreetValidetor == true) {
-		massage += "<br>Street Name must be in Alphabet";
-		document.getElementById("street").style = "border-color:red";
+	let state = document.getElementById("state").value;
+	let statepattern = /[^ a-z || A-Z]/i;
+	let stateValidetor = statepattern.test(state);
+	if (state == "" || stateValidetor == true) {
+		massage += "<br>state Name must be in Alphabet";
+		document.getElementById("state").style = "border-color:red";
 	} else {
 		massage += "<br>";
-		document.getElementById("street").style = "border-color:black";
+		document.getElementById("state").style = "border-color:black";
 
 	}
 	let WardNo = document.getElementById("ward").value;

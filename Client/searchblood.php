@@ -1,0 +1,78 @@
+<?php
+include "../Client/service.php";
+?>
+
+<div class="searchbloodshow">
+    <h1> Search Blood Details</h1>
+    <hr>
+
+    <div class="searchinput">
+        <label for="search_data">Search Text</label>
+        <input type="text" id="searchInput" placeholder="Enter search term">
+    </div>
+    <br>
+    <table class="donorshow-table">
+    </table>
+
+
+</div>
+
+
+
+
+
+
+<div id="loader" style=" display: none; ">
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</div>
+
+
+
+<script>
+$(document).ready(function() {
+    // Handle search input change event
+    $('#searchInput').on('input', function() {
+        var searchTerm = $(this).val();
+
+        // Call search function with a delay of 500 milliseconds
+        setTimeout(function() {
+            searchMatchingText(searchTerm);
+        }, 500);
+    });
+
+    function searchMatchingText(searchTerm) {
+        // Display loader
+        $('#loader').show();
+
+        // Make AJAX request to PHP script
+        $.ajax({
+            url: '../getdata/getsearchblood.php',
+            method: 'POST',
+            data: {
+                search: searchTerm
+            },
+
+
+            success: function(response) {
+                // Hide loader
+                $('#loader').hide();
+                // Display search results
+                $('.donorshow-table').html(response);
+            },
+            error: function() {
+                // Hide loader
+                $('#loader').hide();
+                // Display error message
+                $('donorshow-table').html('Error occurred during search.');
+            }
+        });
+    }
+});
+</script>

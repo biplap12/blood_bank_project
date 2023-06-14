@@ -61,7 +61,7 @@
                 <label>City:<span>*</span></label><input type="text" id="city" >
               </div>
               <div>
-                <label>Street:<span>*</span></label><input type="text" id="street" >
+                <label>state:<span>*</span></label><input type="text" id="state" >
               </div>
               <div><label>Ward No.:<span>*</span></label><input type="tel" id="ward" >
               </div>

@@ -8,7 +8,7 @@ $gender=$_POST['gender'];
 $bloodGroup=$_POST['bloodGroup'];
 $country=$_POST['country'];
 $city=$_POST['city'];
-$street=$_POST['street'];
+$state=$_POST['state'];
 $wardno=$_POST['ward'];
 $address=$_POST['address'];
 $email=$_POST['email'];
@@ -24,7 +24,7 @@ $status="Pending";
 include "../database/dbConnect.php";
 move_uploaded_file($_FILES['uploadphoto']['tmp_name'],"../img/donor_images/$uploadphoto");//uploading files in server
 
-$q="INSERT INTO `donors`(`fullname`, `fathername`, `gender`, `bloodgroup`, `country`, `city`, `street`, `wardno`, `address`, `email`, `phone1`, `phone2`, `birthdate`, `newdonor`, `photo`, `ihaveread`, `iagree`, `status`) VALUES ('$fullname','$fathername','$gender','$bloodGroup','$country','$city','$street','$wardno','$address','$email','$phone1','$phone2','$birthdate','$donor','$uploadphoto','$ihaveread','$iagree','$status')";
+$q="INSERT INTO `donors`(`fullname`, `fathername`, `gender`, `bloodgroup`, `country`, `city`, `state`, `wardno`, `address`, `email`, `phone1`, `phone2`, `birthdate`, `newdonor`, `photo`, `ihaveread`, `iagree`, `status`) VALUES ('$fullname','$fathername','$gender','$bloodGroup','$country','$city','$state','$wardno','$address','$email','$phone1','$phone2','$birthdate','$donor','$uploadphoto','$ihaveread','$iagree','$status')";
 
 
 $result=mysqli_query($con,$q);

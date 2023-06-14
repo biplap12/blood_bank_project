@@ -70,8 +70,8 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
                         </div>
                         <hr class="viewitemhr">
                         <div class="viewitems">
-                            <h2>Street: </h2>
-                            <h3><?php echo $row ["street"];?></h3>
+                            <h2>state: </h2>
+                            <h3><?php echo $row ["state"];?></h3>
                         </div>
                         <hr class="viewitemhr">
                         <div class="viewitems">

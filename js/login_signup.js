@@ -50,15 +50,15 @@ function check() {
 	} else {
 		document.getElementById("city").style = "border-color:none";
 	}
-	//for street validator
-	let Street = document.getElementById("street").value;
-	let Streetpattern = /[^ a-z || A-Z]/i;
-	let StreetValidetor = Streetpattern.test(Street);
-	if (Street == "" || StreetValidetor == true) {
-		massage += "<br>Street Name must be in Alphabet";
-		document.getElementById("street").style = "border-color:red";
+	//for state validator
+	let state = document.getElementById("state").value;
+	let statepattern = /[^ a-z || A-Z]/i;
+	let stateValidetor = statepattern.test(state);
+	if (state == "" || stateValidetor == true) {
+		massage += "<br>state Name must be in Alphabet";
+		document.getElementById("state").style = "border-color:red";
 	} else {
-		document.getElementById("street").style = "border-color:none";
+		document.getElementById("state").style = "border-color:none";
 	}
 	//for ward no validitor
 	let WardNo = document.getElementById("ward").value;
