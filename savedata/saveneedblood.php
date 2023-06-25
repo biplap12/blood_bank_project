@@ -32,7 +32,7 @@ $q="INSERT INTO `needblood`(`patientname`, `bloodgroup`, `gender`,`unitofblood`,
 $result=mysqli_query($con,$q);
 
 
-
+sleep(2);
 // echo "success";
 // header("location:loginForm.php");
 }

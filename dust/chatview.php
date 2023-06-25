@@ -18,7 +18,7 @@ $photo=$row['photo'];
     <div class="main-content">
         <div class="title"><?php echo "Doner : "  . $row ["fullname"];?></div>
         <div class="content">
-            <table class="massage-table">
+            <table class="message-table">
 
 
 
@@ -135,7 +135,7 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
     <div class="main-content">
         <div class="title"><?php echo "Doner : "  . $row ["fullname"];?></div>
         <div class="content">
-            <table class="massage-table">
+            <table class="message-table">
 
 
 

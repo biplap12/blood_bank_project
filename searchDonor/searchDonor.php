@@ -10,8 +10,8 @@ include "../admin/admin.php";
     <div class="main-content">
         <div class="content">
             <div class="searchinput">
-                <label for="search_data">Search Text</label>
-                <input type="text" id="searchInput" placeholder="Enter search term">
+                <label for="search_data">Search Blood Group</label>
+                <input type="text" id="searchInput" placeholder="Enter search  Blood Group">
             </div>
             <br>
             <table class="donorshow-table">
@@ -44,7 +44,7 @@ include "../admin/admin.php";
                 // Call search function with a delay of 500 milliseconds
                 setTimeout(function() {
                     searchMatchingText(searchTerm);
-                }, 5000);
+                }, 500);
             });
 
             function searchMatchingText(searchTerm) {

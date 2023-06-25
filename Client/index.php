@@ -35,7 +35,7 @@
              </div>
              <div class="card">
                  <div class="card_title">
-                     <h2><i class="fa fa-fw fa-user"></i>Need Blood</h2>
+                     <h2><i class="fa-solid fa-suitcase-medical"></i> Need Blood</h2>
                  </div>
                  <p class="cardDis">Every 2 seconds someone needs blood. Your blood helps more than one life at a time.
                      Accident victims, premature babies, patients undergoing major surgeries require whole blood, where
@@ -45,7 +45,7 @@
              </div>
              <div class="card">
                  <div class="card_title">
-                     <h2><i class="fa fa-fw fa-user"></i>Search Donor</h2>
+                     <h2><i class="fa-solid fa-magnifying-glass"></i> Search Donor</h2>
                  </div>
                  <p class="cardDis">Some people who have serious injuries they need blood transfusions to replace blood
                      lost
@@ -60,19 +60,19 @@
 
 
      <section class="Blood_donor">
-         <h1>Blood Doner</h1>
+         <h1>Blood Doner Images</h1>
          <div class="gallery">
              <div class="images">
-                 <a href=""><img src="../img/cover.jpg" alt=""></a>
+                 <a href=""><img src="../img/clz5.jpg" alt=""></a>
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/Blood_donation.jpg" alt=""></a>
+                 <a href=""><img src="../img//clz 6.jpg" alt=""></a>
 
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/club 25.jpg" alt=""></a>
+                 <a href=""><img src="../img/clz5.jpg" alt=""></a>
 
 
              </div>
@@ -81,12 +81,12 @@
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/image-4.png" alt=""></a>
+                 <a href=""><img src="../img/clz3.jpg" alt=""></a>
 
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/istockphot.jpg" alt=""></a>
+                 <a href=""><img src="../img/clz7.jpg" alt=""></a>
 
 
              </div>
@@ -127,13 +127,13 @@
              </div>
          </div>
      </section>
-     <section class="massageUsInIndex">
-         <div class="massageUSINText">
+     <section class="messageUsInIndex">
+         <div class="messageUSINText">
              <p>We expect your loyal feedback to improve our standard.For more details and any subject related queries..
              </p>
          </div>
-         <div class="redirectMassageUs">
-             <a href="massageUsForm.php">Massage Us </a>
+         <div class="redirectmessageUs">
+             <a href="messageUsForm.php">Message Us </a>
          </div>
      </section>
  </section>

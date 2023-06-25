@@ -1,7 +1,7 @@
  <?php
 $id=$_GET['id'];
 include "../database/dbConnect.php";
-include "../header/header.php";
+// include "../header/header.php";
 
 
 $q="SELECT * FROM `tbl_user` WHERE id=$id ";
@@ -48,6 +48,9 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
      <form method="post" id="bloodBankForm">
          <div class="box-form">
+             <div class="closeButtonInSigninSignup"><a href="../displaydata/displayuser.php"><i
+                         class="fa-solid fa-circle-xmark"></i></a>
+             </div>
              <div class="left">
                  <div class="overlay">
                      <h1>Blood Bank</h1>
@@ -65,9 +68,6 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
                      <input type="email" name="email" placeholder="Email" value="<?php echo $row["email"] ?>">
                      <input type="text" name="username" placeholder="UserName" value="<?php echo $row["username"] ?>">
-
-                     <input type="password" name="password" id="Current_password" placeholder="Password"
-                         value="<?php echo $row["password"] ?>">
                      <button type="button" id="passwordShowHide" onclick="showPassword()">
                          <i class="fas fa-eye"></i></button>
                  </div>

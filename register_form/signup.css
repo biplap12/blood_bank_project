@@ -105,7 +105,7 @@ select {
 .signUp_btn:hover {
 	background: #82b534;
 }
-.errormassage {
+.errormessage {
 	position: relative;
 	padding: 10px 20px;
 	color: #f4f0f0;

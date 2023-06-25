@@ -181,7 +181,7 @@ body {
 	font-size: 20px;
 }
 .closeButtonInSigninSignup a{
-	color: #000000;
+	color: #ff0202;
 }
 
 @media screen and (max-width: 630px) {
@@ -877,7 +877,7 @@ background-color: rgb(255, 0, 0);
 }
 
 
-/* massagebox */
+/* messagebox */
 
 .container {
     /* margin: 20px auto; */
@@ -885,7 +885,7 @@ background-color: rgb(255, 0, 0);
     border-radius: 5px;
   }
   
-  .massage-table {
+  .message-table {
     width: 100%;
 	max-width: 2500px;
     border-collapse: collapse;
@@ -893,14 +893,14 @@ background-color: rgb(255, 0, 0);
     border-radius: 5px;
   }
   
-  .massage-table th,
-  .massage-table td {
+  .message-table th,
+  .message-table td {
     padding: 10px;
     text-align: center;
 	border: 1px solid red;
   }
   
-  .massage-table th {
+  .message-table th {
     background-color: #b8b4b4;
     font-weight: bold;
     text-transform: uppercase;
@@ -911,12 +911,12 @@ background-color: rgb(255, 0, 0);
 	
   } */
   
-  .massage-table tbody tr:hover {
+  .message-table tbody tr:hover {
     background-color: #e0e0e0;
 	
   }
   
-  /* .massage-table td:last-child {
+  /* .message-table td:last-child {
     white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1458,4 +1458,8 @@ background-color: rgb(255, 0, 0);
  .donorshow-table tbody tr:hover {
    background-color: #e0e0e0;
  
+ }
+ .status{
+	 text-transform: uppercase;
+	 font-weight: 500;
  }

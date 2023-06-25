@@ -1,4 +1,7 @@
 <?php 
+include "../database/dbConnect.php";
+
+
 session_start();
 $username="NO user";
 if (!isset($_SESSION['username'])){
@@ -8,6 +11,10 @@ if (!isset($_SESSION['username'])){
     $username=$_SESSION['username'];
 
 }
+
+
+
+ 
 
 ?>
 <!DOCTYPE html>
@@ -43,7 +50,7 @@ if (!isset($_SESSION['username'])){
 
         <div class="nav-links">
             <!-- <li> <a href="../index/index.php"><i class="fa-solid fa-house"></i>Home</a></li> -->
-            <li> <a href="../displaydata/displaymassage.php"><i class="fa-solid fa-circle-info"></i>Dashboard</a></li>
+            <li> <a href="../displaydata/displaymessage.php"><i class="fa-solid fa-circle-info"></i>Dashboard</a></li>
             <?php 
             if($_SESSION['username']==="admin")
             {
@@ -53,14 +60,16 @@ if (!isset($_SESSION['username'])){
                 
 
 ?>
-            <!-- <li> <a href="../displaydata/displaymassage.php"><i class="fa-solid fa-message"></i> Massage</a></li> -->
+
+            <!-- <li> <a href="../displaydata/displaymessage.php"><i class="fa-solid fa-message"></i> message</a></li> -->
             <li class="hideList">
                 <div class="dropdown">
                     <button class="dropdown_button"><i class="fa-solid fa-user"></i><?php echo $username?></button>
                     <div class="dropdown-options">
                         <!-- <a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a> -->
                         <a href="../passwordChange/changePasswordForm.php?id=<?php echo $id; ?>"><i
-                                class="fa-solid fa-gear"></i> Setting</a>
+                                class="fa-solid fa-gear"></i>
+                            Setting</a>
                         <!-- <a onclick=return changepassword($id) class='dis update' href='javascript:void(0)'>Setting</a> -->
                         <a class="dropdown_small_screen" href="../session/distroySession.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>

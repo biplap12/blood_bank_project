@@ -26,7 +26,7 @@
 
 
 
-    <form method="post" id="bloodBankForm">
+    <form method="post" id="bloodBankForm" onsubmit="return validateForm()">
         <div class="box-form">
             <div class="closeButtonInSigninSignup"><a href="../login/loginForm.php"><i
                         class="fa-solid fa-circle-xmark"></i></a>
@@ -43,11 +43,11 @@
                     minute
                 </p>
                 <div class="login_inputs">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="name" placeholder="Name" id="nameforsignin">
+                    <input type="tel" name="phone" placeholder="Phone Number" id="pnforsignin" required>
 
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="username" placeholder="UserName" required>
+                    <input type="email" name="email" placeholder="Email" id="emailforsignin" required>
+                    <input type="text" name="username" placeholder="UserName" id="usernameforsignin" required>
                     <input type="password" name="password" id="Current_password" placeholder="Password" required>
                     <button type="button" id="passwordShowHide" onclick="showPassword()">
                         <i class="fas fa-eye"></i></button>
@@ -156,3 +156,16 @@
     </script>
 
     <script src="../js/signupAJAX.js"></script>
+
+    <!-- 
+    <script>
+    function validateForm() {
+        let name = document.getElementById("nameforsignin").value;
+        let pattern = /[^ a-z || A-Z]/i;
+        let result = pattern.test(name);
+        console.log(name);
+        if (name == "") {
+            name.style = "border-bottom:2px solid red"
+        }
+    }
+    </script> -->

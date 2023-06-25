@@ -19,9 +19,9 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
     <h1 class="view-heading">View </h1>
     <hr>
     <div class="main-content">
-        <div class="title"><?php echo "Donor : "  . $row ["fullname"];?></div>
+        <div class="title"><?php echo "Donor Id : "  . $row ["id"];?></div>
         <div class="content">
-            <table class="massage-table">
+            <table class="message-table">
 
                 <div class="viewitem">
                     <div class="viewitemsbox">
@@ -30,9 +30,10 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
                     </div>
                     <div class="viewitemsbox">
                         <div class="viewitems">
-                            <h2>ID:</h2>
-                            <h3><?php echo $row ["id"];?></h3>
+                            <h2>Donor Name:</h2>
+                            <h2><?php echo $row ["fullname"];?></h2>
                         </div>
+                        <hr class="viewitemhr">
                         <hr class="viewitemhr">
                         <div class="viewitems">
                             <h2>Father Name:</h2>

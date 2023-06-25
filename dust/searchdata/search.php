@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <input type="text" id="searchInput" placeholder="Enter search term">
+    <input type="text" id="searchInput" placeholder="Enter search  Blood Group">
     <div class="loader">
         <img src="loader.gif" alt="Loading...">
     </div>

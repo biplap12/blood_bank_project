@@ -14,7 +14,7 @@ include "../database/dbConnect.php";
     <div class="main-content">
         <div class="title">Donors</div>
         <div class="content">
-            <table class="massage-table">
+            <table class="message-table">
 
 
 
@@ -37,7 +37,7 @@ include "../database/dbConnect.php";
                         },
                         success: function(data, status) {
                             $("#loader").hide();
-                            $(".massage-table").html(data);
+                            $(".message-table").html(data);
 
                         },
                         error: function(xhr, data, status) {

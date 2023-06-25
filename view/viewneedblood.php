@@ -17,9 +17,9 @@ $photo=$row['photo'];
     <h1>View</h1>
     <hr>
     <div class="main-content">
-        <div class="title"><?php echo "Need Blood : "  . $row ["patientname"];?></div>
+        <div class="title"><?php echo "Patient ID : "  . $row ["id"];?></div>
         <div class="content">
-            <table class="massage-table">
+            <table class="message-table">
 
 
 
@@ -30,11 +30,7 @@ $photo=$row['photo'];
                         alt="Image" srcset=""></div>
             </div>
             <div class="viewitemsbox">
-                <div class="viewitems">
-                    <h2>ID:</h2>
-                    <h3><?php echo $row ["id"];?></h3>
-                </div>
-                <hr class="viewitemhr">
+
                 <div class="viewitems">
                     <h2>Patient Name:</h2>
                     <h3><?php echo $row ["patientname"];?></h3>
@@ -151,7 +147,7 @@ $photo=$row['photo'];
 
                 <div class="form-groupButtons">
                     <button type="submit">Update Now</button>
-                    <a href="">Back Page</a>
+                    <a href="../displaydata/needblooddisplay.php">Back Page</a>
                 </div>
             </form>
         </div>

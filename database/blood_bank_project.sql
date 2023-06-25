@@ -62,22 +62,22 @@ INSERT INTO `donors` (`id`, `fullname`, `fathername`, `gender`, `bloodgroup`, `c
 -- --------------------------------------------------------
 
 --
--- Table structure for table `massage`
+-- Table structure for table `message`
 --
 
-CREATE TABLE `massage` (
+CREATE TABLE `message` (
   `id` int(255) NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `phone` int(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `massage` longtext NOT NULL
+  `message` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `massage`
+-- Dumping data for table `message`
 --
 
-INSERT INTO `massage` (`id`, `fullname`, `phone`, `email`, `massage`) VALUES
+INSERT INTO `message` (`id`, `fullname`, `phone`, `email`, `message`) VALUES
 (1, 'Biplap', 984343, 'aa@ss.com', 'Shhshhsbsbs'),
 (2, 'neupane', 2147483647, 'a@a.com', 'hello this is testing\r\n'),
 (3, 'hello', 2147483647, 'a.con@shd.com', 'hello sathi'),
@@ -164,9 +164,9 @@ ALTER TABLE `donors`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `massage`
+-- Indexes for table `message`
 --
-ALTER TABLE `massage`
+ALTER TABLE `message`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -192,9 +192,9 @@ ALTER TABLE `donors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `massage`
+-- AUTO_INCREMENT for table `message`
 --
-ALTER TABLE `massage`
+ALTER TABLE `message`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --

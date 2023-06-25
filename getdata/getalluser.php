@@ -9,7 +9,7 @@ $table="";
 $table.="<table class='display_table'>";
 $table.= "<tr>";
 
-$table.=" <th>ID</th><th>Name</th><th>Password</th><th>Phone</th><th>Email</th> <th> UserName </th><th> Status</th><th colspan=3>Action</th> "; 
+$table.=" <th>ID</th><th>Name</th><th>Phone</th><th>Email</th> <th> UserName </th><th> Status</th><th colspan=3>Action</th> "; 
 $table.= "</tr>";
 
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -18,9 +18,6 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
   $table.= "<tr>";
       $table.="<td>";
       $table.=$row["id"];
-      $table.="</td>";
-      $table.="<td>";
-      $table.=$row["password"];
       $table.="</td>";
       $table.="<td>"; 
       $table.=$row["name"];
@@ -34,7 +31,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
       $table.="<td>";
       $table.=$row["username"];
       $table.="</td>";
-      $table.="<td>";
+      $table.="<td class='status'>";
       $table.=$row["status"];
       $table.="</td>";
       $table.="<td><a onclick=\" return ActivateUser($id)\" class='dis view' href='javascript:void(0)'>Activate</a></td>";
@@ -55,6 +52,9 @@ echo $table;
 ?>
 </div>
 </div>
+</div>
+</div>
+
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

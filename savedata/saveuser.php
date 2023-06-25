@@ -10,7 +10,7 @@ $phone=$_POST['phone'];
 $email=$_POST['email'];
 $username=$_POST['username'];
 $password=$_POST['password'];
-$status="pending";
+$status="Pending";
 // connection()
 // select database
 // executing query

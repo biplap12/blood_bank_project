@@ -10,13 +10,13 @@ try{
 $fullname=$_POST['fullname'];
 $phone=$_POST['phone'];
 $email=$_POST['email'];
-$massage=$_POST['massage'];
+$message=$_POST['message'];
 
 
 include "../database/dbConnect.php";
 
 // $q=" INSERT INTO `tbl_user`( `name` , `phone` , `email` , `username`, `password`, `status`) VALUES ('$name','$phone','$email','$username','$password','$status')";
-$q=" INSERT INTO `massage` (`fullname`, `phone`, `email`, `massage`) VALUES ('$fullname','$phone','$email','$massage')";
+$q=" INSERT INTO `message` (`fullname`, `phone`, `email`, `message`) VALUES ('$fullname','$phone','$email','$message')";
 
 $result=mysqli_query($con,$q);
 

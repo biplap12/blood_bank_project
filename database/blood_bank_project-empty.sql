@@ -24,15 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `massage`
+-- Table structure for table `message`
 --
 
-CREATE TABLE `massage` (
+CREATE TABLE `message` (
   `id` int(255) NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `phone` int(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `massage` longtext NOT NULL
+  `message` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -56,9 +56,9 @@ CREATE TABLE `tbl_user` (
 --
 
 --
--- Indexes for table `massage`
+-- Indexes for table `message`
 --
-ALTER TABLE `massage`
+ALTER TABLE `message`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -72,9 +72,9 @@ ALTER TABLE `tbl_user`
 --
 
 --
--- AUTO_INCREMENT for table `massage`
+-- AUTO_INCREMENT for table `message`
 --
-ALTER TABLE `massage`
+ALTER TABLE `message`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --

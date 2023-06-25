@@ -12,23 +12,19 @@ include "../database/dbConnect.php";
     <h1>Inbox</h1>
     <hr>
     <div class="main-content">
-        <div class="title">Massages</div>
+        <div class="title">Messages</div>
         <div class="content">
-            <table class="massage-table">
+            <table class="message-table">
 
 
 
-                <!-- <div id="loader" style="Display:none">
-            <div class="loader"></div><br>
-            Please Wait..
-        </div> -->
 
                 <script type="text/javascript">
                 $(document).ready(function() {
 
 
                     $.ajax({
-                        url: "../getdata/getmassagefromuser.php",
+                        url: "../getdata/getmessagefromuser.php",
                         type: "post",
                         // timeout: 10000,
 
@@ -37,7 +33,7 @@ include "../database/dbConnect.php";
                         },
                         success: function(data, status) {
                             $("#loader").hide();
-                            $(".massage-table").html(data);
+                            $(".message-table").html(data);
 
                         },
                         error: function(xhr, data, status) {

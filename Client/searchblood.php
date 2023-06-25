@@ -3,12 +3,12 @@ include "../Client/service.php";
 ?>
 
 <div class="searchbloodshow">
-    <h1> Search Blood Details</h1>
+    <h1>Search Blood Details</h1>
     <hr>
 
     <div class="searchinput">
-        <label for="search_data">Search Text</label>
-        <input type="text" id="searchInput" placeholder="Enter search term">
+        <label for="search_data">Search Blood Group</label>
+        <input type="text" id="searchInput" placeholder="Enter search  Blood Group">
     </div>
     <br>
     <table class="donorshow-table">

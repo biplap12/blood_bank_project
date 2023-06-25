@@ -3,26 +3,26 @@ include "../database/dbConnect.php";
 ?>
 
 
-<section class="massageSection">
+<section class="messageSection">
 
-    <div class="massageUs">
-        <div class="massageUs_form">
-            <form method="POST" id="massagefromuser">
+    <div class="messageUs">
+        <div class="messageUs_form">
+            <form method="POST" id="messagefromuser">
                 <h1>Send us a Message</h1>
                 <label for="Name">Full Name:</label>
-                <input type="text" name="fullname" id="fullname" pattern="[A-Za-z]{3,50}" required
-                    title="Please enter your valid name"><br>
+                <input type="text" name="fullname" id="fullname" placeholder="Full Name" pattern="[A-Za-z ]{3,50}"
+                    required title="Please enter your valid name"><br>
 
                 <label for="Phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required
+                <input type="tel" name="phone" id="phone" placeholder="9800000000" pattern="[0-9]{10}" required
                     title="Please enter 10-digit number" required> <br>
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required><br>
-                <label class="textare" for="Massage">Massage:</label>
-                <textarea class="textarea" rows="5" cols="100" id="massage" required name="massage" maxlength="999"
-                    style="resize:none"></textarea><br>
-                <button type="submit" class="massageSendButton"><i class="fa-sharp fa-solid fa-paper-plane"></i> Send
-                    Massage</button>
+                <input type="email" name="email" id="email" placeholder="example@example.com" required><br>
+                <label class="textare" for="message">Message:</label>
+                <textarea class="textarea" rows="5" cols="100" id="message" placeholder="Your Message...." required
+                    name="message" maxlength="999" style="resize:none"></textarea><br>
+                <button type="submit" class="messageSendButton"><i class="fa-sharp fa-solid fa-paper-plane"></i> Send
+                    message</button>
             </form>
         </div>
         <div class="company_Details">
@@ -53,18 +53,18 @@ include "../database/dbConnect.php";
 
 <script type="text/javascript">
 $(document).ready(function() {});
-$("#massagefromuser").submit(function(e) {
+$("#messagefromuser").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "../savedata/savemassage.php",
+        url: "../savedata/savemessage.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,
         processData: false,
         contentType: false,
         beforeSend: function() {
-            $("#massagefromuser").show();
+            $("#messagefromuser").show();
             $("#loader").show();
 
 
@@ -75,11 +75,11 @@ $("#massagefromuser").submit(function(e) {
             //  $("#success-msg").show();
             swal({
                 title: "Success!",
-                text: "Massage Send Successfully!",
+                text: "message Send Successfully!",
                 icon: "success"
             }).then(function() {
                 // Redirect to the homepage
-                window.location.href = "./massageUsForm.php";
+                window.location.href = "./messageUsForm.php";
             });
 
 
@@ -96,7 +96,7 @@ $("#massagefromuser").submit(function(e) {
                 icon: "error"
             }).then(function() {
                 // Redirect to the homepage
-                location.replace("./massageUsForm.php")
+                location.replace("./messageUsForm.php")
             });
 
 

@@ -2,7 +2,7 @@
 
 include "../database/dbConnect.php";
 
-$q="SELECT * FROM `massage` ";
+$q="SELECT * FROM `message` ";
 $result =mysqli_query($con,$q);
 
 
@@ -29,8 +29,9 @@ $table.="<td>";
 $table.=$row["email"];
 $table.="</td>";
 $table.="<td>";
-$table.=$row["massage"];
+$table.=$row["message"];
 $table.="</td>";
+
 $table.="<tr>";
 $table.="</tbody>";
 $table.="</table>";

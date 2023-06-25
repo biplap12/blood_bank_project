@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
     $table.= "<table class='display_table'>";
     $table.="<thead>";
     $table.="<tr>";
-    $table.="<th>Name</th><th>Gender</th><th>Blood</th><th>City</th><th>State</th><th>Phone no.</th>";
+    $table.="<th>Name</th><th>Gender</th><th>Blood</th><th>State</th><th>City</th><th>Phone no.</th>";
     $table.="</tr>";
     $table.="</thead>";
     while ($row = $result->fetch_assoc()) {
@@ -33,16 +33,14 @@ if ($result->num_rows > 0) {
         $table.=$row["bloodgroup"];
         $table.="</td>";
         $table.="<td>";
-        $table.=$row["city"];
+        $table.=$row["state"];
         $table.="</td>";
         $table.="<td>";
-        $table.=$row["state"];
+        $table.=$row["city"];
         $table.="</td>";
         $table.="<td>";
         $table.=$row["phone1"];
         $table.="</td>";
-       
-        // $table.="<td><a onclick=\" return ActivateUser($id)\" class='dis update' href='javascript:void(0)'>View</a></td>";
         $table.="</tbody>";
     }
         $table.="</table>";

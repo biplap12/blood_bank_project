@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+  #imageContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #imageContainer img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+
+</style>
+<body>
+    <div id="imageContainer">
+        <img id="mainImage" src="../img/Blood_donation.jpg" alt="Image" onclick="showPopup()">
+      </div>
+      <div id="imageContainer" onclick="hidePopup()">
+        <img id="popupImage" src="" alt="Pop-up Image">
+      </div>
+      
+      
+      <script>
+        function showPopup() {
+          var container = document.getElementById('imageContainer');
+          container.style.display = 'flex'; // Display the container
+        }
+      
+        function hidePopup() {
+          var container = document.getElementById('imageContainer');
+          container.style.display = 'none'; // Hide the container
+        }
+      </script>
+      
+</body>
+</html>

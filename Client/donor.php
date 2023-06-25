@@ -9,11 +9,11 @@
     <form method="POST" id="donorregistrationForm" onsubmit="event.preventDefault(); check();">
         <div class="form-group">
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="fullname" required>
+            <input type="text" id="name" name="fullname" pattern="[A-Za-z ]{3,50}" required>
         </div>
-        <div class="form-group">
+        <div class=" form-group">
             <label for="fathername">Father Name:</label>
-            <input type="text" id="fathername" name="fathername" required>
+            <input type="text" id="fathername" name="fathername" pattern="[A-Za-z ]{3,50}" required>
         </div>
         <div class="form-group">
             <label for="Gender">Gender:</label>
@@ -73,7 +73,7 @@
         </div>
         <div class="form-group">
             <label for="ward">Ward No.:</label>
-            <input type="number" id="ward" name="ward" required>
+            <input type="number" id="ward" name="ward" pattern="[0-9]" required>
         </div>
         <div class="form-group">
             <label for="address">Address:</label>
@@ -118,12 +118,12 @@
             <input type="file" id="uploadphoto" name="uploadphoto" required>
         </div>
         <div class="form-group-checkbox">
-            <input type="checkbox" id="ihaveread" name="ihaveread" required>
+            <input type="checkbox" id="ihaveread" name="ihaveread" checked required>
             <label for="ihaveread">I have read the eligibility criteria and confirm that i am eligible to donate
                 blood.</label>
         </div>
         <div class="form-group-checkbox">
-            <input type="checkbox" id="iagree" name="iagree" required>
+            <input type="checkbox" id="iagree" name="iagree" checked required>
             <label for="iagree">I agree to the Term and Conditions and consent to have my contact and donor
                 information published to the potential blood recipients..</label>
         </div>
