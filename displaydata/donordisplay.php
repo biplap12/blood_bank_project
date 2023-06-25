@@ -9,7 +9,7 @@ include "../database/dbConnect.php";
 ?>
 
 <div class="adminContent">
-    <h1>All Donor</h1>
+    <h1><i class="fa-solid fa-users"></i>Not Active Donor</h1>
     <hr>
     <div class="main-content">
         <div class="title">doners</div>

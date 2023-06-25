@@ -5,12 +5,13 @@ include "../admin/admin.php";
 ?>
 
 <div class="adminContent">
-    <h1> Search Donor Details</h1>
+    <h1><i class="fa-solid fa-magnifying-glass"></i>Search Donor Details</h1>
     <hr>
     <div class="main-content">
         <div class="content">
             <div class="searchinput">
                 <label for="search_data">Search Blood Group</label>
+                <br>
                 <input type="text" id="searchInput" placeholder="Enter search  Blood Group">
             </div>
             <br>

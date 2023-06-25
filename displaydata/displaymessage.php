@@ -9,7 +9,7 @@ include "../database/dbConnect.php";
 ?>
 
 <div class="adminContent">
-    <h1>Inbox</h1>
+    <h1><i class="fa-sharp fa-solid fa-envelope"></i> Inbox</h1>
     <hr>
     <div class="main-content">
         <div class="title">Messages</div>

@@ -9,7 +9,7 @@ include "../database/dbConnect.php";
 ?>
 
 <div class="adminContent">
-    <h1>Need Blood</h1>
+    <h1><i class="fa-solid fa-bed"></i>Need Blood</h1>
     <hr>
     <div class="main-content">
         <div class="title">Need Blood</div>

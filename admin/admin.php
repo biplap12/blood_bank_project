@@ -1,13 +1,16 @@
 <div class="dashboard">
     <div class="sidebar">
-        <h1><a href="../displaydata/displaymessage.php">Dashboard</a></h1>
+        <h1><a href="../displaydata/displaymessage.php"><i class="fa-solid fa-gauge"></i>Dashboard</a></h1>
         <hr>
         <ul>
-            <li><a href="../displaydata/displaymessage.php">Inbox</a></li>
-            <li><a href="../searchDonor/searchdonor.php">Search Blood</a></li>
-            <li><a href="../displaydata/activedonor.php">Active Doners</a></li>
-            <li><a href="../displaydata/donordisplay.php">Not Active Donor</a></li>
-            <li><a href="../displaydata/needblooddisplay.php">Need Blood</a></li>
+            <li><a href="../displaydata/displaymessage.php"><i class="fa-sharp fa-solid fa-envelope"></i> Inbox</a>
+            </li>
+            <li><a href="../searchDonor/searchdonor.php"><i class="fa-solid fa-magnifying-glass"></i>Search Blood</a>
+            </li>
+            <li><a href="../displaydata/activedonor.php"><i class="fa-solid fa-users" style="color: #35f500;"></i>Active
+                    Doners</a></li>
+            <li><a href="../displaydata/donordisplay.php"><i class="fa-solid fa-users"></i>Not Active Donor</a></li>
+            <li><a href="../displaydata/needblooddisplay.php"><i class="fa-solid fa-bed"></i>Need Blood</a></li>
 
 
         </ul>

@@ -1299,7 +1299,9 @@ background-color: rgb(255, 0, 0);
   .viewitems{
 	display: flex;
 	padding: 0;
-	text-align: center;	
+	text-align: start;	
+	margin-left: 10%;
+
 	
   }
   
@@ -1463,3 +1465,4 @@ background-color: rgb(255, 0, 0);
 	 text-transform: uppercase;
 	 font-weight: 500;
  }
+
