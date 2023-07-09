@@ -1,12 +1,30 @@
 <?php 
-include "../database/dbConnect.php";
-include "../header/header.php";
+session_start();
+//  include "../header/header.php";
+ include "../database/dbConnect.php";
+ 
 
-$id = $_GET['id'];
-$password = $_POST['password'];
+$username=$_SESSION['username'];
+$password=$_POST['new_password'];
 
-$q = "UPDATE `tbl_user` SET `password`='$password' WHERE id='$id'";
-$result = mysqli_query($con, $q);
+// connection()
+// select database
+// executing query
 
-sleep(0);
+   
+
+    $q = "UPDATE `tbl_user` SET `password`='$password' WHERE username='$username'";
+    
+    $result=mysqli_query($con,$q);
+
+    if($result){
+       echo "password change successfully";
+    }
+    else {
+        echo "error";
+    }
+   
+sleep(2);
+
+
 ?>

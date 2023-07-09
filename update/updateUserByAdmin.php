@@ -68,8 +68,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
                      <input type="email" name="email" placeholder="Email" value="<?php echo $row["email"] ?>">
                      <input type="text" name="username" placeholder="UserName" value="<?php echo $row["username"] ?>">
-                     <button type="button" id="passwordShowHide" onclick="showPassword()">
-                         <i class="fas fa-eye"></i></button>
+
                  </div>
                  <br>
                  <button type="submit" class="submitBtn" id="updatebtn">Update</button>

@@ -1180,13 +1180,20 @@ background-color: rgb(255, 0, 0);
   .sidebar ul li {
 	margin-bottom: 10px;
 	text-align: start;
+	
+  }
+  .activeAdminDashboard{
+	border-radius: 5px;	
+	background-color: red;
+	
+	
   }
   
   .sidebar ul a{
   display: block;
 	cursor: pointer;
 	padding: 5px;
-	width: 100%;
+	/* width: 100%; */
 	font-size: 20px;
 	border-radius: 5px;
 	text-align: start;
@@ -1195,10 +1202,11 @@ background-color: rgb(255, 0, 0);
 	font-weight: 500;
 	
   }
+ 
   .sidebar ul a:hover{
 	background-color: red;
 	color: white;
-	transition: 0.5s ease-out;
+	transition: 0.5s ease-in;
   }
   
   .adminContent {
@@ -1318,7 +1326,7 @@ background-color: rgb(255, 0, 0);
 
   }
   
-  
+ 
   .activateviewbtn{
 	display: flex;
 	flex-direction: row;

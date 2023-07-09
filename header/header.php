@@ -9,12 +9,14 @@ if (!isset($_SESSION['username'])){
     header("location:../login/loginForm.php");
 }else{
     $username=$_SESSION['username'];
+   
 
 }
 
 
 
- 
+
+
 
 ?>
 <!DOCTYPE html>
@@ -50,7 +52,7 @@ if (!isset($_SESSION['username'])){
 
         <div class="nav-links">
             <!-- <li> <a href="../index/index.php"><i class="fa-solid fa-house"></i>Home</a></li> -->
-            <li> <a href="../displaydata/displaymessage.php"><i class="fa-solid fa-circle-info"></i>Dashboard</a></li>
+            <li> <a href="../displaydata/displaymessage.php"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
             <?php 
             if($_SESSION['username']==="admin")
             {
@@ -67,7 +69,8 @@ if (!isset($_SESSION['username'])){
                     <button class="dropdown_button"><i class="fa-solid fa-user"></i><?php echo $username?></button>
                     <div class="dropdown-options">
                         <!-- <a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a> -->
-                        <a href="../passwordChange/changePasswordForm.php?id=<?php echo $id; ?>"><i
+                        <a
+                            href="../passwordChange/changePasswordForm.php?username=<?php echo $_SESSION['username']; ?>"><i
                                 class="fa-solid fa-gear"></i>
                             Setting</a>
                         <!-- <a onclick=return changepassword($id) class='dis update' href='javascript:void(0)'>Setting</a> -->

@@ -63,7 +63,7 @@
          <h1>Blood Doner Images</h1>
          <div class="gallery">
              <div class="images">
-                 <a href=""><img src="../img/clz5.jpg" alt=""></a>
+                 <a href="../img/clz5.jpg"><img src="../img/clz5.jpg" alt=""></a>
 
              </div>
              <div class="images">

@@ -44,14 +44,14 @@ include "service.php";
         <div class="form-group">
             <label for="country">Country:</label>
             <select id="country" name="country" required>
-                <option value=""></option>
+                <!-- <option value=""></option> -->
                 <option value="Nepal">Nepal</option>
-                <option value="Armenia">Armenia</option>
+                <!-- <option value="Armenia">Armenia</option>
                 <option value="Russia">Russia</option>
                 <option value="Germany">Germany</option>
                 <option value="France">France</option>
                 <option value="USA">USA</option>
-                <option value="UK">UK</option>
+                <option value="UK">UK</option> -->
             </select>
         </div>
         <div class="form-group">
@@ -112,6 +112,8 @@ include "service.php";
         <div class="form-group">
             <button type="submit">Submit</button>
         </div>
+        <input type="hidden" name="current_date_time" value="<?php echo date('Y/m/d-H:i'); ?>">
+
     </form>
 
 
@@ -200,3 +202,7 @@ display: block;
     border: 1px solid #cccccc;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgb -->
+
+
+<?php include "footer.php";
+?>

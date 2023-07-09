@@ -22,6 +22,6 @@ function display_current() {
     }
     images[index].style.display = "block";
     clearTimeout(t);
-     t=setTimeout(next, 2000);
+     t=setTimeout(next, 10000);
 
 }

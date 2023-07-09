@@ -19,6 +19,7 @@ $phone2=$_POST['phone2'];
 $birthdate=$_POST['birthdate'];
 $reasonforblood=$_POST['reasonforblood'];
 $uploadphoto=$_FILES['uploadphoto']['name'];
+$current_date_time=$_POST['current_date_time'];
 $status="Pending";
 
 
@@ -26,7 +27,7 @@ $status="Pending";
 include "../database/dbConnect.php";
 move_uploaded_file($_FILES['uploadphoto']['tmp_name'],"../img/needblood_images/$uploadphoto");//uploading files in server
 
-$q="INSERT INTO `needblood`(`patientname`, `bloodgroup`, `gender`,`unitofblood`,`hospitalNameAddress`, `country`, `city`, `doctorname`, `requiredate`, `contactname`,`needbloodaddress`, `email`, `phone1`, `phone2`, `birthdate`, `reasonforblood`,`photo`,`status`) VALUES ('$patientname','$bloodgroup','$gender','$unitofblood','$hospitalNameAddress','$country','$city','$doctorname','$requiredate','$contactname','$needbloodaddress','$email','$phone1','$phone2','$birthdate','$reasonforblood','$uploadphoto','$status')";
+$q="INSERT INTO `needblood`(`patientname`, `bloodgroup`, `gender`,`unitofblood`,`hospitalNameAddress`, `country`, `city`, `doctorname`, `requiredate`, `contactname`,`needbloodaddress`, `email`, `phone1`, `phone2`, `birthdate`, `reasonforblood`,`photo`,`current_date_time`,`status`) VALUES ('$patientname','$bloodgroup','$gender','$unitofblood','$hospitalNameAddress','$country','$city','$doctorname','$requiredate','$contactname','$needbloodaddress','$email','$phone1','$phone2','$birthdate','$reasonforblood','$uploadphoto','$current_date_time','$status')";
 
 
 $result=mysqli_query($con,$q);

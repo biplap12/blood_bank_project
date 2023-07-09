@@ -3,7 +3,8 @@
         <h1><a href="../displaydata/displaymessage.php"><i class="fa-solid fa-gauge"></i>Dashboard</a></h1>
         <hr>
         <ul>
-            <li><a href="../displaydata/displaymessage.php"><i class="fa-sharp fa-solid fa-envelope"></i> Inbox</a>
+            <li><a href="../displaydata/displaymessage.php"><i class="fa-sharp fa-solid fa-envelope"></i>
+                    Inbox</a>
             </li>
             <li><a href="../searchDonor/searchdonor.php"><i class="fa-solid fa-magnifying-glass"></i>Search Blood</a>
             </li>
@@ -15,3 +16,20 @@
 
         </ul>
     </div>
+
+
+
+    <script>
+    var currentUrl = window.location.href;
+
+    var links = document.querySelectorAll('.sidebar ul li a');
+
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].href === currentUrl) {
+            links[i].parentElement.classList.add('activeAdminDashboard');
+            links[i].style.color = 'white';
+
+            break;
+        }
+    }
+    </script>

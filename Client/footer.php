@@ -1,5 +1,7 @@
 <footer>
-    Copyright © Blood Bank <br>
+    <p>Copyright © <?php
+    echo date("Y") ;
+    ?> Blood Bank <br></p>
 </footer>
 </div>
 <script src="../js/imageSlider.js"></script>

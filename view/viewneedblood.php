@@ -113,6 +113,11 @@ $photo=$row['photo'];
                 </div>
                 <hr class="viewitemhr">
                 <div class="viewitems">
+                    <h2>Request Date: </h2>
+                    <h3><?php echo $row ["current_date_time"];?></h3>
+                </div>
+                <hr class="viewitemhr">
+                <div class="viewitems">
                     <h2>Complete Date: </h2>
                     <h3><?php echo $row ["completeDate"];?></h3>
                 </div>

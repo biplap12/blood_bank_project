@@ -44,14 +44,14 @@
         <div class="form-group">
             <label for="country">Country:</label>
             <select id="country" name="country" required>
-                <option value=""></option>
+                <!-- <option value=""></option> -->
                 <option value="Nepal">Nepal</option>
-                <option value="Armenia">Armenia</option>
+                <!-- <option value="India">India</option>
                 <option value="Russia">Russia</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Sri Lanka">Sri Lanka</option>
                 <option value="USA">USA</option>
-                <option value="UK">UK</option>
+                <option value="UK">UK</option> -->
             </select>
         </div>
         <div class="form-group">
@@ -215,3 +215,6 @@ $("#donorregistrationForm").submit(function(e) {
 
 });
 </script>
+
+<?php include "footer.php";
+?>

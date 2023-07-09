@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notification Example</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#notificationCount {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#notificationContainer {
+    margin-top: 10px;
+}
+
+.notification {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+</style>
+<body>
+    <form id="messageForm">
+        <input type="text" id="messageInput" placeholder="Enter your message">
+        <button type="submit">Send Message</button>
+    </form>
+
+    <span id="notificationCount"></span>
+    <div id="notificationContainer"></div>
+
+    <script>
+
+var count = 0;
+var messages = [];
+
+// Check if the notification count and messages are stored in localStorage
+if (localStorage.getItem('notificationCount')) {
+    count = parseInt(localStorage.getItem('notificationCount'));
+    document.getElementById('notificationCount').textContent = count;
+}
+
+if (localStorage.getItem('messages')) {
+    messages = JSON.parse(localStorage.getItem('messages'));
+    showStoredMessages();
+}
+
+document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var messageInput = document.getElementById('messageInput').value;
+    showMessageNotification(messageInput);
+    document.getElementById('messageInput').value = '';
+});
+
+function showMessageNotification(message) {
+    count++;
+    document.getElementById('notificationCount').textContent = count;
+
+    messages.push(message);
+    localStorage.setItem('notificationCount', count);
+    localStorage.setItem('messages', JSON.stringify(messages));
+
+    var notification = document.createElement('div');
+    notification.textContent = 'New message: ' + message;
+    notification.className = 'notification';
+    notification.addEventListener('click', function() {
+        this.style.display = 'none';
+        count--;
+        if (count < 0) {
+            count = 0;
+        }
+        document.getElementById('notificationCount').textContent = count;
+        localStorage.setItem('notificationCount', count);
+    });
+
+    document.getElementById('notificationContainer').appendChild(notification);
+    document.getElementById('notificationContainer').scrollTop = document.getElementById('notificationContainer').scrollHeight;
+}
+
+function showStoredMessages() {
+    for (var i = 0; i < messages.length; i++) {
+        var notification = document.createElement('div');
+        notification.textContent = 'New message: ' + messages[i];
+        notification.className = 'notification';
+        notification.addEventListener('click', function() {
+            this.style.display = 'none';
+            count--;
+            if (count < 0) {
+                count = 0;
+            }
+            document.getElementById('notificationCount').textContent = count;
+            localStorage.setItem('notificationCount', count);
+        });
+
+        document.getElementById('notificationContainer').appendChild(notification);
+        document.getElementById('notificationContainer').scrollTop = document.getElementById('notificationContainer').scrollHeight;
+    }
+}
+
+    </script>
+</body>
+</html>

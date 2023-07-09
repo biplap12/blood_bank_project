@@ -20,17 +20,23 @@ include "../database/dbConnect.php";
                 <input type="email" name="email" id="email" placeholder="example@example.com" required><br>
                 <label class="textare" for="message">Message:</label>
                 <textarea class="textarea" rows="5" cols="100" id="message" placeholder="Your Message...." required
-                    name="message" maxlength="999" style="resize:none"></textarea><br>
+                    name="message" maxlength="999" style="resize:none"></textarea><br><br>
                 <button type="submit" class="messageSendButton"><i class="fa-sharp fa-solid fa-paper-plane"></i> Send
-                    message</button>
+                    Message</button>
             </form>
         </div>
         <div class="company_Details">
             <h1>Contact Details</h1>
-            <h2> Blood Bank <br> Kathmandu.Nepal</h2>
-            <h2>98000000</h2>
-            <h2>bloodbank@gmail.com</h2>
-            <h2>www.blodbank.com</h2>
+            <h3> Blood Bank <br> Kathmandu.Nepal</h3>
+            <h3><i class="fa-solid fa-phone"></i> 9812345678</h3>
+            <h3><i class="fa-solid fa-envelope"></i> <a href="#"> bloodbank@gmail.com</a></h3>
+            <h3><i class="fa-solid fa-clock"></i> 24*7</h3>
+            <h3><i class="fa-solid fa-globe"></i> <a href="../Client/index.php">www.blodbank.org.np</a></h3>
+            <h1><a href=""><i class="fa-brands fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;<a href=""><i
+                        class="fa-brands fa-twitter"></i></a>
+                &nbsp;&nbsp;&nbsp;<a href=""><i class="fa-brands fa-square-instagram"></i></a>
+
+            </h1>
         </div>
 
     </div>
@@ -75,7 +81,7 @@ $("#messagefromuser").submit(function(e) {
             //  $("#success-msg").show();
             swal({
                 title: "Success!",
-                text: "message Send Successfully!",
+                text: "Message Send Successfully!",
                 icon: "success"
             }).then(function() {
                 // Redirect to the homepage

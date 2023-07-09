@@ -1,9 +1,10 @@
 <?php
 
 include "../header/header.php";
-// if($_SESSION['username']!=="admin"){
-// die("Only admin can use this page");
-// };
+if($_SESSION['username']!=="admin"){
+    header("location:../index");
+die("");
+};
 
 
 

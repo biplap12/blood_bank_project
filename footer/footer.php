@@ -1,5 +1,7 @@
 <footer>
-    <h2>Copyright © Blood Bank</h2>
+    <h2> <?php
+    echo date("Y") ;
+    ?>Copyright © Blood Bank</h2>
 
 </footer>
 </div>
