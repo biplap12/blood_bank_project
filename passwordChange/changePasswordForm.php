@@ -1,4 +1,14 @@
-<?php include "../database/dbConnect.php";?>
+<?php
+
+include "../database/dbConnect.php";
+// include "../header/header.php";
+
+$username=$_GET['username'];
+$q="SELECT * FROM `tbl_user` WHERE username='$username'";
+$result=mysqli_query($con,$q);
+$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,14 +19,10 @@
     <title>Blood Bank</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css?v=<?php echo Time();?>">
-
-
-    <script src="../js/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="loader.css?v=<?php echo Time();?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 
 
@@ -30,8 +36,7 @@
 
     <form method="post" id="changePasswordForm">
         <div class="box-form">
-            <div class="closeButtonInSigninSignup"><a href="../index/index.php"><i
-                        class="fa-solid fa-circle-xmark"></i></a>
+            <div class="closeButtonInSigninSignup"><a href="../index"><i class="fa-solid fa-circle-xmark"></i></a>
             </div>
             <div class="left">
                 <div class="overlay">
@@ -47,7 +52,8 @@
                 <div class="login_inputs">
 
                     <input type="hidden" id="password" value="<?php echo $row['password']; ?>">
-                    <input type="password" name="current_password" id="current_password" placeholder="Current Password">
+                    <input type="password" name="current_password" id="current_password" placeholder="Current Password"
+                        value="<?php echo $row['password'];?>">
                     <input type="password" name="new_password" id="new_password" placeholder="New Password">
                     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
 
@@ -56,7 +62,7 @@
                 <button type="submit" class="submitBtn" id="updatebtn">Change</button>
             </div>
     </form>
-    <div id="loader" style=" display: none; ">
+    <div id="loader" style="display:none;">
         <div class="loading">
             <span></span>
             <span></span>
@@ -112,7 +118,7 @@
             // Make the AJAX request
             $.ajax({
                 url: "changepassword.php",
-                type: 'POST',
+                type: 'post',
                 data: {
                     oldPassword: oldPassword,
                     new_password: newPassword
@@ -128,7 +134,7 @@
                         icon: "success"
                     }).then(function() {
                         // Redirect to the homepage
-                        window.location.href = "../index/index.php";
+                        // window.location.href = "../index/index.php";
                     });
                 },
                 error: function(xhr, status, error) {
@@ -142,3 +148,7 @@
         });
     });
     </script>
+    </div>
+    </div>
+
+    <?php  include "../footer/footer.php"; ?>
