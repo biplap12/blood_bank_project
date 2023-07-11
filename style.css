@@ -824,6 +824,12 @@ display: none;
 
 }
 
+.text_danger{
+	color: red;
+	background-color: #000000;
+	font-size: 50px;
+}
+
 .dis{
 text-decoration: none;
 display: inline;

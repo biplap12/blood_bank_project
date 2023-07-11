@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <form action="../savedata/saveuser.php" method="post" id="bloodBankForm" onsubmit="return validateForm()">
+        <div class="box-form">
+            <div class="closeButtonInSigninSignup"><a href="../login/loginForm.php"><i
+                        class="fa-solid fa-circle-xmark"></i></a>
+            </div>
+            <div class="left">
+                <div class="overlay">
+                    <h1>Blood Bank</h1>
+                </div>
+            </div>
+            <div class="right">
+                <h5>SignUP</h5>
+                <p class="signupRedirect">Already have an account? <a href="../login/loginForm.php">Login Your
+                        Account</a> it takes less than a
+                    minute
+                </p>
+                <div class="login_inputs">
+                    <input type="text" name="name" placeholder="Name" id="nameforsignin">
+                    <p class="text_danger"><?php if(isset($errors['n'])) echo $errors['n']; ?></p>
+                    <input type="tel" name="phone" placeholder="Phone Number" id="pnforsignin">
+                    <p class="text_danger"><?php if(isset($errors['p'])) echo $errors['p']; ?></p>
+                    <input type="email" name="email" placeholder="Email" id="emailforsignin">
+                    <p class="text_danger"><?php if(isset($errors['e'])) echo $errors['e']; ?></p>
+                    <input type="text" name="username" placeholder="UserName" id="usernameforsignin"
+                        onInput="checkUsername()">
+                    <span id="check-username"></span>
+                    <p class="text_danger"><?php if(isset($errors['u'])) echo $errors['u']; ?></p>
+                    <input type="password" name="password" id="Current_password" placeholder="Password">
+                    <button type="button" id="passwordShowHide" onclick="showPassword()">
+                        <i class="fas fa-eye"></i></button>
+                    <p class="text_danger"><?php if(isset($errors['pw'])) echo $errors['pw']; ?></p>
+                </div>
+                <br>
+                <div class="closeButtonInSigninSignupSmallScreen"><a href="../login/loginForm.php"><i
+                            class="fa fa-arrow-left" style="font-size: 20px; color: black; "></i></a>
+                </div>
+                <button class="submitBtn" type="submit">Sign UP</button>
+            </div>
+
+    </form>
+    <div id="loader" style=" display: none; ">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+
+
+    <!-- 
+    <script type="text/javascript">
+    $(document).ready(function() {});
+    $("#bloodBankForm").submit(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: "../savedata/saveuser.php",
+            type: "post",
+            data: new FormData(this),
+            timeout: 20000,
+            processData: false,
+            contentType: false,
+            beforeSend: function() {
+                $("#bloodBankForm").show();
+                $("#loader").show();
+
+
+            },
+            success: function(response, data, status) {
+                $("#loader").hide();
+                //  $("#success-msg").html(data);
+                //  $("#success-msg").show();
+                swal({
+                    title: "Success!",
+                    text: "Signin successfull",
+                    icon: "success"
+                }).then(function() {
+                    // Redirect to the homepage
+                    window.location.href = "../login/loginForm.php";
+                });
+
+
+
+            },
+            error: function(xhr, data, status) {
+                $("#loader").hide();
+                $("#error-msg").html(data);
+                $("#error-msg").show();
+                // location.replace("../update/updateUserByAdmin.php")
+                // swal("Success!", "Form updated successfully!", "success"); 
+                swal({
+                    title: "Error!",
+                    text: "Something went Wrong",
+                    icon: "error"
+                }).then(function() {
+                    // Redirect to the homepage
+                    location.replace("../signup/signup.php")
+                });
+
+
+
+            }
+
+        });
+
+    });
+    </script> -->
+
+
+    <script>
+    function showPassword() {
+        let password = document.getElementById("Current_password");
+        var button = document.getElementById("passwordShowHide")[0];
+        if (password.type === "password") {
+            password.type = "text";
+            passwordShowHide.innerHTML = "<i class='fas fa-eye-slash'></i>";
+            passwordShowHide.style.backgroundRepeat = "no-repeat";
+            passwordShowHide.style.backgroundPosition = "center";
+        } else {
+            password.type = "password";
+            passwordShowHide.innerHTML = "<i class='fas fa-eye'></i>";
+            passwordShowHide.style.backgroundRepeat = "no-repeat";
+            passwordShowHide.style.backgroundPosition = "center";
+        }
+
+    }
+    </script>
+
+    <!-- <script src="../js/signupAJAX.js"></script> -->
+
+    <!-- 
+    <script>
+    function validateForm() {
+        let name = document.getElementById("nameforsignin").value;
+        let pattern = /[^ a-z || A-Z]/i;
+        let result = pattern.test(name);
+        console.log(name);
+        if (name == "") {
+            name.style = "border-bottom:2px solid red"
+        }
+    }
+    </script> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function checkUsername() {
+
+        jQuery.ajax({
+            url: "../savedata/saveuser.php",
+            data: 'username=' + $("#username").val(),
+            type: "POST",
+            success: function(data) {
+                $("#check-username").html(data);
+            },
+            error: function() {}
+        });
+    }
+    </script>
+
+    <!-- ****** -->
