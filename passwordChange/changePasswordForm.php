@@ -19,7 +19,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
     <title>Blood Bank</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css?v=<?php echo Time();?>">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -134,7 +134,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                         icon: "success"
                     }).then(function() {
                         // Redirect to the homepage
-                        // window.location.href = "../index/index.php";
+                        window.location.href = "../index/index.php";
                     });
                 },
                 error: function(xhr, status, error) {
@@ -150,5 +150,3 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
     </script>
     </div>
     </div>
-
-    <?php  include "../footer/footer.php"; ?>

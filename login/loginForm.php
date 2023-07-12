@@ -55,7 +55,7 @@ if (isset($_COOKIE['password'])){
                 </div>
                 <div class="right">
                     <h5>Login</h5>
-                    <p class="signupRedirect">Don't have an account? <a href="../signup/signupDummy.php">Create Your
+                    <p class="signupRedirect">Don't have an account? <a href="../signup/signup.php">Create Your
                             Account</a> it takes less than a minute.</p>
 
                     <div class="login_inputs">
