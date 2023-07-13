@@ -87,7 +87,6 @@
                 <input type="radio" value="none" id="female" name="gender" />
                 <label for="female" class="radio_btn">Female</label>
               </div>
-                
                   <div class="birthdate">
               <label>Birthdate:<span>*</span></label>
                 <input type="date" id="dob">
