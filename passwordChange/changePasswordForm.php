@@ -52,8 +52,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                 <div class="login_inputs">
 
                     <input type="hidden" id="password" value="<?php echo $row['password']; ?>">
-                    <input type="password" name="current_password" id="current_password" placeholder="Current Password"
-                        value="<?php echo $row['password'];?>">
+                    <input type="password" name="current_password" id="current_password" placeholder="Current Password">
                     <input type="password" name="new_password" id="new_password" placeholder="New Password">
                     <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
 

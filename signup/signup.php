@@ -26,7 +26,7 @@
 
 
 
-    <form method="post" id="bloodBankForm" onsubmit="return validateForm()">
+    <form method="post" id="bloodBankForm">
         <div class="box-form">
             <div class="closeButtonInSigninSignup"><a href="../login/loginForm.php"><i
                         class="fa-solid fa-circle-xmark"></i></a>
@@ -43,8 +43,10 @@
                     minute
                 </p>
                 <div class="login_inputs">
-                    <input type="text" name="name" placeholder="Name" id="nameforsignin">
-                    <input type="tel" name="phone" placeholder="Phone Number" id="pnforsignin" required>
+                    <input type="text" name="name" placeholder="Name" pattern="[A-Za-z ]{3,50}" id="nameforsignin"
+                        title="Please enter your full name" required>
+                    <input type="tel" name="phone" placeholder="98XXXXXXXX" pattern="[0-9]{10}" id="pnforsignin"
+                        required>
 
                     <input type="email" name="email" placeholder="Email" id="emailforsignin" required>
                     <input type="text" name="username" placeholder="UserName" id="usernameforsignin" required>
