@@ -8,7 +8,7 @@
             </li>
             <li><a href="../searchDonor/searchdonor.php"><i class="fa-solid fa-magnifying-glass"></i>Search Blood</a>
             </li>
-            <li><a href="../displaydata/activedonor.php"><i class="fa-solid fa-users" style="color: #35f500;"></i>Active
+            <li><a href="../displaydata/activedonor.php"><i class="fa-solid fa-users" style="color: #068D0F;"></i>Active
                     Doners</a></li>
             <li><a href="../displaydata/donordisplay.php"><i class="fa-solid fa-users"></i>Not Active Donor</a></li>
             <li><a href="../displaydata/needblooddisplay.php"><i class="fa-solid fa-bed"></i>Need Blood</a></li>
