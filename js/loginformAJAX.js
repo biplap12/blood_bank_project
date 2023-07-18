@@ -36,7 +36,7 @@ $("#bloodBankForm").submit(function(e) {
                 title: 'Loged in successfully'
             }).then(function() {
                 // Redirect to the homepage
-                location.replace("../index/index.php");
+                location.replace("../admin/dashboard.php");
             });
 
         },
@@ -57,10 +57,10 @@ $("#bloodBankForm").submit(function(e) {
 
             Toast.fire({
                 icon: 'error',
-                title: 'error to Log in'
-            }).then(function() {
-                // Redirect to the homepage
-                location.replace("../login/loginForm.php");
+                title: 'Error to Log in'
+            // }).then(function() {
+            //     // Redirect to the homepage
+            //     location.replace("../login/loginForm.php");
             });
 
         },

@@ -3,8 +3,8 @@
 include "../database/dbConnect.php";
 // include "../header/header.php";
 
-$username=$_GET['username'];
-$q="SELECT * FROM `tbl_user` WHERE username='$username'";
+$uid=$_GET['id'];
+$q="SELECT * FROM `tbl_user` WHERE id=$uid";
 $result=mysqli_query($con,$q);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -54,9 +54,20 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                         <input type="hidden" id="password" value="<?php echo $row['password']; ?>">
                         <input type="password" name="current_password" id="current_password"
                             placeholder="Current Password">
+                        <button type="button" class="passwordShowHide"
+                            onclick="togglePasswordVisibility('current_password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
                         <input type="password" name="new_password" id="new_password" placeholder="New Password">
+                        <button type="button" class="passwordShowHide"
+                            onclick="togglePasswordVisibility('new_password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
                         <input type="password" name="confirm_password" id="confirm_password"
                             placeholder="Confirm Password">
+                        <button type="button" class="passwordShowHide"
+                            onclick="togglePasswordVisibility('confirm_password')">
+                            <i class="fas fa-eye"></i></button>
 
                     </div>
                     <br>
@@ -135,7 +146,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                         icon: "success"
                     }).then(function() {
                         // Redirect to the homepage
-                        window.location.href = "../index/index.php";
+                        window.location.href = "../admin/dashboard.php";
                     });
                 },
                 error: function(xhr, status, error) {
@@ -148,6 +159,23 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
             });
         });
     });
+
+
+    // password show hide 
+
+    function togglePasswordVisibility(inputId) {
+        var input = document.getElementById(inputId);
+        var button = input.nextElementSibling;
+
+        if (input.type === "password") {
+            input.type = "text";
+            button.innerHTML = "<i class='fas fa-eye-slash'></i>";
+        } else {
+            input.type = "password";
+            button.innerHTML = "<i class='fas fa-eye'></i>";
+        }
+    }
     </script>
+
     </div>
     </div>

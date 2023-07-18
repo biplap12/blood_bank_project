@@ -1,6 +1,6 @@
 <div class="dashboard">
     <div class="sidebar">
-        <h1><a href="../displaydata/displaymessage.php"><i class="fa-solid fa-gauge"></i>Dashboard</a></h1>
+        <h1><a href="../admin/dashboard.php"><i class="fa-solid fa-gauge"></i>Dashboard</a></h1>
         <hr>
         <ul>
             <li><a href="../displaydata/displaymessage.php"><i class="fa-sharp fa-solid fa-envelope"></i>
@@ -12,7 +12,6 @@
                     Doners</a></li>
             <li><a href="../displaydata/donordisplay.php"><i class="fa-solid fa-users"></i>Not Active Donor</a></li>
             <li><a href="../displaydata/needblooddisplay.php"><i class="fa-solid fa-bed"></i>Need Blood</a></li>
-
 
         </ul>
     </div>

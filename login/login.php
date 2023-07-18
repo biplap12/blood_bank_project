@@ -9,9 +9,10 @@ $q="SELECT * FROM `tbl_user` WHERE `username`='$username' and `password`='$passw
 
 $result=mysqli_query($con,$q)  or die(mysqli_error($con)) ;
 
-if(mysqli_fetch_array($result,MYSQLI_ASSOC)){
+if($data=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 
-   $_SESSION['username']=$username;
+    $_SESSION['username']=$username;
+    $_SESSION['uid']=$data["id"];
    if(isset($_POST['remember_user'])){
     setcookie("username",$username,time()+60*60*24*2);
     setcookie("password",$password,time()+60*60*24*2);

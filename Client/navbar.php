@@ -36,7 +36,6 @@
                         <li class="navbar-item"><a class="navbar-link" href="index.php">Home</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="AboutClient.php">About</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="donor.php">Service</a></li>
-                        <!-- <li class="navbar-item"><a class="navbar-link" href="">Patient</a></li> -->
                         <li class="navbar-item"><a class="navbar-link" href="messageUsForm.php">Contact</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="../login/loginForm.php">Admin</a></li>
                     </ul>

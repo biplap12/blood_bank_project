@@ -1165,14 +1165,17 @@ background-color: rgb(255, 0, 0);
   	
   }
   
-  .sidebar h1 {
-	font-size: 28px;
-	/* margin-bottom: 10px; */
-	text-align: start;
-  }
+ 
+ 
   .sidebar h1 a{
 	text-decoration: none;
 	color: red;
+	font-size: 28px;
+	/* margin-bottom: 10px; */
+	text-align: start;
+	border-radius: 5px;
+	width: 100%;
+	display: block;
   }
   
   .sidebar hr {
@@ -1215,7 +1218,7 @@ background-color: rgb(255, 0, 0);
 	
   }
  
-  .sidebar ul a:hover{
+  .sidebar ul a:hover , .sidebar h1 a:hover{
 	background-color: red;
 	color: white;
 	transition: 0.5s ease-in;
@@ -1486,3 +1489,63 @@ background-color: rgb(255, 0, 0);
 	 font-weight: 500;
  }
 
+
+ /* dashboard */
+
+ 
+.dashboard_admin {
+    max-width: 2000px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard_heading {
+	margin-top: 70px;
+    text-align: center;
+    margin-bottom: 20px;
+	font-size: 35px;
+	color: red;
+
+}
+
+.dashboard_box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dashboard_box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard_box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.dashboard_box p {
+    color: #ff0000;
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: 500;
+}
+
+.dashboard_btn {
+    display: inline-block;
+    width: 80%;
+    padding: 10px 15px;
+    background-color: #f70404;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard_btn:hover {
+    background-color: #830808;
+}
