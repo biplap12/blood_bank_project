@@ -1,38 +1,4 @@
 <?php
-
-// try{
-
-// $name=$_POST['name'];
-// $phone=$_POST['phone'];
-// $email=$_POST['email'];
-// $username=$_POST['username'];
-// $password=$_POST['password'];
-// $status="Pending";
-// // connection()
-// // select database
-// // executing query
-
-// include "../database/dbConnect.php";
-
-// $q=" INSERT INTO `tbl_user`( `name` , `phone` , `email` , `username`, `password`, `status`) VALUES ('$name','$phone','$email','$username','$password','$status')";
-// $result=mysqli_query($con,$q);
-
-
-// sleep(2);
-// // echo "success";
-// // header("location:loginForm.php");
-// }
-// catch(Exception $e){
-// 	throw $e;
-// }
-
-
-
-
-// *****************************************
-
-
-
 try {
     // Retrieve form data
     $name = $_POST['name'];
@@ -40,6 +6,7 @@ try {
     $email = $_POST['email'];
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $signUpDate=$_POST['signUpDate'];
     $status = "Pending";
     
     // Connection
@@ -56,11 +23,12 @@ try {
     }
     
     // Insert the data if it doesn't exist
-    $insertQuery = "INSERT INTO `tbl_user` (`name`, `phone`, `email`, `username`, `password`, `status`) VALUES ('$name', '$phone', '$email', '$username', '$password', '$status')";
+    $insertQuery = "INSERT INTO `tbl_user` (`signUpDate` , `name`, `phone`, `email`, `username`, `password`, `status`) VALUES ('$signUpDate','$name', '$phone', '$email', '$username', '$password', '$status')";
     $result = mysqli_query($con, $insertQuery);
     
     if ($result) {
         echo "Success";
+        sleep(2);
     } else {
         echo "Error inserting data";
     }

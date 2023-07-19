@@ -52,7 +52,7 @@ if (!isset($_SESSION['username'])){
             <?php 
             if($_SESSION['username']==="admin")
             {
-                echo '<li> <a href="../admin/dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>';
+                // echo '<li> <a href="../admin/dashboard.php"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>';
                 echo '<li> <a href="../displaydata/displayuser.php"><i class="fa-solid fa-users"></i> Users</a></li>';
              }
                 

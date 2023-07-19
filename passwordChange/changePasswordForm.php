@@ -36,7 +36,8 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
     <form method="post" id="changePasswordForm">
         <div class="box-form">
-            <div class="closeButtonInSigninSignup"><a href="../index"><i class="fa-solid fa-circle-xmark"></i></a>
+            <div class="closeButtonInSigninSignup"><a href="../admin/dashboard.php"><i
+                        class="fa-solid fa-circle-xmark"></i></a>
             </div>
             <div class="left">
                 <div class="overlay">

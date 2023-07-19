@@ -12,7 +12,6 @@ include "../database/dbConnect.php";
                 <label for="Name">Full Name:</label>
                 <input type="text" name="fullname" id="fullname" placeholder="Full Name" pattern="[A-Za-z ]{3,50}"
                     required title="Please enter your valid name"><br>
-
                 <label for="Phone">Phone Number:</label>
                 <input type="tel" name="phone" id="phone" placeholder="9800000000" pattern="[0-9]{10}" required
                     title="Please enter 10-digit number" required> <br>
@@ -23,6 +22,7 @@ include "../database/dbConnect.php";
                     name="message" maxlength="999" style="resize:none"></textarea><br><br>
                 <button type="submit" class="messageSendButton"><i class="fa-sharp fa-solid fa-paper-plane"></i> Send
                     Message</button>
+                <input type="hidden" name="messageDateTime" value="<?php echo date('Y/m/d-H:i'); ?>">
             </form>
         </div>
         <div class="company_Details">

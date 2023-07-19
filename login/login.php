@@ -4,6 +4,7 @@ session_start();
 $username=$_POST['username'];
 $password=$_POST['password'];
 
+
 include "../database/dbConnect.php";
 $q="SELECT * FROM `tbl_user` WHERE `username`='$username' and `password`='$password' and status='Active'";  // and status='Active'"
 
@@ -13,6 +14,7 @@ if($data=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 
     $_SESSION['username']=$username;
     $_SESSION['uid']=$data["id"];
+  $_SESSION['name']=$data['name'];
    if(isset($_POST['remember_user'])){
     setcookie("username",$username,time()+60*60*24*2);
     setcookie("password",$password,time()+60*60*24*2);

@@ -20,7 +20,10 @@ die("");
 </style>
 
 <div class="main-content">
-    <div class="title">Display Users</div>
+    <div class="title userprofile">
+        <span>Display Users</span>
+        <a href="../admin/dashboard.php"><i class="fa-solid fa-xmark"></i></a>
+    </div>
     <div class="content">
         <div id="show-table"></div>
 
