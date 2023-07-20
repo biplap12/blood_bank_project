@@ -10,7 +10,7 @@ $table="";
 $table.= "<table class='display_table'>";
 $table.="<thead>";
 $table.="<tr>";
-$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>City</th><th>State</th><th>Phone1</th><th>Phone2</th><th>View</th><th>Delete</th>";
+$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th><th>View</th><th>Delete</th>";
 $table.="</tr>";
 $table.="</thead>";
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -29,18 +29,12 @@ $table.="</td>";
 $table.="<td>";
 $table.=$row["bloodgroup"];
 $table.="</td>";
+
+
 $table.="<td>";
-$table.=$row["city"];
+$table.=$row["phone"];
 $table.="</td>";
-$table.="<td>";
-$table.=$row["state"];
-$table.="</td>";
-$table.="<td>";
-$table.=$row["phone1"];
-$table.="</td>";
-$table.="<td>";
-$table.=$row["phone2"];
-$table.="</td>";
+
 $table.="<td><a onclick=\" return ActivateUser($id)\" class='dis update' href='javascript:void(0)'>View</a></td>";
 $table.="<td><a onclick=\" return Delete($id)\" class='dis deleteitem' href='javascript:void(0)'>Delete</a></td>";
 $table.="</tbody>";
@@ -78,13 +72,9 @@ function ActivateUser(id) {
         .then((Active) => {
             if (Active) {
                 window.location.href = '../view/viewdonor.php?id=' + id;
-
-                // swal("File has been Activate!", {
-                //     icon: "success",
-                // });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("File has not been Activate!", {
+                swal("Failed to View user.", {
                     icon: "error",
                 });
             }

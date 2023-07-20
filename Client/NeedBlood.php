@@ -41,27 +41,32 @@ include "service.php";
             <textarea type="textarea" id="textarea" cols="84" name="hospitalNameAddress" rows="5" maxlength="999"
                 style="resize:none;border-radius:5px;font-size:18px" required></textarea>
         </div>
+
         <div class="form-group">
+            <label for="resionforblood">Reason For Blood:</label>
+            <input type="text" name="reasonforblood" id="ReasonForBlood" required>
+        </div>
+        <!-- <div class="form-group">
             <label for="country">Country:</label>
-            <select id="country" name="country" required>
-                <!-- <option value=""></option> -->
-                <option value="Nepal">Nepal</option>
-                <!-- <option value="Armenia">Armenia</option>
+            <select id="country" name="country" required> -->
+        <!-- <option value=""></option> -->
+        <!-- <option value="Nepal">Nepal</option> -->
+        <!-- <option value="Armenia">Armenia</option>
                 <option value="Russia">Russia</option>
                 <option value="Germany">Germany</option>
                 <option value="France">France</option>
                 <option value="USA">USA</option>
                 <option value="UK">UK</option> -->
-            </select>
-        </div>
+        <!-- </select> -->
+        <!-- </div> -->
         <div class="form-group">
             <label for="city">City:</label>
             <input type="text" name="city" id="city" required>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="doctorname">Doctor Name:</label>
             <input type="text" name="doctorname" id="doctorname" required>
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="requiredDate">When Required:</label>
             <input type="date" name="requiredate" id="requiredDate" required>
@@ -70,23 +75,23 @@ include "service.php";
             <label for="contactName">Contact Name:</label>
             <input type="text" name="contactname" id="contactName" required>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="address">Address:</label>
             <textarea type="textarea" id="textarea" cols="84" name="needbloodaddress" rows="5" maxlength="999"
                 style="resize:none;border-radius:5px;font-size:18px" required></textarea>
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="Email">Email ID:</label>
             <input type="email" name="email" id="Email" required>
         </div>
         <div class="form-group">
-            <label for="phone">Phone No.1:</label>
-            <input type="tel" name="phone1" id="phone1" required>
+            <label for="phone">Phone No.:</label>
+            <input type="tel" name="phone" id="phone" required>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="phone">Phone No.2:</label>
             <input type="tel" name="phone2" id="phone2" required>
-        </div>
+        </div> -->
         <!-- <div class="form-group">
                 <label for="gender">Gender:</label>
                 <div class="radio-group">
@@ -96,19 +101,15 @@ include "service.php";
                     <label for="female" class="radio-label">Female</label>
                 </div>
             </div> -->
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="birthdate">Birthdate:</label>
             <input type="date" name="birthdate" id="birthdate" required>
-        </div>
-        <div class="form-group">
-            <label for="address">Reason For Blood:</label>
-            <textarea type="textarea" id="ReasonForBlood" cols="84" name="reasonforblood" rows="5" maxlength="999"
-                style="resize:none;border-radius:5px;font-size:18px" required></textarea>
-        </div>
-        <div class="form-group">
+        </div> -->
+
+        <!-- <div class="form-group">
             <label for="uploadphoto">Upload Photo:</label>
             <input type="file" name="uploadphoto" id="uploadphoto" required>
-        </div>
+        </div> -->
         <div class="form-group">
             <button type="submit">Submit</button>
         </div>

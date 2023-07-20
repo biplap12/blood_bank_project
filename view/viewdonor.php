@@ -7,7 +7,6 @@ $id = $_GET["id"];
 $q = "SELECT * FROM `donors` WHERE id=$id";
 $result = mysqli_query($con, $q);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-$photo = $row['photo'];
 
 $status = $row["status"];
 $buttonColor = ($status == "Active") ? "green" : "red";
@@ -24,21 +23,13 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
             <table class="message-table">
 
                 <div class="viewitem">
-                    <div class="viewitemsbox">
-                        <div> <img class="responsive" width="200px" src="../img/donor_images/<?php echo $photo ?>"
-                                alt="Image" srcset=""></div>
-                    </div>
+
                     <div class="viewitemsbox">
                         <div class="viewitems">
                             <h2>Donor Name:</h2>
                             <h2><?php echo $row ["fullname"];?></h2>
                         </div>
                         <hr class="viewitemhr">
-                        <hr class="viewitemhr">
-                        <div class="viewitems">
-                            <h2>Father Name:</h2>
-                            <h3><?php echo $row ["fathername"];?></h3>
-                        </div>
                         <hr class="viewitemhr">
                         <div class="viewitems">
                             <h2>Gender: </h2>
@@ -49,45 +40,23 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
                             <h2>Blood Group:</h2>
                             <h3><?php echo $row ["bloodgroup"];?></h3>
                         </div>
-                        <hr class="viewitemhr">
-                        <div class="viewitems">
-                            <h2>Ward No.:</h2>
-                            <h3><?php echo $row ["wardno"];?></h3>
-                        </div>
+
                         <hr class="viewitemhr">
                         <div class="viewitems">
                             <h2>Address:</h2>
                             <h3><?php echo $row ["address"];?></h3>
                         </div>
-                        <hr class="viewitemhr">
-                        <div class="viewitems">
-                            <h2>Country: </h2>
-                            <h3><?php echo $row ["country"];?></h3>
-                        </div>
-                        <hr class="viewitemhr">
-                        <div class="viewitems">
-                            <h2>City: </h2>
-                            <h3><?php echo $row ["city"];?></h3>
-                        </div>
-                        <hr class="viewitemhr">
-                        <div class="viewitems">
-                            <h2>state: </h2>
-                            <h3><?php echo $row ["state"];?></h3>
-                        </div>
+
                         <hr class="viewitemhr">
                         <div class="viewitems">
                             <h2>Email:</h2>
                             <h3><?php echo $row ["email"];?></h3>
                         </div>
+
                         <hr class="viewitemhr">
                         <div class="viewitems">
-                            <h2>Phone No.1: </h2>
-                            <h3><?php echo $row ["phone1"];?></h3>
-                        </div>
-                        <hr class="viewitemhr">
-                        <div class="viewitems">
-                            <h2>Phone No.2:</h2>
-                            <h3><?php echo $row ["phone2"];?></h3>
+                            <h2>Phone No.:</h2>
+                            <h3><?php echo $row ["phone"];?></h3>
                         </div>
                         <hr class="viewitemhr">
                         <div class="viewitems">

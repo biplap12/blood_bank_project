@@ -102,7 +102,7 @@ $name=$_SESSION['name'];
                 ?>
             <h1><?= $total_pendings;?></h1>
             <p>Pending Blood Request</p>
-            <a href="../displaydata/needblooddisplay.php" class="dashboard_btn">View</a>
+            <a href="../displaydata/pendingBloodRequest.php" class="dashboard_btn">View</a>
         </div>
 
         <div class="dashboard_box">
@@ -114,7 +114,7 @@ $name=$_SESSION['name'];
                 ?>
             <h1><?= $total_Not_Completed;?></h1>
             <p>Approved Blood Request</p>
-            <a href="../displaydata/needblooddisplay.php" class="dashboard_btn">View</a>
+            <a href="../displaydata/ApprovedBloodRequest.php" class="dashboard_btn">View</a>
         </div>
 
         <div class="dashboard_box">
@@ -126,7 +126,7 @@ $name=$_SESSION['name'];
                 ?>
             <h1><?= $total_Completed;?></h1>
             <p>Completed Blood Request</p>
-            <a href="../displaydata/needblooddisplay.php" class="dashboard_btn">View</a>
+            <a href="../displaydata/completedBloodRequest.php" class="dashboard_btn">View</a>
         </div>
 
 
@@ -142,19 +142,19 @@ $name=$_SESSION['name'];
     <div class="dashboard_box">
         <h1>' . $Active_user . '</h1>
         <p>Active User</p>
-        <a href="../displaydata/displayuser.php" class="dashboard_btn">View</a>
+        <a href="../displaydata/activeUser.php" class="dashboard_btn">View</a>
     </div>
 
     <div class="dashboard_box">
         <h1>' . $total_pendings_user . '</h1>
         <p>Pending User</p>
-        <a href="../displaydata/displayuser.php" class="dashboard_btn">View</a>
+        <a href="../displaydata/pendingUser.php" class="dashboard_btn">View</a>
     </div>
 
     <div class="dashboard_box">
         <h1>' . $total_deactivate_user . '</h1>
         <p>Deactive User</p>
-        <a href="../displaydata/displayuser.php" class="dashboard_btn">View</a>
+        <a href="../displaydata/deactiveUser.php" class="dashboard_btn">View</a>
     </div>
     ';
 }

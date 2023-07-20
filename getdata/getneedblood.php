@@ -10,7 +10,7 @@ $table="";
 $table.= "<table class='display_table'>";
 $table.="<thead>";
 $table.="<tr>";
-$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Hospital</th><th>Phone</th><th>Complete Date</th><th>Status</th><th>Update</th>";
+$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Hospital</th><th>Phone</th><th>Complete Date</th><th>Status</th><th>View</th>";
 $table.="</tr>";
 $table.="</thead>";
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -33,7 +33,7 @@ $table.="<td>";
 $table.=$row["hospitalNameAddress"];
 $table.="</td>";
 $table.="<td>";
-$table.=$row["phone1"];
+$table.=$row["phone"];
 $table.="</td>";
 $table.="<td>";
 $table.=$row["completeDate"];

@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
     $table.= "<table class='display_table'>";
     $table.="<thead>";
     $table.="<tr>";
-    $table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>State</th><th>City</th><th>Phone1</th><th>Phone2</th><th>View</th>";
+    $table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th><th>View</th>";
     $table.="</tr>";
     $table.="</thead>";
     while ($row = $result->fetch_assoc()) {
@@ -35,19 +35,11 @@ if ($result->num_rows > 0) {
         $table.="<td>";
         $table.=$row["bloodgroup"];
         $table.="</td>";
+        
         $table.="<td>";
-        $table.=$row["state"];
+        $table.=$row["phone"];
         $table.="</td>";
-        $table.="<td>";
-        $table.=$row["city"];
-        $table.="</td>";
-        $table.="<td>";
-        $table.=$row["phone1"];
-        $table.="</td>";
-        $table.="<td>";
-        $table.=$row["phone2"];
-        $table.="</td>";
-        $table.="<td><a onclick=\" return viewDonor($id)\" class='dis update' href='javascript:void(0)'>View</a></td>";
+        $table.="<td><a onclick=\" return viewDonor($id)\" class='dis view' href='javascript:void(0)'>View</a></td>";
         $table.="</tbody>";
     }
         $table.="</table>";
@@ -90,12 +82,9 @@ function viewDonor(id) {
             if (Active) {
                 window.location.href = '../view/viewdonor.php?id=' + id;
 
-                // swal("File has been Activate!", {
-                //     icon: "success",
-                // });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("File has not been Activate!", {
+                swal("Failed to View donor.", {
                     icon: "error",
                 });
             }

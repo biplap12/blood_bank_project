@@ -54,7 +54,7 @@ $(document).ready(function() {
 
         // Make AJAX request to PHP script
         $.ajax({
-            url: '../getdata/getsearchblood.php',
+            url: '../getdata/getClientSearchblood.php',
             method: 'POST',
             data: {
                 search: searchTerm

@@ -8,7 +8,6 @@ $id=$_GET["id"];
 $q="SELECT * FROM `needblood` WHERE id=$id";
 $result=mysqli_query($con,$q);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-$photo=$row['photo'];
 
 ?>
 
@@ -25,12 +24,8 @@ $photo=$row['photo'];
 
         </div>
         <div class="viewitem">
-            <div class="viewitemsbox">
-                <div> <img class="responsive" width="200px" src="../img/needblood_images/<?php echo $photo ?>"
-                        alt="Image" srcset=""></div>
-            </div>
-            <div class="viewitemsbox">
 
+            <div class="viewitemsbox">
                 <div class="viewitems">
                     <h2>Patient Name:</h2>
                     <h3><?php echo $row ["patientname"];?></h3>
@@ -56,21 +51,13 @@ $photo=$row['photo'];
                     <h2>Hospital:</h2>
                     <h3><?php echo $row ["hospitalNameAddress"];?></h3>
                 </div>
-                <hr class="viewitemhr">
-                <div class="viewitems">
-                    <h2>Country:</h2>
-                    <h3><?php echo $row ["country"];?></h3>
-                </div>
+
                 <hr class="viewitemhr">
                 <div class="viewitems">
                     <h2>City:</h2>
                     <h3><?php echo $row ["city"];?></h3>
                 </div>
-                <hr class="viewitemhr">
-                <div class="viewitems">
-                    <h2>Doctor:</h2>
-                    <h3><?php echo $row ["doctorname"];?></h3>
-                </div>
+
                 <hr class="viewitemhr">
                 <div class="viewitems">
                     <h2>Require Date:</h2>
@@ -81,11 +68,7 @@ $photo=$row['photo'];
                     <h2>Contact Name:</h2>
                     <h3><?php echo $row ["contactname"];?></h3>
                 </div>
-                <hr class="viewitemhr">
-                <div class="viewitems">
-                    <h2>Address:</h2>
-                    <h3><?php echo $row ["needbloodaddress"];?></h3>
-                </div>
+
                 <hr class="viewitemhr">
                 <div class="viewitems">
                     <h2>Email:</h2>
@@ -94,17 +77,7 @@ $photo=$row['photo'];
                 <hr class="viewitemhr">
                 <div class="viewitems">
                     <h2>Phone No.1:</h2>
-                    <h3><?php echo $row ["phone1"];?></h3>
-                </div>
-                <hr class="viewitemhr">
-                <div class="viewitems">
-                    <h2>Phone No.2: </h2>
-                    <h3><?php echo $row ["phone2"];?></h3>
-                </div>
-                <hr class="viewitemhr">
-                <div class="viewitems">
-                    <h2>Birth Date:</h2>
-                    <h3><?php echo $row ["birthdate"];?></h3>
+                    <h3><?php echo $row ["phone"];?></h3>
                 </div>
                 <hr class="viewitemhr">
                 <div class="viewitems">
@@ -144,8 +117,7 @@ $photo=$row['photo'];
                     <label for="status">Status:</label>
                     <select id="needbloodstatus" name="needbloodstatus" required>
                         <option value="">Select Status</option>
-                        <option value="Pending">Pending</option>
-                        <option value="Not Completed">Not Completed</option>
+                        <option value="Approved">Approved</option>
                         <option value="Completed">Completed</option>
                     </select>
                 </div>

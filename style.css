@@ -1320,11 +1320,7 @@ background-color: rgb(255, 0, 0);
 	}
   }
   
-   .viewitem{
-	display: flex;
-	flex-wrap: wrap;
-	gap: 5rem;
-  }
+  
 
   .viewitemsbox {
 	flex:1 1 20rem;

@@ -11,10 +11,7 @@
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="fullname" pattern="[A-Za-z ]{3,50}" required>
         </div>
-        <div class=" form-group">
-            <label for="fathername">Father Name:</label>
-            <input type="text" id="fathername" name="fathername" pattern="[A-Za-z ]{3,50}" required>
-        </div>
+
         <div class="form-group">
             <label for="Gender">Gender:</label>
             <select id="gender" name="gender" required>
@@ -37,44 +34,6 @@
                 <option value="AB-">AB-</option>
             </select>
         </div>
-        <!-- <div class="form-group">
-            <label for="area">Area Name:</label>
-            <input type="text" id="areaname" required>
-        </div> -->
-        <div class="form-group">
-            <label for="country">Country:</label>
-            <select id="country" name="country" required>
-                <!-- <option value=""></option> -->
-                <option value="Nepal">Nepal</option>
-                <!-- <option value="India">India</option>
-                <option value="Russia">Russia</option>
-                <option value="Bhutan">Bhutan</option>
-                <option value="Sri Lanka">Sri Lanka</option>
-                <option value="USA">USA</option>
-                <option value="UK">UK</option> -->
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
-        </div>
-        <div class="form-group">
-            <label for="state">State:</label>
-            <select id="state" name="state" required>
-                <option value=""></option>
-                <option value="Koshi State">Koshi State</option>
-                <option value="Madhesh State">Madhesh State</option>
-                <option value="Bagmati State">Bagmati State</option>
-                <option value="Gandaki State">Gandaki State</option>
-                <option value="Lumbini State">Lumbini State</option>
-                <option value="Karnali State">Karnali State</option>
-                <option value="Sudurpachhim State">Sudurpachhim State</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="ward">Ward No.:</label>
-            <input type="number" id="ward" name="ward" pattern="[0-9]" required>
-        </div>
         <div class="form-group">
             <label for="address">Address:</label>
             <textarea type="textarea" id="textarea" cols="84" name="address" rows="5" maxlength="999"
@@ -85,22 +44,9 @@
             <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-            <label for="phone">Phone No.1:</label>
-            <input type="tel" id="phone1" name="phone1" required>
+            <label for="phone">Phone No.:</label>
+            <input type="tel" id="phone" name="phone" required>
         </div>
-        <div class="form-group">
-            <label for="phone">Phone No.2:</label>
-            <input type="tel" id="phone2" name="phone2" required>
-        </div>
-        <!-- <div class="form-group">
-                <label for="gender">Gender:</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="male" required>
-                    <label for="male" class="radio-label">Male</label>
-                    <input type="radio" id="female" name="gender" value="female" required>
-                    <label for="female" class="radio-label">Female</label>
-                </div> 
-            </div>-->
         <div class="form-group">
             <label for="birthdate">Birthdate:</label>
             <input type="date" id="birthdate" name="birthdate" required>
@@ -113,15 +59,13 @@
                 <option value="No">No</option>
             </select>
         </div>
-        <div class="form-group">
-            <label for="uploadphoto">Upload Photo:</label>
-            <input type="file" id="uploadphoto" name="uploadphoto" required>
-        </div>
+
         <div class="form-group-checkbox">
             <input type="checkbox" id="ihaveread" name="ihaveread" checked required>
             <label for="ihaveread">I have read the eligibility criteria and confirm that i am eligible to donate
                 blood.</label>
         </div>
+        <input type="hidden" name="donorRegisterDate" value="<?php echo date('Y/m/d-H:i'); ?>">
         <div class="form-group-checkbox">
             <input type="checkbox" id="iagree" name="iagree" checked required>
             <label for="iagree">I agree to the Term and Conditions and consent to have my contact and donor
@@ -144,20 +88,6 @@
 
 </div>
 
-<!-- <input type="file" class="form-control" name="fileToUpload">
-display: block;
-    width: 100%;
-    height: 38px;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-    background-color: #ffffff;
-    background-image: none;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgb -->
-
 
 <script type="text/javascript">
 $(document).ready(function() {});
@@ -179,8 +109,6 @@ $("#donorregistrationForm").submit(function(e) {
         },
         success: function(response, data, status) {
             $("#loader").hide();
-            //  $("#success-msg").html(data);
-            //  $("#success-msg").show();
             swal({
                 title: "Success!",
                 text: "Donor registration Successfully!",
