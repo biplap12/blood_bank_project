@@ -9,26 +9,19 @@ include "../database/dbConnect.php";
 ?>
 
 <div class="adminContent">
-    <h1><i class="fa-solid fa-users"></i>Not Active Donor</h1>
+    <h1><i class="fa-solid fa-users"></i>All Donors</h1>
     <hr>
     <div class="main-content">
-        <div class="title">doners</div>
+        <div class="title">Donors</div>
         <div class="content">
             <table class="message-table">
-
-
-
-                <!-- <div id="loader" style="Display:none">
-            <div class="loader"></div><br>
-            Please Wait..
-        </div> -->
 
                 <script type="text/javascript">
                 $(document).ready(function() {
 
 
                     $.ajax({
-                        url: "../getdata/getdonor.php",
+                        url: "../getdata/getAllDonor.php",
                         type: "post",
                         // timeout: 10000,
 

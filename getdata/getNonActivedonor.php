@@ -5,12 +5,12 @@ include "../database/dbConnect.php";
 $q="SELECT * FROM `donors` where status='Pending'";
 $result =mysqli_query($con,$q);
 
-
+if ($result->num_rows > 0) {
 $table="";
 $table.= "<table class='display_table'>";
 $table.="<thead>";
 $table.="<tr>";
-$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th><th>View</th><th>Delete</th>";
+$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th><th>Status</th><th>Delete</th>";
 $table.="</tr>";
 $table.="</thead>";
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -29,13 +29,13 @@ $table.="</td>";
 $table.="<td>";
 $table.=$row["bloodgroup"];
 $table.="</td>";
-
-
 $table.="<td>";
 $table.=$row["phone"];
 $table.="</td>";
-
-$table.="<td><a onclick=\" return ActivateUser($id)\" class='dis update' href='javascript:void(0)'>View</a></td>";
+$table.="<td>";
+$table.=$row["status"];
+$table.="</td>";
+// $table.="<td><a onclick=\" return ActivateUser($id)\" class='dis update' href='javascript:void(0)'>View</a></td>";
 $table.="<td><a onclick=\" return Delete($id)\" class='dis deleteitem' href='javascript:void(0)'>Delete</a></td>";
 $table.="</tbody>";
 }
@@ -45,7 +45,11 @@ $table.= "</tr>";
 
 
 echo $table;
-
+} else {
+        
+    echo "<td class='abc'>No matching results found.</td>";   
+   
+     }
 ?>
 </div>
 

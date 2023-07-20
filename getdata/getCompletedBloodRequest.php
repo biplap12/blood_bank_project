@@ -5,7 +5,7 @@ include "../database/dbConnect.php";
 $q="SELECT * FROM `needblood` WHERE `status`='Completed'";
 $result =mysqli_query($con,$q);
 
-
+if ($result->num_rows > 0) {
 $table="";
 $table.= "<table class='display_table'>";
 $table.="<thead>";
@@ -47,7 +47,11 @@ $table.= "</tr>";
 
 echo $table;
 
-
+} else {
+        
+    echo "<td class='abc'>No matching results found.</td>";   
+   
+     }
 
 
 

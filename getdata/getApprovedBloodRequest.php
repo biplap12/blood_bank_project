@@ -2,10 +2,10 @@
 
 include "../database/dbConnect.php";
 
-$q="SELECT * FROM `needblood` WHERE `status`='Approved'";
+$q="SELECT * FROM `needblood` WHERE status='Approved'";
 $result =mysqli_query($con,$q);
 
-
+if ($result->num_rows > 0) {
 $table="";
 $table.= "<table class='display_table'>";
 $table.="<thead>";
@@ -35,7 +35,7 @@ $table.="</td>";
 $table.="<td>";
 $table.=$row["phone"];
 $table.="</td>";
-$table.="<td class='Status' >";
+$table.="<td class='Status'>";
 $table.=$row["status"];
 $table.="</td>";
 $table.="</tbody>";
@@ -47,7 +47,11 @@ $table.= "</tr>";
 
 echo $table;
 
-
+} else {
+        
+    echo "<td class='abc'>No matching results found.</td>";   
+   
+     }
 
 
 

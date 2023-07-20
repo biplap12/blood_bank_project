@@ -2,7 +2,7 @@
 
 include "../header/header.php";
 if($_SESSION['username']!=="admin"){
-    header("location:../index");
+    header("location:../admin/dashboard.php");
 die("");
 };
 

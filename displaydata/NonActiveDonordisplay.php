@@ -9,7 +9,7 @@ include "../database/dbConnect.php";
 
 
 <div class="main-content">
-    <div class="title userprofile"><span>Active Donors</span>
+    <div class="title userprofile"><span>Not Active Donor</span>
         <a href="../admin/dashboard.php"><i class="fa-solid fa-xmark"></i></a>
     </div>
     <div class="content">
@@ -27,7 +27,7 @@ include "../database/dbConnect.php";
 
 
                 $.ajax({
-                    url: "../getdata/activeDonor.php",
+                    url: "../getdata/getNonActivedonor.php",
                     type: "post",
                     // timeout: 10000,
 

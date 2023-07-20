@@ -78,7 +78,7 @@ $name=$_SESSION['name'];
                 ?>
             <h1><?= $pending_donor;?></h1>
             <p>Non Active Donor</p>
-            <a href="../displaydata/donordisplay.php" class="dashboard_btn">View</a>
+            <a href="../displaydata/NonActiveDonordisplay.php" class="dashboard_btn">View</a>
         </div>
 
         <div class="dashboard_box">
@@ -101,19 +101,19 @@ $name=$_SESSION['name'];
                 $total_pendings =$row['count'];
                 ?>
             <h1><?= $total_pendings;?></h1>
-            <p>Pending Blood Request</p>
+            <p>Pending Request</p>
             <a href="../displaydata/pendingBloodRequest.php" class="dashboard_btn">View</a>
         </div>
 
         <div class="dashboard_box">
             <?php
-                $sql ="SELECT COUNT(*) AS count FROM `needblood` WHERE `status` = 'Not Completed'";
+                $sql ="SELECT COUNT(*) AS count FROM `needblood` WHERE `status` = 'Approved'";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                $total_Not_Completed =$row['count'];
+                $approved_blood=$row['count'];
                 ?>
-            <h1><?= $total_Not_Completed;?></h1>
-            <p>Approved Blood Request</p>
+            <h1><?= $approved_blood;?></h1>
+            <p>Approved Request</p>
             <a href="../displaydata/ApprovedBloodRequest.php" class="dashboard_btn">View</a>
         </div>
 
@@ -125,7 +125,7 @@ $name=$_SESSION['name'];
                 $total_Completed=$row['count'];
                 ?>
             <h1><?= $total_Completed;?></h1>
-            <p>Completed Blood Request</p>
+            <p>Completed Request</p>
             <a href="../displaydata/completedBloodRequest.php" class="dashboard_btn">View</a>
         </div>
 

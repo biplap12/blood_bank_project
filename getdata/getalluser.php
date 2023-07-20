@@ -4,6 +4,8 @@ include "../database/dbConnect.php";
 
 $q="SELECT * FROM `tbl_user`";
 $result=mysqli_query($con,$q);
+
+if ($result->num_rows > 0) {
 $table="";
 
 $table.="<table class='display_table'>";
@@ -46,7 +48,11 @@ $table.= "</table>";
 
 echo $table;
 
-
+} else {
+        
+    echo "<td class='abc'>No matching results found.</td>";   
+   
+     }
 
 
 ?>

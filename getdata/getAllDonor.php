@@ -2,7 +2,7 @@
 
 include "../database/dbConnect.php";
 
-$q="SELECT * FROM `donors` where status='Active'";
+$q="SELECT * FROM `donors`";
 $result =mysqli_query($con,$q);
 
 if ($result->num_rows > 0) {
@@ -10,7 +10,7 @@ $table="";
 $table.= "<table class='display_table'>";
 $table.="<thead>";
 $table.="<tr>";
-$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th><th>Status</th>";
+$table.="<th>S.N.</th><th>Name</th><th>Gender</th><th>Blood</th><th>Phone</th><th>View</th>";
 $table.="</tr>";
 $table.="</thead>";
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -29,13 +29,11 @@ $table.="</td>";
 $table.="<td>";
 $table.=$row["bloodgroup"];
 $table.="</td>";
+
 $table.="<td>";
 $table.=$row["phone"];
 $table.="</td>";
-$table.="<td>";
-$table.=$row["status"];
-$table.="</td>";
-// $table.="<td><a onclick=\" return ActivateUser($id)\" class='dis view' href='javascript:void(0)'>View</a></td>";
+$table.="<td><a onclick=\" return ActivateUser($id)\" class='dis view' href='javascript:void(0)'>View</a></td>";
 // $table.="<td><a onclick=\" return Delete($id)\" class='dis deleteitem' href='javascript:void(0)'>Delete</a></td>";
 $table.="</tbody>";
 }
@@ -55,7 +53,7 @@ echo $table;
 
 
 
-<!-- 
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -90,41 +88,41 @@ function ActivateUser(id) {
 
 
 
-} 
+}
 
 
 // function Delete(id) {
-// swal({
-// title: "Are you sure?",
-// text: "This user will be permanently deleted.",
-// icon: "warning",
-// buttons: ["Cancel", "Delete"],
-// dangerMode: true,
-// })
-// .then((willDelete) => {
-// if (willDelete) {
-// $.ajax({
-// type: "POST",
-// url: "../Deactive/deleteDonor.php",
-// data: {
-// id: id
-// },
-// success: function(response) {
-// if (response === "success") {
-// swal("Success", "User deleted successfully!", "success")
-// .then(() => {
-// // Reload the page or perform any other action
-// location.reload();
-// });
-// } else {
-// swal("Error", "Failed to delete user.", "error");
-// }
-// },
-// error: function() {
-// swal("Error", "Failed to delete user.", "error");
-// }
-// });
-// }
-// });
+//     swal({
+//             title: "Are you sure?",
+//             text: "This user will be permanently deleted.",
+//             icon: "warning",
+//             buttons: ["Cancel", "Delete"],
+//             dangerMode: true,
+//         })
+//         .then((willDelete) => {
+//             if (willDelete) {
+//                 $.ajax({
+//                     type: "POST",
+//                     url: "../Deactive/deleteDonor.php",
+//                     data: {
+//                         id: id
+//                     },
+//                     success: function(response) {
+//                         if (response === "success") {
+//                             swal("Success", "User deleted successfully!", "success")
+//                                 .then(() => {
+//                                     // Reload the page or perform any other action
+//                                     location.reload();
+//                                 });
+//                         } else {
+//                             swal("Error", "Failed to delete user.", "error");
+//                         }
+//                     },
+//                     error: function() {
+//                         swal("Error", "Failed to delete user.", "error");
+//                     }
+//                 });
+//             }
+//         });
 // }
 </script>

@@ -1278,24 +1278,7 @@ background-color: rgb(255, 0, 0);
 	width: 90%;
   }
   
-  /* table {
-	width: 100%;
-	max-width: 1500px;
-	border-collapse: collapse;
-	 border-bottom: 1px solid #ccc;
-  }
   
-  table th,
-  table td {
-	padding: 8px;
-	text-align: center;
-	border-bottom: 1px solid #ccc;
-	font-size: 15px;
-  }
-  
-  table th {
-	background-color: #f2f2f2;
-  } */
   
   @media screen and (max-width: 630px) {
 	.dashboard {
@@ -1304,16 +1287,15 @@ background-color: rgb(255, 0, 0);
 	  margin: 0;
 	  
 	}
+	.dashboard_heading{
+		text-align: center;
+	}
   
 	.sidebar {
 	  width: 100%;
 	  padding: 10px;
 	}
-  
-	.sidebar ul li a {
-	  text-align: center;
-	}
-  
+    
 	.adminContent {
 	  padding: 10px;
 	  overflow-x: scroll;
