@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2023 at 10:35 PM
+-- Generation Time: Jul 20, 2023 at 09:47 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,22 +30,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `donors` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
-  `fathername` varchar(100) NOT NULL,
   `gender` varchar(100) NOT NULL,
   `bloodgroup` varchar(100) NOT NULL,
-  `country` varchar(100) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `state` varchar(100) NOT NULL,
-  `wardno` int(100) NOT NULL,
   `address` varchar(250) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone1` int(20) NOT NULL,
-  `phone2` int(20) NOT NULL,
+  `phone` int(20) NOT NULL,
   `birthdate` date NOT NULL,
   `newdonor` varchar(100) NOT NULL,
-  `photo` varchar(100) NOT NULL,
   `ihaveread` varchar(100) NOT NULL,
   `iagree` varchar(100) NOT NULL,
+  `donorRegisterDate` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -77,18 +71,12 @@ CREATE TABLE `needblood` (
   `gender` varchar(100) NOT NULL,
   `unitofblood` varchar(100) NOT NULL,
   `hospitalNameAddress` varchar(500) NOT NULL,
-  `country` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
-  `doctorname` varchar(100) NOT NULL,
   `requiredate` date NOT NULL,
   `contactname` varchar(100) NOT NULL,
-  `needbloodaddress` varchar(1000) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone1` varchar(20) NOT NULL,
-  `phone2` varchar(20) NOT NULL,
-  `birthdate` date NOT NULL,
+  `phone` varchar(20) NOT NULL,
   `reasonforblood` varchar(1000) NOT NULL,
-  `photo` varchar(100) NOT NULL,
   `current_date_time` varchar(50) NOT NULL,
   `status` varchar(100) NOT NULL,
   `completeDate` varchar(100) NOT NULL
@@ -110,6 +98,14 @@ CREATE TABLE `tbl_user` (
   `signUpDate` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`id`, `name`, `phone`, `email`, `username`, `password`, `signUpDate`, `status`) VALUES
+(1, 'Super Admin', 2147483647, 'admin@admin.com', 'admin', 'Admin123@', '2023/07/19-22:35', 'Active'),
+(2, 'Biplap Neupane', 2147483647, 'biplap@biplap.com', 'biplap', 'Biplap123@', '2023/07/19-22:37', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -166,7 +162,7 @@ ALTER TABLE `needblood`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

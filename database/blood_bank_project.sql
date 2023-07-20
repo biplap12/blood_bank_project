@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2023 at 10:43 PM
+-- Generation Time: Jul 20, 2023 at 09:46 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,24 +30,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `donors` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
-  `fathername` varchar(100) NOT NULL,
   `gender` varchar(100) NOT NULL,
   `bloodgroup` varchar(100) NOT NULL,
-  `country` varchar(100) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `state` varchar(100) NOT NULL,
-  `wardno` int(100) NOT NULL,
   `address` varchar(250) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone1` int(20) NOT NULL,
-  `phone2` int(20) NOT NULL,
+  `phone` int(20) NOT NULL,
   `birthdate` date NOT NULL,
   `newdonor` varchar(100) NOT NULL,
-  `photo` varchar(100) NOT NULL,
   `ihaveread` varchar(100) NOT NULL,
   `iagree` varchar(100) NOT NULL,
+  `donorRegisterDate` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `donors`
+--
+
+INSERT INTO `donors` (`id`, `fullname`, `gender`, `bloodgroup`, `address`, `email`, `phone`, `birthdate`, `newdonor`, `ihaveread`, `iagree`, `donorRegisterDate`, `status`) VALUES
+(1, 'sdada', 'Female', 'A-', 'nayabazar 16 ktm', 'sq@sdf.com', 0, '0000-00-00', 'No', 'on', 'on', '', 'Active');
 
 -- --------------------------------------------------------
 
@@ -77,22 +78,23 @@ CREATE TABLE `needblood` (
   `gender` varchar(100) NOT NULL,
   `unitofblood` varchar(100) NOT NULL,
   `hospitalNameAddress` varchar(500) NOT NULL,
-  `country` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
-  `doctorname` varchar(100) NOT NULL,
   `requiredate` date NOT NULL,
   `contactname` varchar(100) NOT NULL,
-  `needbloodaddress` varchar(1000) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `phone1` varchar(20) NOT NULL,
-  `phone2` varchar(20) NOT NULL,
-  `birthdate` date NOT NULL,
+  `phone` varchar(20) NOT NULL,
   `reasonforblood` varchar(1000) NOT NULL,
-  `photo` varchar(100) NOT NULL,
   `current_date_time` varchar(50) NOT NULL,
   `status` varchar(100) NOT NULL,
   `completeDate` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `needblood`
+--
+
+INSERT INTO `needblood` (`id`, `patientname`, `bloodgroup`, `gender`, `unitofblood`, `hospitalNameAddress`, `city`, `requiredate`, `contactname`, `email`, `phone`, `reasonforblood`, `current_date_time`, `status`, `completeDate`) VALUES
+(1, 'text', 'A-', 'Female', 'asda', 'asda', 'asaas', '3333-12-31', 'sad', 'sq@sdf.com', '9785', 'asdada', '2023/07/20-08:49', 'Completed', '0001-11-11');
 
 -- --------------------------------------------------------
 
@@ -156,7 +158,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `donors`
 --
 ALTER TABLE `donors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -168,7 +170,7 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT for table `needblood`
 --
 ALTER TABLE `needblood`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
