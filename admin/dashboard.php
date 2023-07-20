@@ -11,11 +11,17 @@ $name=$_SESSION['name'];
 
 ?>
 <?php
+
                 $sql ="SELECT COUNT(*) AS count FROM `tbl_user` WHERE `status`='Deactive'";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $total_deactivate_user =$row['count'];
                 
+                $sql ="SELECT COUNT(*) AS count FROM `tbl_user`";
+                $result = mysqli_query($con, $sql);
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                $total_user =$row['count'];
+
                 $sql ="SELECT COUNT(*) AS count FROM `tbl_user` WHERE `status`='Pending'";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -32,7 +38,7 @@ $name=$_SESSION['name'];
 <section class="dashboard_admin">
 
     <h1 class="dashboard_heading">Dashboard</h1>
-
+    <hr>
     <div class="dashboard_box-container">
 
         <div class="dashboard_box">
@@ -128,6 +134,11 @@ $name=$_SESSION['name'];
         <?php
         if ($_SESSION['username'] === "admin") {
     echo '
+    <div class="dashboard_box">
+        <h1>' . $total_user . '</h1>
+        <p>Total users</p>
+        <a href="../displaydata/displayuser.php" class="dashboard_btn">View</a>
+    </div>
     <div class="dashboard_box">
         <h1>' . $Active_user . '</h1>
         <p>Active User</p>

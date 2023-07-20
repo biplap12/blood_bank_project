@@ -1527,15 +1527,15 @@ background-color: rgb(255, 0, 0);
 .dashboard_admin {
     max-width: 2000px;
     width: 70%;
-    margin: 0 auto;
+    margin: 25px auto;
     padding: 20px;
 }
 
 .dashboard_heading {
 	margin-top: 70px;
-    text-align: center;
+    
     margin-bottom: 20px;
-	font-size: 35px;
+	font-size: 30px;
 	color: red;
 
 }
