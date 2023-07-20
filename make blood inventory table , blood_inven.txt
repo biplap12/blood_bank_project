@@ -1,0 +1,8 @@
+make blood inventory table , blood_inventory_id(primarykey),
+blood_group_id(foregin key),
+quantity-available
+
+and 
+blood group table 
+blood-group-id (primarykey),
+blood-group-name(eg, A+,B, B)
