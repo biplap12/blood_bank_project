@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<!-- online offline message -->
+<script src="../js/sweetalertofline.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 
 <!-- <link rel="stylesheet" href="../style.css?v="> -->
 
@@ -42,3 +45,52 @@
                 </div>
             </nav>
         </header>
+
+
+        <!-- online offline message -->
+
+
+
+
+
+        <script>
+        function updateStatus(event) {
+            const root = document.documentElement;
+            const color = navigator.onLine ? "green" : "red";
+            root.style.setProperty("--status-color", color);
+
+            const showAlert = sessionStorage.getItem('showAlert');
+
+            if (!showAlert && !navigator.onLine) {
+                // Show SweetAlert2 modal dialog when offline
+                Swal.fire({
+                    icon: "info",
+                    title: "Offline",
+                    text: "You are currently offline. Please check your internet connection.",
+                    confirmButtonText: "OK",
+                    didClose: () => {
+                        sessionStorage.setItem('showAlert', true); // Set the showAlert flag to true
+                    }
+                });
+            }
+        }
+
+        // Call updateStatus initially to set the correct color when the page loads
+        updateStatus();
+
+        // Listen for the "online" and "offline" events to update the status and show the alerts
+        window.addEventListener("online", () => {
+            // Show SweetAlert2 modal dialog when online
+            Swal.fire({
+                icon: "info",
+                title: "Online",
+                text: "You are back online. Your internet connection is restored.",
+                confirmButtonText: "OK",
+            });
+
+            // Call updateStatus when online to set the correct color
+            updateStatus();
+        });
+
+        window.addEventListener("offline", updateStatus);
+        </script>
