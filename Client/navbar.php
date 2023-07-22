@@ -22,7 +22,7 @@
     <div>
         <header id="navbar">
             <nav class="navbar-container container">
-                <a href="https://www.biplapneupane.com.np/" class="home-link">
+                <a href="index.php" class="home-link">
                     <div class="navbar-logo">
                         <img src="../img/729.gif" alt="logo" height="30px" width="30px">
                     </div>
