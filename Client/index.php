@@ -60,7 +60,7 @@
 
 
      <section class="Blood_donor">
-         <h1>Blood Doner Images</h1>
+         <h1>Blood Donor Images</h1>
          <div class="gallery">
              <div class="images">
                  <a href="../img/clz5.jpg"><img src="../img/clz5.jpg" alt=""></a>

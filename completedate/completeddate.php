@@ -25,17 +25,20 @@ $patientname=$row['patientname'];
 $bloodGroup=$row['bloodgroup'];
 $unitofblood=$row['unitofblood'];
 $requiredate=$row['requiredate'];
+$completeDate=$row['completeDate'];
 
 // mail
 $to = "$email";
-$subject = "Blood Request $status";
+
+if($status=="Approved"){
+$subject = "Blood Request has been Approved";
 $body = "
 Dear $patientname,
 
 Thank you for reaching out to us for your blood requirement. We have received your blood request, and we are committed to assisting you during this time.
 
 Request Details:
-Recipient's Name: $patientname
+Patient's Name: $patientname
 Blood Group Requested: $bloodGroup
 Number of Units Required: $unitofblood
 Required Date: $requiredate
@@ -49,14 +52,19 @@ In the meantime, if there are any changes or additional information you would li
 Once again, thank you for choosing us for your blood requirements. Together, we can make a significant difference in saving lives.
 
 Best regards,
-Blood Bank Biplap";
+Blood Bank";
+}else if($status=="Completed"){
+    $subject = "Blood Request Completed";
+    $body = "Dear User,\n\nWe are pleased to inform you that your blood request has been completed on date $completeDate. You have successfully received the required blood units.\n\nThank you for choosing us for your blood requirements.\n\nBest regards,\n Blood Bank";
+    
+}
 $from ="aaagamming111@gmail.com";
 $headers = "From: $from";
 
 if (mail($to, $subject, $body, $headers)) {
-    echo "Email successfully sent to $to...";
+    echo "Email successfully sent";
 } else {
-    echo "Email sending failed...";
+    echo "Email sending failed";
 }
 
 }

@@ -6,7 +6,7 @@ $id = $_GET["id"];
 $updateQuery = "UPDATE `needblood` SET `status`='Active' WHERE id=$id";
 mysqli_query($con, $updateQuery);
 
-// Redirect back to the viewdoner.php page
+// Redirect back to the viewdonor.php page
 header("location:../view/viewdonor.php?id=$id");
 
 ?>

@@ -96,7 +96,7 @@ $("#donorregistrationForm").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "../savedata/saveDoner.php",
+        url: "../savedata/saveDonor.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,

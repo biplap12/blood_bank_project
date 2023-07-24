@@ -83,7 +83,7 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
                     href="../Deactive/deactivedonor.php?id=<?php echo $id; ?>"><?php echo ucfirst($status); ?></a>
                 <?php else : ?>
                 <a class="activateviewbtn" style="background-color: <?php echo $buttonColor; ?>"
-                    href="../Activate/activatedoner.php?id=<?php echo $id; ?>"><?php echo ucfirst($status); ?></a>
+                    href="../Activate/activatedonor.php?id=<?php echo $id; ?>"><?php echo ucfirst($status); ?></a>
                 <?php endif; ?>
         </div>
     </div>
