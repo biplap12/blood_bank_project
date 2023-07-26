@@ -36,17 +36,10 @@ try {
     $result = mysqli_query($con, $insertQuery);
     
     if ($result) {
-        echo "Success";
-
-        // mail 
-
-
-        
+        echo "Success";   
 $to = "$email";
-$subject = "User Registration Successful";
+$subject = "User Registration Successful!";
 $body = "
-
-
 Dear $name,
 
 Congratulations! Your registration with Blood Bank has been successfully completed. Thank you for becoming a valued member of our blood bank community.

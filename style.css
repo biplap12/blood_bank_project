@@ -800,38 +800,34 @@ table-layout: auto;
 .info-msg {
 color: #059;
 background-color: #BEF;
-padding: 15px;
+padding: 0 15px;
 font-size: larger;
-display: none;
+
 
 }
 .success-msg {
 color: #270;
 background-color: #DFF2BF;
-padding: 15px;
-font-size: larger;
-display: none;
+padding:15px;
+
 
 }
-.warning-msg {
-color: #9F6000;
-background-color: #FEEFB3;
-padding: 15px;
-font-size: larger;
-display: none;
-
+.password_change-success{
+	font-size: 30px;
 }
 .error-msg {
-color: #D8000C;
-background-color: #FFBABA;
+background-color: #e76969;
 padding: 15px;
-font-size: larger;
+color: white;
+text-align: center;
+align-items: center;
+
 }
 
 .text_danger{
-	color: red;
-	background-color: #000000;
-	font-size: 50px;
+	color: rgb(255, 0, 0);
+	background-color: #7bf722;
+	font-size: 14px;
 }
 
 .dis{

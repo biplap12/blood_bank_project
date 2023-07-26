@@ -44,7 +44,7 @@
                 </p>
                 <div class="login_inputs">
                     <input type="hidden" name="signUpDate" value="<?php echo date('Y/m/d-H:i');?>">
-                    <input type="text" name="name" placeholder="Name" pattern="[A-Za-z ]{3,50}" id="nameforsignin"
+                    <input type="text" name="name" placeholder="FullName" pattern="[A-Za-z ]{3,50}" id="nameforsignin"
                         title="Please enter your full name" required>
                     <input type="tel" name="phone" placeholder="98XXXXXXXX" pattern="[0-9]{10}" id="pnforsignin"
                         required>
@@ -78,16 +78,7 @@
     </div>
     </div>
 
-    <script>
-    // $(document).ready(function() {
-    //     $(".submitBtn").prop("disabled", true);
-    // });
 
-    // $("#usernameforsignin").on('keyup', function() {
-
-    //     var name = $(this).val();
-    // });
-    </script>
 
 
     <script>

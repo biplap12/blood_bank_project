@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2023 at 09:47 AM
+-- Generation Time: Jul 26, 2023 at 03:44 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,6 +42,14 @@ CREATE TABLE `donors` (
   `donorRegisterDate` varchar(100) NOT NULL,
   `status` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `donors`
+--
+
+INSERT INTO `donors` (`id`, `fullname`, `gender`, `bloodgroup`, `address`, `email`, `phone`, `birthdate`, `newdonor`, `ihaveread`, `iagree`, `donorRegisterDate`, `status`) VALUES
+(1, 'hello', 'Male', 'A+', 'ask', 'abcgamming123@gmail.com', 2147483647, '2023-07-27', 'No', 'on', 'on', '2023/07/26-10:33', 'Active'),
+(2, 'hello', 'Male', 'A-', 'asdad', 'abcgamming123@gmail.com', 2147483647, '2023-07-06', 'No', 'on', 'on', '2023/07/26-10:41', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -96,16 +104,9 @@ CREATE TABLE `tbl_user` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `signUpDate` varchar(100) NOT NULL,
-  `status` varchar(100) NOT NULL
+  `status` varchar(100) NOT NULL,
+  `code` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_user`
---
-
-INSERT INTO `tbl_user` (`id`, `name`, `phone`, `email`, `username`, `password`, `signUpDate`, `status`) VALUES
-(1, 'Super Admin', 2147483647, 'admin@admin.com', 'admin', 'Admin123@', '2023/07/19-22:35', 'Active'),
-(2, 'Biplap Neupane', 2147483647, 'biplap@biplap.com', 'biplap', 'Biplap123@', '2023/07/19-22:37', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -134,7 +135,10 @@ ALTER TABLE `needblood`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `username_2` (`username`),
+  ADD UNIQUE KEY `email_2` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -144,7 +148,7 @@ ALTER TABLE `tbl_user`
 -- AUTO_INCREMENT for table `donors`
 --
 ALTER TABLE `donors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `message`
@@ -162,7 +166,7 @@ ALTER TABLE `needblood`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
