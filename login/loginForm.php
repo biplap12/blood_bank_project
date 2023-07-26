@@ -25,7 +25,7 @@ if (isset($_COOKIE['password'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Blood Bank</title>
     <link rel="stylesheet" href="../style.css?v=<?php echo Time();?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="../js/jquery_cookie.js"></script>

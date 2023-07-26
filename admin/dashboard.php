@@ -3,9 +3,7 @@
 include "../database/dbConnect.php";
 include "../header/header.php";
 include "../admin/admin.php";
-// if(!isset($_SESSION['username'])){
 
-// }
 
 $name=$_SESSION['name'];
 
