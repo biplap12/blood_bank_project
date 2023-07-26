@@ -21,6 +21,15 @@ try {
         echo json_encode($response);
         exit();
     }
+
+    $cQ = "SELECT * FROM `tbl_user` WHERE `email` = '$email'";
+    $cR = mysqli_query($con, $cQ);
+    if (mysqli_num_rows($cR) > 0) {
+        http_response_code(409); // Conflict status code
+        $response = array("error" => "DuplicateEmail");
+        echo json_encode($response);
+        exit();
+    }
     
     // Insert the data if it doesn't exist
     $insertQuery = "INSERT INTO `tbl_user` (`signUpDate` , `name`, `phone`, `email`, `username`, `password`, `status`) VALUES ('$signUpDate','$name', '$phone', '$email', '$username', '$password', '$status')";
@@ -77,12 +86,7 @@ if (mail($to, $subject, $body, $headers)) {
 }
 } else {
         echo "Error inserting data";
-        $to = "$email";
-$subject = "User Registration Unsuccessful";
-$body = "Please try again";
-$from ="aaagamming111@gmail.com";
-$headers = "From: $from";
-
+       
     }
 } catch (Exception $e) {
     throw $e;

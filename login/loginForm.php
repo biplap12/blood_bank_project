@@ -73,7 +73,7 @@ if (isset($_COOKIE['password'])){
                             <input type="checkbox" name="remember_user" id="remember_user" />
                             <span id="Remember_user_text" class="text-checkbox">Remember me</span>
                         </label>
-                        <p> <a href="#">forget password?</a></p>
+                        <p> <a href="../forgotPassword/enterEmail/forgotPassword.php">forget password?</a></p>
                     </div>
                     <br>
                     <div class="closeButtonInSigninSignupSmallScreen"><a href="../Client/index.php"><i

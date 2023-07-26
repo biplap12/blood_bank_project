@@ -76,10 +76,11 @@ $(document).ready(function() {
                         text: "Username already exists!",
                         icon: "error"
                     });
-                } else {
+                 }
+                else {
                     swal({
                         title: "Error!",
-                        text: "Something went wrong",
+                        text: "Email already exists",
                         icon: "error"
                     });
                 }
