@@ -1,10 +1,7 @@
-/* * {
-	box-sizing: border-box;
-} */
-
 body {
 	margin: 0px;
 	font-family: "segoe ui";
+	scroll-behavior: smooth;
 }
 
   ::-webkit-scrollbar {
@@ -47,7 +44,6 @@ body {
 
 .nav > .nav-links > li {
 	display: inline-block;
-	/* padding: 13px 10px 13px 30px; */
 	padding: 0;
 	list-style: none;
 	
@@ -56,8 +52,6 @@ body {
 	display: inline-block;
 	text-decoration: none;
 	color: white;
-	/* background-color: #000000; */
-	/* padding: 13px 10px 13px 30px; */
 	padding: 13px 8px;
 	text-align: center;
 	align-items: center;
@@ -87,28 +81,6 @@ body {
 	
 }
 
-/* .username{
-	float: right;
-}
-.username_logout_button{
-	position: absolute;
-	text-decoration: none;	
-	padding:10px;
-	color: rgb(229, 223, 223);
-	background-color: rgb(73, 73, 91);
-	margin: 35px -100px ;
-	border-radius: 10px;
-	font-family:Georgia, 'Times New Roman', Times, serif;
-	font-size: 16px;
-}
-
-.username_logout_button:hover{
-	color:white;
-	color:rgb(255, 255, 255);
-	text-decoration: underline;
-	background-color:rgb(87, 87, 108) ;
-} */
-
 
 .nav-links  li  .dropdown_button{
 	text-align: center;
@@ -125,9 +97,7 @@ body {
 	cursor:pointer;
 	
   }
-  
  
-  
   .dropdown-options {
 	display: none;
 	position: absolute;
@@ -138,18 +108,15 @@ body {
   
   .dropdown:hover .dropdown-options{
 	display: block;
-	/* margin-right: 50px; */
   }
   
   .dropdown-options a {
 	display: block;
 	font-style: normal;
 	color: #000000;
-	/* padding: 5px; */
 	text-decoration: none;
 	padding:20px 30px;
 	text-align: center;
-	/* width: 80px; */
 	
   }
   
@@ -157,11 +124,6 @@ body {
 	color: #0a0a23;
 	background-color: #ddd;
   }
-  /* /* .dropdown_small_screen, .small_screen{
-	display: none;
-	visibility: hidden; */
-
-
  
 @media (max-width: 900px) {
 	.nav > .nav-links {
@@ -218,9 +180,7 @@ body {
 	text-align: center;
 	border-radius: 0;
 	color: white;
-	
-	
-	
+
   }
   
   .dropdown-options a:hover{
@@ -244,11 +204,7 @@ body {
 		margin: 0 5px 0 0 ;
 		text-align: center;
 	}
-	/* .nav > .nav-btn > label:hover,
-	.nav #nav-check:checked ~ .nav-btn > label {
-		font-style: bold;
-		
-	} */
+
 	.nav > .nav-btn > label > span {
 		display: block;
 		width: 30px;
@@ -286,8 +242,6 @@ body {
 		
 	}
 }
-
-
 
 /* About */
 
@@ -462,21 +416,12 @@ button[type="button"]{
 	margin-top: -20px;
 }
 
-
-	
-	
-
- 
 .signupRedirect{
 margin-top: 10px;
 	margin-bottom: -20px;
   
 }}
-  /* .login_inputs{
-	margin-top: -10px;
-  } */
- 
-
+  
 @media screen and (max-width:600px) {
 	.box-form {
 	  margin: 0% auto;
@@ -594,67 +539,7 @@ margin-top: 10px;
     background-image: linear-gradient(135deg, #f57070 10%, #c62828 100%); 
   }
   
-  /* .stylish_checkbox {
-    display: block;
-    position: relative;
-    margin-left: 30px;
-  }
   
-  .stylish_checkbox::before {
-    content: ' \f00c';
-    position: absolute;
-    font-family: FontAwesome;
-    background: transparent;
-    border: 3px solid #f57070;
-    border-radius: 4px;
-    color: transparent;
-    left: -30px;
-    transition: all 0.2s linear;
-  }
-
-  .remember-me--forget-password label input[type=checkbox]:checked + label {
-	color: #f00;
-	font-style: normal;
-  } 
-  
-  .stylish_checkbox::after {
-    content: ' \f00c';
-    position: absolute;
-    font-family: FontAwesome;
-    background: transparent;
-    border: 3px solid #b570f5;
-    border-radius: 4px;
-    color: transparent;
-    left: -30px;
-    transition: all 0.2s linear;
-  }
-  
-  .stylish_checkbox:hover::before {
-    font-family: FontAwesome;
-    content: ' \f00c';
-    color: #ff0000;
-    cursor: pointer;
-    background:red;
-  }
-  
-  .stylish_checkbox:hover::before .text-checkbox {
-    background: #8070f5;
-	background-color: #270;
-  }
-  
-  .stylish_checkbox span.text-checkbox {
-    display: inline-block;
-    height: auto;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.2s linear;
-  }
-  
-  .stylish_checkbox input[type="checkbox"] {
-    display:none;
-  } */
-
-	
 
 .stylish_checkbox{
 	display: inline-block;
@@ -935,7 +820,8 @@ background-color: rgb(255, 0, 0);
   .messageSee {
     max-width: 400px;
     margin: 0 auto; 
-    overflow: hidden; 
+overflow-x: hidden;
+overflow-y: scroll;
 }
 .messageSee h2{
 	text-align: center;
@@ -1062,7 +948,7 @@ background-color: rgb(255, 0, 0);
 
   
 /* ************************************** */
-/* donorNeedBlood */
+/* donorBloodRequest */
 /* ***************************************** */
 
 .container_service {
@@ -1121,31 +1007,6 @@ background-color: rgb(255, 0, 0);
   
   }
   
-  /* input[type="radio"] {
-	display: none;
-  } 
-  
-  .radio-group label {
-	display: inline-block;
-	margin-right: 10px;
-	cursor: pointer;
-  }
-  
-  .radio-group label::before {
-	content: "";
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	border: 2px solid #ccc;
-	border-radius: 50%;
-	vertical-align: middle;
-	margin-right: 5px;
-  }
-  
-  .radio-group input[type="radio"]:checked + label::before {
-	background-color: #ccc;
-  }
-  */
   .form-group button[type="submit"] {
 	display: block;
 	width: max-content;
@@ -1404,6 +1265,7 @@ background-color: rgb(255, 0, 0);
 	border: none;
 	font-size:1.2em;
 	border-radius: 5px;
+	cursor: pointer;
 }
 .form-groupButtons button[type="submit"]{
 	background-color: #270;

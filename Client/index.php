@@ -35,13 +35,13 @@
              </div>
              <div class="card">
                  <div class="card_title">
-                     <h2><i class="fa-solid fa-suitcase-medical"></i> Need Blood</h2>
+                     <h2><i class="fa-solid fa-suitcase-medical"></i> Blood Request</h2>
                  </div>
                  <p class="cardDis">Every 2 seconds someone needs blood. Your blood helps more than one life at a time.
                      Accident victims, premature babies, patients undergoing major surgeries require whole blood, where
                      your
                      blood after testing is used directly.</p>
-                 <div class="btn"><a href="NeedBlood.php">View More</a></div>
+                 <div class="btn"><a href="BloodRequest.php">View More</a></div>
              </div>
              <div class="card">
                  <div class="card_title">
@@ -123,7 +123,7 @@
                  </ul>
              </div>
              <div class="image_about">
-                 <img class="aboutImg_banner" src="../img/image-4.png" alt="blood donet picture" />
+                 <img class="aboutImg_banner" src="../img/image-4.png" alt="blood donation picture" />
              </div>
          </div>
      </section>

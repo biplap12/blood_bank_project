@@ -9,7 +9,7 @@ include "../Client/service.php";
     <div class="searchinput">
         <label for="search_data">Search Blood Group</label>
         <br>
-        <input type="text" id="searchInput" placeholder="Enter search  Blood Group">
+        <input type="text" id="searchInput" placeholder="Enter search Blood Group">
     </div>
     <br>
     <table class="donorshow-table">

@@ -2,7 +2,7 @@
 
 include "../database/dbConnect.php";
 
-$q="SELECT * FROM `needblood` WHERE status='Approved'";
+$q="SELECT * FROM `bloodrequest` WHERE `status`='Approved'";
 $result =mysqli_query($con,$q);
 
 if ($result->num_rows > 0) {

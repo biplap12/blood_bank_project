@@ -19,7 +19,7 @@ $status="Pending";
 
 
 include "../database/dbConnect.php";
-$q="INSERT INTO `needblood`(`patientname`, `bloodgroup`, `gender`,`unitofblood`,`hospitalNameAddress`, 
+$q="INSERT INTO `bloodrequest`(`patientname`, `bloodgroup`, `gender`,`unitofblood`,`hospitalNameAddress`, 
 `city`,`requiredate`, `contactname`, `email`, `phone`,
  `reasonforblood`,`current_date_time`,`status`) VALUES ('$patientname','$bloodgroup',
  '$gender','$unitofblood','$hospitalNameAddress','$city','$requiredate','$contactname',
@@ -31,7 +31,7 @@ $result=mysqli_query($con,$q);
 
 
 $to = "$email";
-$subject = "Blood Request Registration Received";
+$subject = "Blood Request Registration Successful";
 $body = "
 
 Dear $patientname,
@@ -57,8 +57,9 @@ Best regards,
  Blood Bank
 9800000000
 ";
-$from ="aaagamming111@gmail.com";
-$headers = "From: $from";
+$from ="blood.bank.nepal11@gmail.com";
+$senderName="Blood Bank";
+$headers = "From:$senderName $from";
 
 if (mail($to, $subject, $body, $headers)) {
     echo "Email successfully sent";

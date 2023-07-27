@@ -81,19 +81,19 @@ $name=$_SESSION['name'];
 
         <div class="dashboard_box">
             <?php
-                $sql ="SELECT COUNT(*) AS count FROM `needblood` ";
+                $sql ="SELECT COUNT(*) AS count FROM `bloodrequest`";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $total_blood_request =$row['count'];
                 ?>
             <h1><?= $total_blood_request;?></h1>
             <p>Total Blood Request</p>
-            <a href="../displaydata/needblooddisplay.php" class="dashboard_btn">View</a>
+            <a href="../displaydata/BloodRequestDisplay.php" class="dashboard_btn">View</a>
         </div>
 
         <div class="dashboard_box">
             <?php
-                $sql ="SELECT COUNT(*) AS count FROM `needblood` WHERE `status` = 'Pending'";
+                $sql ="SELECT COUNT(*) AS count FROM `bloodrequest` WHERE `status` = 'Pending'";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $total_pendings =$row['count'];
@@ -105,7 +105,7 @@ $name=$_SESSION['name'];
 
         <div class="dashboard_box">
             <?php
-                $sql ="SELECT COUNT(*) AS count FROM `needblood` WHERE `status` = 'Approved'";
+                $sql ="SELECT COUNT(*) AS count FROM `bloodrequest` WHERE `status` = 'Approved'";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $approved_blood=$row['count'];
@@ -117,7 +117,7 @@ $name=$_SESSION['name'];
 
         <div class="dashboard_box">
             <?php
-                $sql ="SELECT COUNT(*) AS count FROM `needblood` WHERE `status` = 'Completed'";
+                $sql ="SELECT COUNT(*) AS count FROM `bloodrequest` WHERE `status` = 'Completed'";
                 $result = mysqli_query($con, $sql);
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $total_Completed=$row['count'];

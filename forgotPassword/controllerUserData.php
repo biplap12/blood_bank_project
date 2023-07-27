@@ -16,9 +16,10 @@ $errors = array();
             $insert_code = "UPDATE tbl_user SET code = $code WHERE email = '$email'";
             $run_query =  mysqli_query($con, $insert_code);
             if($run_query){
+                $senderName="Blood Bank";
                 $subject = "Password Reset Code";
                 $message = "Your password reset code is $code";
-                $sender = "From: aaagamming111@gmail.com";
+                $sender = "From: $senderName blood.bank.nepal11@gmail.com";
                 if(mail($email, $subject, $message, $sender)){
                     $info = "We've sent a passwrod reset otp to your email - $email";
                     $_SESSION['info'] = $info;

@@ -3,7 +3,7 @@ include "../database/dbConnect.php";
 $id = $_GET["id"];
 
 // Update the status to "active" in the backend database
-$updateQuery = "UPDATE `needblood` SET `status`='Active' WHERE id=$id";
+$updateQuery = "UPDATE `bloodrequest` SET `status`='Active' WHERE id=$id";
 mysqli_query($con, $updateQuery);
 
 // Redirect back to the viewdonor.php page

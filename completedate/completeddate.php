@@ -5,17 +5,17 @@ try{
     include "../database/dbConnect.php";
 $id=$_GET['id'];
 $completedate=$_POST["completedate"];
-$status=$_POST["needbloodstatus"];
+$status=$_POST["bloodRequeststatus"];
 
-$q="UPDATE `needblood` SET `completeDate`='$completedate', `status`='$status' WHERE id=$id";
+$q="UPDATE `bloodrequest` SET `completeDate`='$completedate', `status`='$status' WHERE id=$id";
 
 $result=mysqli_query($con,$q);
 
 // echo "success";
-header("location:../view/viewneedblood.php?id=$id");
+header("location:../view/viewBloodRequest.php?id=$id");
 
 
-$query = "SELECT * FROM needblood WHERE id=$id";
+$query = "SELECT * FROM `bloodrequest` WHERE id=$id";
 $result = mysqli_query($con, $query);
 
 
@@ -58,8 +58,9 @@ Blood Bank";
     $body = "Dear User,\n\nWe are pleased to inform you that your blood request has been completed on date $completeDate. You have successfully received the required blood units.\n\nThank you for choosing us for your blood requirements.\n\nBest regards,\n Blood Bank";
     
 }
-$from ="aaagamming111@gmail.com";
-$headers = "From: $from";
+$from ="blood.bank.nepal11@gmail.com";
+$senderName="Blood Bank";
+$headers = "From:$senderName  $from";
 
 if (mail($to, $subject, $body, $headers)) {
     echo "Email successfully sent";

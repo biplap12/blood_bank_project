@@ -19,10 +19,10 @@ include "../database/dbConnect.php";
                 <input type="email" name="email" id="email" placeholder="example@example.com" required><br>
                 <label class="textare" for="message">Message:</label>
                 <textarea class="textarea" rows="5" cols="100" id="message" placeholder="Your Message...." required
-                    name="message" maxlength="999" style="resize:none"></textarea><br><br>
+                    name="message" maxlength="9999999999" style="resize:none"></textarea><br><br>
+                <input type="hidden" name="messageDateTime" value="<?php echo date('Y/m/d-H:i'); ?>">
                 <button type="submit" class="messageSendButton"><i class="fa-sharp fa-solid fa-paper-plane"></i> Send
                     Message</button>
-                <input type="hidden" name="messageDateTime" value="<?php echo date('Y/m/d-H:i'); ?>">
             </form>
         </div>
         <div class="company_Details">

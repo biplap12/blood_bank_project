@@ -4,7 +4,7 @@ include "service.php";
 
 ?>
 <div class="container_service">
-    <h1>Need Blood</h1>
+    <h1>Blood Request</h1>
     <form id="needbloodForm" method="POST">
         <div class="form-group">
             <label for="PatientName">Patient Name:</label>
@@ -138,7 +138,7 @@ $("#needbloodForm").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "../savedata/saveneedblood.php",
+        url: "../savedata/saveBloodRequest.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,
@@ -160,7 +160,7 @@ $("#needbloodForm").submit(function(e) {
                 icon: "success"
             }).then(function() {
                 // Redirect to the homepage
-                window.location.href = "./NeedBlood.php";
+                window.location.href = "./BloodRequest.php";
             });
 
 
@@ -177,7 +177,7 @@ $("#needbloodForm").submit(function(e) {
                 icon: "error"
             }).then(function() {
                 // Redirect to the homepage
-                location.replace("./NeedBlood.php")
+                location.replace("./BloodRequest.php")
             });
 
 

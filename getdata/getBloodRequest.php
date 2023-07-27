@@ -2,7 +2,7 @@
 
 include "../database/dbConnect.php";
 
-$q="SELECT * FROM `needblood`";
+$q="SELECT * FROM `bloodrequest`";
 $result =mysqli_query($con,$q);
 
 if ($result->num_rows > 0) {
@@ -84,7 +84,7 @@ function View(id) {
         })
         .then((Active) => {
             if (Active) {
-                window.location.href = '../view/viewneedblood.php?id=' + id;
+                window.location.href = '../view/viewBloodRequest.php?id=' + id;
 
                 // swal("File has been Activate!", {
                 //     icon: "success",
@@ -100,40 +100,4 @@ function View(id) {
 
 
 }
-
-
-// function Delete(id) {
-//     swal({
-//             title: "Are you sure?",
-//             text: "This user will be permanently deleted.",
-//             icon: "warning",
-//             buttons: ["Cancel", "Delete"],
-//             dangerMode: true,
-//         })
-//         .then((willDelete) => {
-//             if (willDelete) {
-//                 $.ajax({
-//                     type: "POST",
-//                     url: "../Deactive/deleteDonor.php",
-//                     data: {
-//                         id: id
-//                     },
-//                     success: function(response) {
-//                         if (response === "success") {
-//                             swal("Success", "User deleted successfully!", "success")
-//                                 .then(() => {
-//                                     // Reload the page or perform any other action
-//                                     location.reload();
-//                                 });
-//                         } else {
-//                             swal("Error", "Failed to delete user.", "error");
-//                         }
-//                     },
-//                     error: function() {
-//                         swal("Error", "Failed to delete user.", "error");
-//                     }
-//                 });
-//             }
-//         });
-// }
 </script>

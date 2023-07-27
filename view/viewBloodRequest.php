@@ -5,7 +5,7 @@ include "../admin/admin.php";
 include "../database/dbConnect.php";
 $id=$_GET["id"];
 
-$q="SELECT * FROM `needblood` WHERE id=$id";
+$q="SELECT * FROM `bloodrequest` WHERE id=$id";
 $result=mysqli_query($con,$q);
 $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -115,7 +115,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                     <label for="completedate">Complete Date:</label>
                     <input type="date" name="completedate" id="completedate" required>
                     <label for="status">Status:</label>
-                    <select id="needbloodstatus" name="needbloodstatus" required>
+                    <select id="needbloodstatus" name="bloodRequeststatus" required>
                         <option value="">Select Status</option>
                         <option value="Approved">Approved</option>
                         <option value="Completed">Completed</option>
@@ -124,7 +124,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
                 <div class="form-groupButtons">
                     <button type="submit">Update Now</button>
-                    <a href="../displaydata/needblooddisplay.php">Back Page</a>
+                    <a href="../displaydata/BloodRequestDisplay.php">Back Page</a>
                 </div>
             </form>
         </div>

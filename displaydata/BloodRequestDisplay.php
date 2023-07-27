@@ -9,10 +9,10 @@ include "../database/dbConnect.php";
 ?>
 
 <div class="adminContent">
-    <h1><i class="fa-solid fa-bed"></i>Need Blood</h1>
+    <h1><i class="fa-solid fa-bed"></i>Blood Request</h1>
     <hr>
     <div class="main-content">
-        <div class="title">Need Blood</div>
+        <div class="title"> Blood Request</div>
         <div class="content">
             <table class="message-table">
 
@@ -28,7 +28,7 @@ include "../database/dbConnect.php";
 
 
                     $.ajax({
-                        url: "../getdata/getneedblood.php",
+                        url: "../getdata/getBloodRequest.php",
                         type: "post",
                         // timeout: 10000,
 

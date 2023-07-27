@@ -69,8 +69,9 @@ Blood Bank
 980000000
 www.bloodbank.org
 ";
-$from ="aaagamming111@gmail.com";
-$headers = "From: $from";
+$from ="blood.bank.nepal11@gmail.com";
+$senderName="Blood Bank";
+$headers = "From:$senderName $from";
 
 if (mail($to, $subject, $body, $headers)) {
     echo "Email successfully sent";

@@ -4,7 +4,7 @@ include "../database/dbConnect.php";
 
 ?>
 <div class="main-content">
-    <div class="title userprofile"><span>Pending Blood Request</span>
+    <div class="title userprofile"><span>Pending Request Blood </span>
         <a href="../admin/dashboard.php"><i class="fa-solid fa-xmark"></i></a>
     </div>
     <div class="content">
@@ -16,7 +16,7 @@ include "../database/dbConnect.php";
 
 
                 $.ajax({
-                    url: "../getdata/getPendingNeedBlood.php",
+                    url: "../getdata/getPendingBloodRequest.php",
                     type: "post",
                     // timeout: 10000,
 

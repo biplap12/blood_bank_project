@@ -9,7 +9,7 @@ include "../header/header.php";
     <hr style="margin-top: -1.5%" />
     <div class="redirect_heading">
         <h2>
-            <a href="../index/index.php">Home /</a>
+            <a href="../Client/index.php">Home /</a>
         </h2>
 
         <p><?php 
