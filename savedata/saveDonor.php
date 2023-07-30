@@ -24,6 +24,9 @@ $q="INSERT INTO `donors`(`fullname`, `gender`, `bloodgroup`, `address`, `email`,
 
 $result=mysqli_query($con,$q);
 
+//insert for blood group
+ $bloodgroupQuery="INSERT INTO `bloodgroup`( `Blood_id`, `bloodGroup`) VALUES (3,'$bloodGroup')";
+ $result=mysqli_query($con,$bloodgroupQuery);
 
 // mail
 
@@ -57,8 +60,7 @@ Once again, thank you for your generosity and compassion. Together, we can make 
 Best regards,
 Blood Bank
 980000000
-www.bloodbank.org
-";
+www.bloodbank.org.np";
 $from ="blood.bank.nepal11@gmail.com";
 $senderName="Blood Bank";
 $headers = "From:$senderName $from";
