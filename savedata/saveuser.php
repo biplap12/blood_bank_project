@@ -53,9 +53,7 @@ Email: $email
 As a registered user, you now have access to various features and benefits, including:
 
 1. Easy appointment scheduling for blood donations.
-2. Notification alerts for blood donation drives and events.
-3. Access to your donation history and records.
-4. Updates on blood availability and urgent requests.
+2. Donors also can request for blood if necessary.
 
 Rest assured that the information you have provided will be kept confidential and used only for blood donation-related purposes.
 

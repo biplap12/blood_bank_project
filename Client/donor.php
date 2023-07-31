@@ -1,17 +1,15 @@
 <?php
     include "service.php";
     ?>
-
-
-
 <div class="container_service">
     <h1>Blood Donor Registration</h1>
-    <form method="POST" id="donorregistrationForm" onsubmit="event.preventDefault(); check();">
+    <form method="POST" id="donorregistrationForm">
         <div class="form-group">
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="fullname" pattern="[A-Za-z ]{3,50}" required>
+            <input type="text" id="name" name="fullname" pattern="[A-Za-z ]{3,50}" required
+                title="Please enter your valid name">
         </div>
-
+        <input type="hidden" name="id">
         <div class="form-group">
             <label for="Gender">Gender:</label>
             <select id="gender" name="gender" required>
@@ -37,7 +35,7 @@
         </div>
         <div class="form-group">
             <label for="address">Address:</label>
-            <textarea type="textarea" id="textarea" cols="84" name="address" rows="5" maxlength="999"
+            <textarea type="textarea" id="textarea" cols="84" name="address" rows="1" maxlength="999"
                 style="resize:none;border-radius:5px;font-size:18px" required></textarea>
         </div>
         <div class="form-group">
@@ -46,11 +44,11 @@
         </div>
         <div class="form-group">
             <label for="phone">Phone No.:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
         </div>
         <div class="form-group">
             <label for="birthdate">Birthdate:</label>
-            <input type="date" id="birthdate" name="birthdate" required>
+            <input type="date" id="birthdate" name="birthdate" max="2005-07-30" required>
         </div>
         <div class="form-group">
             <label for="New Donor">New Donor:</label>
@@ -144,6 +142,5 @@ $("#donorregistrationForm").submit(function(e) {
 
 });
 </script>
-
 <?php include "footer.php";
 ?>

@@ -43,7 +43,7 @@ Blood Group Requested: $bloodGroup
 Number of Units Required: $unitofblood
 Required Date: $requiredate
 
-Our dedicated team is actively working to arrange the necessary blood units matching your requirements. We understand the urgency, and you can rest assured that we will do our utmost to provide the needed support.
+Our dedicated team is actively working to arrange the necessary blood units matching your requirements. We understand the urgency, and you can rest assured that we will do our best to provide the needed support.
 
 We kindly request you to be available and prepared for the blood donation process on the specified required date. Our team will be in touch with you to finalize the donation procedure and location.
 

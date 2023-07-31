@@ -8,7 +8,7 @@ include "service.php";
     <form id="needbloodForm" method="POST">
         <div class="form-group">
             <label for="PatientName">Patient Name:</label>
-            <input type="text" id="PatientName" name="patientname" required>
+            <input type="text" id="PatientName" name="patientname" pattern="[A-Za-z ]{3,50}" required>
         </div>
         <div class="form-group">
             <label for="bloodGroup">Required Blood Group:</label>
@@ -38,16 +38,6 @@ if (mysqli_num_rows($res) == 0) {
 }
 ?>
 
-
-                <!-- <option value=""></option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option> -->
             </select>
         </div>
         <div class="form-group">
@@ -61,7 +51,7 @@ if (mysqli_num_rows($res) == 0) {
         </div>
         <div class="form-group">
             <label for="unitofblood">Need Unit Of Blood:</label>
-            <input type="text" name="unitofblood" id="unitofblood" required>
+            <input type="text" name="unitofblood" id="unitofblood" min="0" max="10" required>
         </div>
         <div class="form-group">
             <label for="HospitalNameAddress">Hospital Name & Address:</label>
@@ -73,70 +63,30 @@ if (mysqli_num_rows($res) == 0) {
             <label for="resionforblood">Reason For Blood:</label>
             <input type="text" name="reasonforblood" id="ReasonForBlood" required>
         </div>
-        <!-- <div class="form-group">
-            <label for="country">Country:</label>
-            <select id="country" name="country" required> -->
-        <!-- <option value=""></option> -->
-        <!-- <option value="Nepal">Nepal</option> -->
-        <!-- <option value="Armenia">Armenia</option>
-                <option value="Russia">Russia</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
-                <option value="USA">USA</option>
-                <option value="UK">UK</option> -->
-        <!-- </select> -->
-        <!-- </div> -->
+
         <div class="form-group">
             <label for="city">City:</label>
             <input type="text" name="city" id="city" required>
         </div>
-        <!-- <div class="form-group">
-            <label for="doctorname">Doctor Name:</label>
-            <input type="text" name="doctorname" id="doctorname" required>
-        </div> -->
+
         <div class="form-group">
             <label for="requiredDate">When Required:</label>
             <input type="date" name="requiredate" id="requiredDate" required>
         </div>
         <div class="form-group">
             <label for="contactName">Contact Name:</label>
-            <input type="text" name="contactname" id="contactName" required>
+            <input type="text" name="contactname" id="contactName" pattern="[A-Za-z ]{3,50}" required>
         </div>
-        <!-- <div class="form-group">
-            <label for="address">Address:</label>
-            <textarea type="textarea" id="textarea" cols="84" name="needbloodaddress" rows="5" maxlength="999"
-                style="resize:none;border-radius:5px;font-size:18px" required></textarea>
-        </div> -->
+
         <div class="form-group">
             <label for="Email">Email ID:</label>
             <input type="email" name="email" id="Email" required>
         </div>
         <div class="form-group">
             <label for="phone">Phone No.:</label>
-            <input type="tel" name="phone" id="phone" required>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" required>
         </div>
-        <!-- <div class="form-group">
-            <label for="phone">Phone No.2:</label>
-            <input type="tel" name="phone2" id="phone2" required>
-        </div> -->
-        <!-- <div class="form-group">
-                <label for="gender">Gender:</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="male" required>
-                    <label for="male" class="radio-label">Male</label>
-                    <input type="radio" id="female" name="gender" value="female" required>
-                    <label for="female" class="radio-label">Female</label>
-                </div>
-            </div> -->
-        <!-- <div class="form-group">
-            <label for="birthdate">Birthdate:</label>
-            <input type="date" name="birthdate" id="birthdate" required>
-        </div> -->
 
-        <!-- <div class="form-group">
-            <label for="uploadphoto">Upload Photo:</label>
-            <input type="file" name="uploadphoto" id="uploadphoto" required>
-        </div> -->
         <div class="form-group">
             <button type="submit">Submit</button>
         </div>

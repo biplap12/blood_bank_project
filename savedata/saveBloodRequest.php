@@ -45,18 +45,18 @@ Number of Units Required: $unitofblood
 Contact Number: $phone
 Required Date: $requiredate
 
-Our dedicated team is actively working to arrange the required blood units matching your specifications. We understand the urgency of your request and will do our utmost to provide the needed support.
+Our dedicated team is actively working to arrange the required blood units matching your specifications. We understand the urgency of your request and will do our best to provide the needed support.
 
-Please be assured that your request is of the utmost importance to us, and we will keep you informed about the progress.
+Please be assured that your request is of the most importance to us, and we will keep you informed about the progress.
 
 In the meantime, if there are any changes or additional information you would like to provide, please feel free to contact us.
 
 Thank you for choosing us for your blood requirements. We are here to support you during this critical time.
 
 Best regards,
- Blood Bank
+Blood Bank
 9800000000
-";
+www.bloodbank.org.np";
 $from ="blood.bank.nepal11@gmail.com";
 $senderName="Blood Bank";
 $headers = "From:$senderName $from";
