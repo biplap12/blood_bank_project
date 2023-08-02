@@ -13,16 +13,20 @@ $result=mysqli_query($con,$q);
 
 // echo "success";
 header("location:../view/viewBloodRequest.php?id=$id");
-
+$q="SELECT b.id,bg.bloodgroup
+FROM bloodrequest b
+INNER JOIN bloodgroup bg ON b.bloodGroup = bg.blood_grp_id
+WHERE b.id=$id";
+$result = mysqli_query($con, $q);
+$row1 = mysqli_fetch_assoc($result);
 
 $query = "SELECT * FROM `bloodrequest` WHERE id=$id";
 $result = mysqli_query($con, $query);
 
-
 $row = mysqli_fetch_assoc($result);
 $email = $row['email'];
 $patientname=$row['patientname'];
-$bloodGroup=$row['bloodgroup'];
+$bloodGroup=$row1['bloodgroup'];
 $unitofblood=$row['unitofblood'];
 $requiredate=$row['requiredate'];
 $completeDate=$row['completeDate'];

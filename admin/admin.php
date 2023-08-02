@@ -12,7 +12,8 @@
             <!-- style="color: #068D0F;"-->
             <!-- <li><a href="../displaydata/donordisplay.php"><i class="fa-solid fa-users"></i>Not Active Donor</a></li> -->
             <li><a href="../displaydata/BloodRequestDisplay.php"><i class="fa-solid fa-bed"></i>Blood Request </a></li>
-
+            <!-- <li><a href="../displaydata/addBloodGroup.php"><i class="fa-sharp fa-solid fa-plus"></i>Add Blood Group</a>
+            </li> -->
         </ul>
     </div>
 

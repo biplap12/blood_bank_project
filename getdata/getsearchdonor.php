@@ -5,7 +5,10 @@ include "../database/dbConnect.php";
 $searchTerm = $_POST['search'];
 
 // Construct SQL query
-$sql = "SELECT * FROM `donors` WHERE bloodgroup LIKE '%$searchTerm%'";
+$sql="SELECT d.id, d.fullname, d.gender, bg.bloodgroup, d.address, d.phone
+FROM donors d
+INNER JOIN bloodgroup bg ON d.bloodGroup = bg.blood_grp_id
+WHERE bg.bloodgroup LIKE '%$searchTerm%'";
 
 // Execute query
 $result = $con->query($sql);

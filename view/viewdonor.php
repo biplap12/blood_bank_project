@@ -4,7 +4,11 @@ include "../admin/admin.php";
 include "../database/dbConnect.php";
 $id = $_GET["id"];
 
-$q = "SELECT * FROM `donors` WHERE id=$id";
+// $q = "SELECT * FROM `donors` WHERE id=$id";
+$q="SELECT d.id, d.fullname, d.gender, bg.bloodgroup, d.address, d.email, d.phone, d.birthdate, d.newdonor, d.donorRegisterDate, d.status
+FROM donors d
+INNER JOIN bloodgroup bg ON d.bloodGroup = bg.blood_grp_id
+WHERE d.id=$id";
 $result = mysqli_query($con, $q);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -67,6 +71,11 @@ $newButtonColor = ($newStatus == "Active") ? "green" : "red";
                         <div class="viewitems">
                             <h2>New donor: </h2>
                             <h3><?php echo $row ["newdonor"];?></h3>
+                        </div>
+                        <hr class="viewitemhr">
+                        <div class="viewitems">
+                            <h2>Register Date: </h2>
+                            <h3><?php echo $row ["donorRegisterDate"];?></h3>
                         </div>
                         <hr class="viewitemhr">
                         <div class="viewitems">

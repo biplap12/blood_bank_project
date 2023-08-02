@@ -2,7 +2,10 @@
 
 include "../database/dbConnect.php";
 
-$q="SELECT * FROM `bloodrequest`";
+// $q="SELECT * FROM `bloodrequest`";
+$q="SELECT b.id, b.patientname, b.gender, bg.bloodgroup, b.hospitalNameAddress, b.phone, b.completeDate, b.status
+FROM bloodrequest b
+INNER JOIN bloodgroup bg ON b.bloodGroup = bg.blood_grp_id";
 $result =mysqli_query($con,$q);
 
 if ($result->num_rows > 0) {

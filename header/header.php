@@ -1,7 +1,6 @@
 <?php 
 include "../database/dbConnect.php";
 
-
 session_start();
 $username="NO user";
 if (!isset($_SESSION['username'])){
@@ -54,7 +53,12 @@ if (!isset($_SESSION['username'])){
                     <div class="dropdown-options">
                         <a href="../passwordChange/changePasswordForm.php?id=<?php echo $_SESSION['uid']; ?>"><i
                                 class="fa-solid fa-gear"></i>
-                            Setting</a>
+                            Change password</a>
+                        <?php
+        if ($_SESSION['username'] === "admin") {
+                     echo '<a href="../displaydata/addBloodGroup.php"><i class="fa-sharp fa-solid fa-plus"></i>Add
+                            Blood</a>';}?>
+
                         <!-- <a onclick=return changepassword($id) class='dis update' href='javascript:void(0)'>Setting</a> -->
                         <a class="dropdown_small_screen" href="../session/distroySession.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>

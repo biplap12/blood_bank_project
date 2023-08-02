@@ -22,15 +22,7 @@
         <div class="form-group">
             <label for="bloodGroup">Blood Group:</label>
             <select id="bloodGroup" name="bloodGroup" required>
-                <option value=""></option>
-                <option value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
+                <?php include "../admin/setting.php";?>
             </select>
         </div>
         <div class="form-group">
@@ -52,7 +44,7 @@
         </div>
         <div class="form-group">
             <label for="New Donor">New Donor:</label>
-            <select id="donor" name="donor" required>
+            <select id="donor" name="newdonor" required>
                 <option value=""></option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
