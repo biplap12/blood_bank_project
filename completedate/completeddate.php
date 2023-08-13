@@ -56,7 +56,8 @@ In the meantime, if there are any changes or additional information you would li
 Once again, thank you for choosing us for your blood requirements. Together, we can make a significant difference in saving lives.
 
 Best regards,
-Blood Bank";
+Blood Bank
+www.bloodbank.org.np";
 }else if($status=="Completed"){
     $subject = "Blood Request Completed";
     $body = "Dear User,\n\nWe are pleased to inform you that your blood request has been completed on date $completeDate. You have successfully received the required blood units.\n\nThank you for choosing us for your blood requirements.\n\nBest regards,\n Blood Bank";
