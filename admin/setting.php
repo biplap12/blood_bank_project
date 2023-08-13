@@ -8,6 +8,8 @@ $displayedGroups = array();
 if (mysqli_num_rows($res) == 0) {
     echo '<option value="">No blood groups found</option>';
 } else {
+    echo '<option value="">Select Blood group</option>';
+
     while ($row = mysqli_fetch_assoc($res)) {
        
         $bloodGroupId = $row['blood_grp_id'];

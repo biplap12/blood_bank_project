@@ -362,12 +362,12 @@ margin: -2px 10px;
   text-align: center;
   border-radius: 10px;
   transition: 0.5s ease-in-out;
-  
-  
+   
 
 }
 .icon-btn-prev:hover{
   color: red;
+  cursor: pointer;
 }
 
 .icon-btn-next{
@@ -384,12 +384,12 @@ display:block;
   text-align: center;
   border-radius: 10px;
   transition: 0.5s ease-in-out;
-  
-  
+   
 
 }
 .icon-btn-next:hover{
   color: red;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -535,25 +535,24 @@ footer {
 
   
 }
-.redirectmessageUs{
-padding: 10px;
-background-color: #ff0000;
-border: none;
-outline: none;
-border-radius: 5px;
-height: fit-content;
-width: 10em;
-margin: auto;
-text-align: center;
 
-}
-.redirectmessageUs a{
-  text-decoration: none;
+
+.redirectmessageUs{
+  /* padding:10px; */
+  margin: auto;
   text-align: center;
-  color: white;
-  font-size: larger;
-  
-}
+  }
+  .redirectmessageUs a{
+    text-decoration: none;
+    color: white;
+    background-color: #ff0000;
+    padding:10px 20px;
+    font-size: larger;
+    height: fit-content;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
 
 
 /* message */
@@ -755,7 +754,7 @@ input:valid{
 
 .error-message {
   color: red;
-  font-size: 12px;
+  font-size: 15px;
   margin-top: 5px;
 }
 

@@ -69,20 +69,20 @@ include "../admin/admin.php";
                 },
                 error: function(xhr, data, status) {
                     $("#loader").hide();
-                    $("#error-msg").html(data);
-                    $("#error-msg").show();
-
-                    swal({
-                        title: "Error!",
-                        text: "Something went Wrong",
-                        icon: "error"
-                    }).then(function() {
-                        // Redirect to the homepage
-                        location.replace("./addBloodGroup.php")
-                    });
-
-
-
+                    var responseText = JSON.parse(xhr.responseText);
+                    if (responseText.error === "AlreadyExists") {
+                        swal({
+                            title: "Error!",
+                            text: "Blood Group already exists!",
+                            icon: "error"
+                        });
+                    } else {
+                        swal({
+                            title: "Error!",
+                            text: "Something went Wrong",
+                            icon: "error"
+                        });
+                    }
                 }
 
             });

@@ -12,8 +12,6 @@ if (!isset($_SESSION['username'])){
 
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +33,15 @@ if (!isset($_SESSION['username'])){
 <body>
     <div class="nav">
         <div class="nav-header">
-            <div class="nav-title">Blood Bank</div>
+            <div class="nav-title">
+                <a href="../admin/dashboard.php" class="home-link">
+                    <div class="navbar-logo">
+                        <img src="../img/729.gif" alt="logo" height="30px" width="30px">
+                    </div>
+                    Blood Bank
+                </a>
+
+            </div>
         </div>
         <input type="checkbox" name="nav-check" id="nav-check">
         <div class="nav-btn">
@@ -55,11 +61,9 @@ if (!isset($_SESSION['username'])){
                                 class="fa-solid fa-gear"></i>
                             Change password</a>
                         <?php
-        if ($_SESSION['username'] === "admin") {
-                     echo '<a href="../displaydata/addBloodGroup.php"><i class="fa-sharp fa-solid fa-plus"></i>Add
+                      if ($_SESSION['username'] === "admin") {
+                        echo '<a href="../displaydata/addBloodGroup.php"><i class="fa-sharp fa-solid fa-plus"></i>Add
                             Blood</a>';}?>
-
-                        <!-- <a onclick=return changepassword($id) class='dis update' href='javascript:void(0)'>Setting</a> -->
                         <a class="dropdown_small_screen" href="../session/distroySession.php"><i
                                 class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
                     </div>

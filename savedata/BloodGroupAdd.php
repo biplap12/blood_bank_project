@@ -8,9 +8,16 @@ try{
 
 $bloodGroup =$_POST['bloodGroup'];
 
+$checkQuery = "SELECT * FROM `bloodgroup` WHERE `bloodGroup` = '$bloodGroup'";
+    $checkResult = mysqli_query($con, $checkQuery);
+    if (mysqli_num_rows($checkResult) > 0) {
+        http_response_code(409); 
+        $response = array("error" => "AlreadyExists");
+        echo json_encode($response);
+        exit();
+    }
 
 
-// move_uploaded_file($_FILES['uploadphoto']['tmp_name'],"../img/donor_images/$uploadphoto");//uploading files in server
 
 $q="INSERT INTO `bloodgroup`( `bloodGroup`) VALUES ('$bloodGroup');";
 

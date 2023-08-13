@@ -101,16 +101,3 @@
     </script>
 
     <script src="../js/signupAJAX.js"></script>
-
-    <!-- 
-    <script>
-    function validateForm() {
-        let name = document.getElementById("nameforsignin").value;
-        let pattern = /[^ a-z || A-Z]/i;
-        let result = pattern.test(name);
-        console.log(name);
-        if (name == "") {
-            name.style = "border-bottom:2px solid red"
-        }
-    }
-    </script> -->

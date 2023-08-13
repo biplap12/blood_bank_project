@@ -73,7 +73,7 @@ if (isset($_COOKIE['password'])){
                             <input type="checkbox" name="remember_user" id="remember_user" />
                             <span id="Remember_user_text" class="text-checkbox">Remember me</span>
                         </label>
-                        <p> <a href="../forgotPassword/forgot-password.php">forget password?</a></p>
+                        <p> <a href="../forgotPassword/forgot-password.php">forgot password?</a></p>
                     </div>
                     <br>
                     <div class="closeButtonInSigninSignupSmallScreen"><a href="../Client/index.php"><i
@@ -92,77 +92,7 @@ if (isset($_COOKIE['password'])){
     <div class="error-msg" id="error-msg" style="Display:none;">
     </div>
 
-    <!-- 
 
-
-    <script type="text/javascript">
-    $(document).ready(function() {});
-    $("#bloodBankForm").submit(function(e) {
-        e.preventDefault();
-
-        $.ajax({
-            url: "login.php",
-            type: "post",
-            data: new FormData(this),
-            timeout: 100000,
-            processData: false,
-            contentType: false,
-            beforeSend: function() {
-                $("#bloodBankForm").show();
-                $("#loader").hide();
-            },
-            success: function(response, data, status) {
-                // $.cookie("fromlogin", 1);
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top',
-                    showConfirmButton: false,
-                    timer: 1000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
-                    icon: 'success',
-                    title: 'Loged in successfully'
-                }).then(function() {
-                    // Redirect to the homepage
-                    location.replace("../index/index.php");
-                });
-
-            },
-            error: function(xhr, data, response, status) {
-                $("#error-msg").html(xhr.responseText);
-                $("#error-msg").show();
-                const Toast = Swal.mixin({
-                    toast: true,
-                    position: 'top',
-                    showConfirmButton: false,
-                    timer: 2000,
-                    timerProgressBar: true,
-                    didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                    }
-                })
-
-                Toast.fire({
-                    icon: 'error',
-                    title: 'error to Log in'
-                }).then(function() {
-                    // Redirect to the homepage
-                    location.replace("../login/loginForm.php");
-                });
-
-            },
-
-        });
-
-    });
-    </script> -->
 
     <?php
             if(isset($_SESSION['errorMsg'])){?>

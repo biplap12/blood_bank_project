@@ -35,14 +35,17 @@ include "../Client/service.php";
 </div>
 
 
-
 <script>
 $(document).ready(function() {
     // Handle search input change event
     $('#searchInput').on('input', function() {
-        var searchTerm = $(this).val();
+        var searchTerm = $(this).val().trim(); // Trim whitespace
 
-        // Call search function with a delay of 500 milliseconds
+        if (searchTerm === '') {
+            // Display error message when input is empty
+            $('.donorshow-table').html('<td class="error-message">Please enter a search term.</td>');
+            return;
+        }
         setTimeout(function() {
             searchMatchingText(searchTerm);
         }, 500);
@@ -59,8 +62,6 @@ $(document).ready(function() {
             data: {
                 search: searchTerm
             },
-
-
             success: function(response) {
                 // Hide loader
                 $('#loader').hide();
@@ -71,12 +72,11 @@ $(document).ready(function() {
                 // Hide loader
                 $('#loader').hide();
                 // Display error message
-                $('donorshow-table').html('Error occurred during search.');
+                $('.donorshow-table').html('Error occurred during search.');
             }
         });
     }
 });
 </script>
-
 <?php include "footer.php";
 ?>

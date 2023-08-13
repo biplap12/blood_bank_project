@@ -38,11 +38,10 @@ if ($result->num_rows > 0) {
         $table.="<td>";
         $table.=$row["bloodgroup"];
         $table.="</td>";
-        
         $table.="<td>";
         $table.=$row["phone"];
         $table.="</td>";
-        $table.="<td><a onclick=\" return viewDonor($id)\" class='dis view' href='javascript:void(0)'>View</a></td>";
+        $table.="<td><a onclick=\"return viewDonor($id)\" class='dis view' href='javascript:void(0)'>View</a></td>";
         $table.="</tbody>";
     }
         $table.="</table>";

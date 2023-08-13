@@ -153,7 +153,6 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 </head>
 
 </html>
-<!-- Add SweetAlert CSS -->
 
 <!-- Your existing script -->
 <script type="text/javascript">
@@ -201,4 +200,14 @@ $("#updateBloodrequest").submit(function(e) {
         }
     });
 });
+</script>
+
+<script>
+const today = new Date();
+const fiveDaysFromNow = new Date(today);
+fiveDaysFromNow.setDate(today.getDate() + 5);
+
+const datePicker = document.getElementById("completedate");
+datePicker.min = today.toISOString().split("T")[0];
+datePicker.max = fiveDaysFromNow.toISOString().split("T")[0];
 </script>

@@ -102,9 +102,9 @@ body {
 	display: none;
 	position: absolute;
 	overflow: auto;
-	background-color:#b8b5b5;
+	background-color:#e8e8e8;
 	border-radius:5px;
-	width: 225px;
+	width: 224px;
 	right: 0;
   }
   
@@ -118,13 +118,14 @@ body {
 	color: #000000;
 	text-decoration: none;
 	padding:20px 30px;
-	text-align: center;
+	text-align: start;
+
 	
   }
   
   .dropdown-options a:hover {
 	color: #0a0a23;
-	background-color: #ddd;
+	background-color: #9e9d9d;
   }
  
 @media (max-width: 900px) {
@@ -1482,3 +1483,32 @@ overflow-y: scroll;
     float: right;
     margin-top: 50px;
   }
+
+
+  .navbar-logo {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5em;
+    font-size: 20px;
+  }
+
+  
+  .home-link{
+    font-size: 25px;
+  }
+  
+  .home-link,
+  .navbar-link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+  }
+  
+  .home-link:is(:focus, :hover) {
+    color: rgb(255, 255, 255);
+  }
+  
