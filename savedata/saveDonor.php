@@ -26,6 +26,14 @@ $result=mysqli_query($con,$q);
 
 
 // mail
+$bloodgroup_q = "SELECT bloodGroup FROM bloodgroup WHERE blood_grp_id = '$bloodGroup'";
+$bloodgroup_result = mysqli_query($con, $bloodgroup_q);
+
+if ($bloodgroup_result && mysqli_num_rows($bloodgroup_result) > 0) {
+    $bloodgroup_row = mysqli_fetch_assoc($bloodgroup_result);
+    $bloodgroupName = $bloodgroup_row['bloodGroup'];
+}
+// *******
 
 $to = "$email";
 $subject = "Blood Donor Registration Received";
@@ -38,7 +46,7 @@ Thank you for registering as a blood donor with our Blood Bank. Your willingness
 Donor Details:
 Name: $fullname
 Date of Birth: $birthdate
-Blood Group: $bloodGroup
+Blood Group: $bloodgroupName
 Gender: $gender
 Contact Number: $phone
 Email: $email

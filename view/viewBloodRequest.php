@@ -81,7 +81,7 @@ $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
                 </div>
                 <hr class="viewitemhr">
                 <div class="viewitems">
-                    <h2>Phone No.1:</h2>
+                    <h2>Phone No.:</h2>
                     <h3><?php echo $row ["phone"];?></h3>
                 </div>
                 <hr class="viewitemhr">

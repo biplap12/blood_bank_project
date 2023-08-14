@@ -29,7 +29,15 @@ $result=mysqli_query($con,$q);
 
 // *******mail********
 
+$bloodgroup_q = "SELECT bloodGroup FROM bloodgroup WHERE blood_grp_id = '$bloodgroup'";
+$bloodgroup_result = mysqli_query($con, $bloodgroup_q);
 
+if ($bloodgroup_result && mysqli_num_rows($bloodgroup_result) > 0) {
+    $bloodgroup_row = mysqli_fetch_assoc($bloodgroup_result);
+    $bloodgroupName = $bloodgroup_row['bloodGroup'];
+}
+
+// ****************************
 $to = "$email";
 $subject = "Blood Request Registration Successful";
 $body = "
@@ -40,7 +48,7 @@ Thank you for registering your blood request with us. We have received your requ
 
 Request Details:
 Patient's Name: $patientname
-Blood Group: $bloodgroup
+Blood Group:  $bloodgroupName
 Number of Units Required: $unitofblood
 Contact Number: $phone
 Required Date: $requiredate
