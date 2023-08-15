@@ -32,7 +32,7 @@ try {
     }
     
     // Insert the data if it doesn't exist
-    $insertQuery = "INSERT INTO `tbl_user` (`signUpDate` , `name`, `phone`, `email`, `username`, `password`, `status`) VALUES ('$signUpDate','$name', '$phone', '$email', '$username', '$password', '$status')";
+    $insertQuery = "INSERT INTO `tbl_user` (`name`,`phone`, `email`, `username`, `password`, `status`,`signUpDate`) VALUES ('$name','$phone', '$email', '$username', '$password', '$status','$signUpDate')";
     $result = mysqli_query($con, $insertQuery);
     
     if ($result) {

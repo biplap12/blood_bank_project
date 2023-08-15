@@ -57,7 +57,6 @@ function View(id) {
 
     swal({
             title: "Are you sure you want to View?",
-            text: "you cannot change any thing!",
             icon: "warning",
             buttons: true,
             dangerMode: true,

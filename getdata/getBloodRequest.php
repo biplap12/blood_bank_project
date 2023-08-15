@@ -80,7 +80,6 @@ function View(id) {
 
     swal({
             title: "Are you sure you want to View & Update?",
-            text: "once update you cannot change any thing!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -94,7 +93,7 @@ function View(id) {
                 // });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("File has not been Updated!", {
+                swal("Somthing went wrong!", {
                     icon: "error",
                 });
             }

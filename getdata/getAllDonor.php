@@ -69,7 +69,7 @@ function ActivateUser(id) {
 
     swal({
             title: "Are you sure you want to View?",
-            text: "you can see any thing of donors!",
+            text: "You can see any thing of donors!",
             icon: "info",
             buttons: true,
             dangerMode: true,
@@ -83,7 +83,7 @@ function ActivateUser(id) {
                 // });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("Failed to View user.", {
+                swal("Failed to View Donor.", {
                     icon: "error",
                 });
             }
@@ -92,40 +92,4 @@ function ActivateUser(id) {
 
 
 }
-
-
-// function Delete(id) {
-//     swal({
-//             title: "Are you sure?",
-//             text: "This user will be permanently deleted.",
-//             icon: "warning",
-//             buttons: ["Cancel", "Delete"],
-//             dangerMode: true,
-//         })
-//         .then((willDelete) => {
-//             if (willDelete) {
-//                 $.ajax({
-//                     type: "POST",
-//                     url: "../Deactive/deleteDonor.php",
-//                     data: {
-//                         id: id
-//                     },
-//                     success: function(response) {
-//                         if (response === "success") {
-//                             swal("Success", "User deleted successfully!", "success")
-//                                 .then(() => {
-//                                     // Reload the page or perform any other action
-//                                     location.reload();
-//                                 });
-//                         } else {
-//                             swal("Error", "Failed to delete user.", "error");
-//                         }
-//                     },
-//                     error: function() {
-//                         swal("Error", "Failed to delete user.", "error");
-//                     }
-//                 });
-//             }
-//         });
-// }
 </script>

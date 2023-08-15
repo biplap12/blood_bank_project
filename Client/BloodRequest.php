@@ -28,7 +28,7 @@ include "service.php";
         </div>
         <div class="form-group">
             <label for="unitofblood">Need Unit Of Blood:</label>
-            <input type="text" name="unitofblood" id="unitofblood" min="0" max="10" required>
+            <input type="number" name="unitofblood" id="unitofblood" min="0" max="10" required>
         </div>
         <div class="form-group">
             <label for="HospitalNameAddress">Hospital Name & Address:</label>

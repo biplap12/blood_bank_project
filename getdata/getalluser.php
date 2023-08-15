@@ -72,7 +72,6 @@ function ActivateUser(id) {
 
     swal({
             title: "Are you sure you want to Activate?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -86,7 +85,7 @@ function ActivateUser(id) {
                 });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("File has not been Activate!", {
+                swal("Somthing went Wrong", {
                     icon: "error",
                 });
             }
@@ -101,7 +100,6 @@ function deactivateData(id) {
 
     swal({
             title: "Are you sure you want to Deactive?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -115,7 +113,7 @@ function deactivateData(id) {
                 });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("File has not been deactivate!", {
+                swal("Somthing went Wrong", {
                     icon: "error",
                 });
             }
@@ -128,7 +126,6 @@ function updateUser(id) {
 
     swal({
             title: "Are you sure you want to Update User?",
-            text: "Once Updated, you will not be able to see this before file!",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -142,7 +139,7 @@ function updateUser(id) {
                 // });
             } else {
                 // swal("Your imaginary file is safe!");
-                swal("File has not been Updated!", {
+                swal("Somthing went Wrong", {
                     icon: "error",
                 });
             }

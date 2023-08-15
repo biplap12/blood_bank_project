@@ -2,11 +2,6 @@
 
 include "../database/dbConnect.php";
 
-// $q="SELECT * FROM `donors` where status='Active'";
-// $q="SELECT d.id, d.fullname, d.gender, bg.bloodgroup, d.address, d.email, d.phone, d.birthdate, d.newdonor, d.ihaveread, d.iagree, d.donorRegisterDate, d.status
-// FROM donors d
-// INNER JOIN bloodgroup bg ON d.bloodGroup = bg.blood_grp_id;
-// ";
 $q="SELECT d.id, d.fullname, d.gender, bg.bloodgroup, d.address, d.email, d.phone, d.birthdate, d.newdonor, d.ihaveread, d.iagree, d.donorRegisterDate, d.status
 FROM donors d
 INNER JOIN bloodgroup bg ON d.bloodGroup = bg.blood_grp_id
