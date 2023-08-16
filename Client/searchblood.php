@@ -1,5 +1,5 @@
 <?php
-include "service.php";
+include "../Client/service.php";
 ?>
 
 <div class="searchbloodshow">
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
         // Make AJAX request to PHP script
         $.ajax({
-            url: 'getdata/getClientSearchblood.php',
+            url: '../getdata/getClientSearchblood.php',
             method: 'POST',
             data: {
                 search: searchTerm

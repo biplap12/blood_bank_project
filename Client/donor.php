@@ -22,7 +22,7 @@
         <div class="form-group">
             <label for="bloodGroup">Blood Group:</label>
             <select id="bloodGroup" name="bloodGroup" required>
-                <?= include "setting.php";?>
+                <?php include "../admin/setting.php";?>
             </select>
         </div>
         <div class="form-group">
@@ -86,7 +86,7 @@ $("#donorregistrationForm").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "savedata/saveDonor.php",
+        url: "../savedata/saveDonor.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,

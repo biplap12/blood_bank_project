@@ -13,7 +13,7 @@ include "service.php";
         <div class="form-group">
             <label for="bloodGroup">Required Blood Group:</label>
             <select id="bloodGroup" name="bloodgroup" required>
-                <?php include "setting.php";?>
+                <?php include "../admin/setting.php";?>
 
             </select>
         </div>
@@ -91,7 +91,7 @@ $("#needbloodForm").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "savedata/saveBloodRequest.php",
+        url: "../savedata/saveBloodRequest.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,

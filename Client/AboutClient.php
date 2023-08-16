@@ -13,7 +13,6 @@ include "navbar.php";
         </h2>
 
         <p><?php 
-
         echo substr( $_SERVER['PHP_SELF'],27,5) ?></p>
 
 
@@ -21,7 +20,7 @@ include "navbar.php";
     </div>
     <div class="aboutUS_Text">
         <div class="image_about">
-            <img class="aboutImg_banner" src="./img/image-4.png" alt="blood donation picture" />
+            <img class="aboutImg_banner" src="../img/image-4.png" alt="blood donation picture" />
         </div>
         <div class="image_text">
             <h2 style="font-size: 30px">About Blood Bank</h2>

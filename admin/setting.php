@@ -1,5 +1,5 @@
 <?php
-include "database/dbConnect.php";
+include("../database/dbConnect.php");
 $sql = "SELECT * FROM bloodgroup";
 $res = mysqli_query($con, $sql);
 

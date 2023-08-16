@@ -1,7 +1,8 @@
 <footer>
     <h2> <?php
     echo date("Y") ;
-    ?>Copyright © Blood Bank || Biplap Neupane</h2>
+    ?>Copyright © Blood Bank</h2>
+
 </footer>
 </div>
 <script src="../js/imageSlider.js"></script>
