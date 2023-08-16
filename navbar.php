@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
 </head>
-<link rel="stylesheet" href="style.css?v=<?php echo Time()?>">
+<link rel="stylesheet" href="Client_style.css?v=<?php echo Time()?>">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
@@ -21,7 +21,7 @@
             <nav class="navbar-container container">
                 <a href="index.php" class="home-link">
                     <div class="navbar-logo">
-                        <img src="../img/729.gif" alt="logo" height="30px" width="30px">
+                        <img src="./img/729.gif" alt="logo" height="30px" width="30px">
                     </div>
                     Bloodbank
                 </a>
@@ -37,7 +37,7 @@
                         <li class="navbar-item"><a class="navbar-link" href="AboutClient.php">About</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="donor.php">Service</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="messageUsForm.php">Contact</a></li>
-                        <li class="navbar-item"><a class="navbar-link" href="../login/loginForm.php">Admin</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="./login/loginForm.php">Admin</a></li>
                     </ul>
                 </div>
             </nav>

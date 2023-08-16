@@ -416,18 +416,29 @@ display:block;
 
 /* Footer */
 
-footer {
+/* .footer {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: auto;
-  
-  
-  
+  scroll-margin-bottom: 0;
  
+} */
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Set the desired height of the container */
 }
+
+.footer_content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: large;
+}
+.footer_content a{
+  text-decoration: none;
+  color: #ff0000;
+}
+
 
 /* .blood_management{
   margin-top: 650px;

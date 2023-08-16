@@ -13,7 +13,7 @@ include "service.php";
         <div class="form-group">
             <label for="bloodGroup">Required Blood Group:</label>
             <select id="bloodGroup" name="bloodgroup" required>
-                <?php include "../admin/setting.php";?>
+                <?php include "setting.php";?>
 
             </select>
         </div>
@@ -91,7 +91,7 @@ $("#needbloodForm").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "../savedata/saveBloodRequest.php",
+        url: "savedata/saveBloodRequest.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,
@@ -141,22 +141,6 @@ $("#needbloodForm").submit(function(e) {
 
 });
 </script>
-
-
-
-<!-- <input type="file" class="form-control" name="fileToUpload">
-display: block;
-    width: 100%;
-    height: 38px;
-    padding: 8px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333333;
-    background-color: #ffffff;
-    background-image: none;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgb -->
 
 
 <?php include "footer.php";
