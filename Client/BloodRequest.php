@@ -48,7 +48,7 @@ include "service.php";
 
         <div class="form-group">
             <label for="requiredDate">When Required:</label>
-            <input type="date" name="requiredate" id="requiredDate" required>
+            <input type="date" name="requiredate" id="requiredDate" min="<?= date('Y-m-d') ?>" required>
         </div>
         <div class="form-group">
             <label for="contactName">Contact Name:</label>

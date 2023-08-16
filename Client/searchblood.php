@@ -18,11 +18,6 @@ include "../Client/service.php";
 
 </div>
 
-
-
-
-
-
 <div id="loader" style=" display: none; ">
     <div class="loading">
         <span></span>
