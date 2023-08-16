@@ -60,7 +60,7 @@ Blood Bank
 www.bloodbank.org.np";
 }else if($status=="Completed"){
     $subject = "Blood Request Completed";
-    $body = "Dear User,\n\nWe are pleased to inform you that your blood request has been completed on date $completeDate. You have successfully received the required blood units.\n\nThank you for choosing us for your blood requirements.\n\nBest regards,\n Blood Bank";
+    $body = "Dear $patientname,\n\nWe are pleased to inform you that your blood request has been completed on date $completeDate. You have successfully received the required blood units.\n\nThank you for choosing us for your blood requirements.\n\nBest regards,\n Blood Bank";
     
 }
 $from ="blood.bank.nepal11@gmail.com";
