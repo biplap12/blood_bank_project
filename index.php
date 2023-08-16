@@ -3,7 +3,6 @@
 
 
 
-
  <div class="mainSlider">
      <div class="imageSlider">
          <div class="prev-next-btn">
@@ -11,11 +10,11 @@
              <button class="icon-btn-next" onclick="next()"><i class="fa-solid fa-caret-right"></i></button>
          </div>
          <div class="slider">
-             <img id="1" class="slide" src="../img/blood inject.jpg" alt="" />
-             <img id="2" class="slide" src="../img/Blood-Donation-2.webp" alt="" />
-             <img id="3" class="slide" src="../img/Blood_donation.jpg" alt="" />
-             <img id="4" class="slide" src="../img/Blood-Donation-2.webp" alt="" />
-             <img id="5" class="slide" src="../img/istockphot.jpg" alt="" />
+             <img id="1" class="slide" src="./img/blood inject.jpg" alt="" />
+             <img id="2" class="slide" src="./img/Blood-Donation-2.webp" alt="" />
+             <img id="3" class="slide" src="./img/Blood_donation.jpg" alt="" />
+             <img id="4" class="slide" src="./img/Blood-Donation-2.webp" alt="" />
+             <img id="5" class="slide" src="./img/istockphot.jpg" alt="" />
          </div>
      </div>
  </div>
@@ -29,7 +28,8 @@
                  </div>
                  <p class="cardDis">Have you at anytime witnessed a relative of yours or a close friend searching
                      frantically for a blood
-                     donor, when blood banks say out of stock, the donors in mind are out of reach and the time keeps
+                     donor, when blood banks say out of stock, the donors in mind are out of reach and the time
+                     keeps
                      ticking?This thought laid our foundation.</.>
                  <div class="btn"><a href="donor.php">View More</a></div>
              </div>
@@ -37,17 +37,21 @@
                  <div class="card_title">
                      <h2><i class="fa-solid fa-suitcase-medical"></i> Blood Request</h2>
                  </div>
-                 <p class="cardDis">Every 2 seconds someone needs blood. Your blood helps more than one life at a time.
-                     Accident victims, premature babies, patients undergoing major surgeries require whole blood, where
+                 <p class="cardDis">Every 2 seconds someone needs blood. Your blood helps more than one life at a
+                     time.
+                     Accident victims, premature babies, patients undergoing major surgeries require whole blood,
+                     where
                      your
                      blood after testing is used directly.</p>
                  <div class="btn"><a href="BloodRequest.php">View More</a></div>
              </div>
+
              <div class="card">
                  <div class="card_title">
                      <h2><i class="fa-solid fa-magnifying-glass"></i> Search Donor</h2>
                  </div>
-                 <p class="cardDis">Some people who have serious injuries they need blood transfusions to replace blood
+                 <p class="cardDis">Some people who have serious injuries they need blood transfusions to replace
+                     blood
                      lost
                      during the injury.Regular blood donors ensure that a safe and plentiful supply of blood is
                      available
@@ -63,39 +67,39 @@
          <h1>Blood Donor Images</h1>
          <div class="gallery">
              <div class="images">
-                 <a href="../img/clz5.jpg"><img src="../img/clz5.jpg" alt=""></a>
+                 <a href="./img/clz5.jpg"><img src="./img/clz5.jpg" alt=""></a>
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img//clz 6.jpg" alt=""></a>
-
-
-             </div>
-             <div class="images">
-                 <a href=""><img src="../img/clz5.jpg" alt=""></a>
+                 <a href=""><img src="./img/clz 6.jpg" alt=""></a>
 
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/nguy-n-hi-p-sTTeaN4wwrU-unsplash.jpg" alt=""></a>
-
-             </div>
-             <div class="images">
-                 <a href=""><img src="../img/clz3.jpg" alt=""></a>
+                 <a href=""><img src="./img/clz5.jpg" alt=""></a>
 
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/clz7.jpg" alt=""></a>
+                 <a href=""><img src="./img/nguy-n-hi-p-sTTeaN4wwrU-unsplash.jpg" alt=""></a>
+
+             </div>
+             <div class="images">
+                 <a href=""><img src="./img/clz3.jpg" alt=""></a>
 
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/club25Nepal.jpg" alt=""></a>
+                 <a href=""><img src="./img/clz7.jpg" alt=""></a>
+
 
              </div>
              <div class="images">
-                 <a href=""><img src="../img/blood inject.jpg" alt=""></a>
+                 <a href=""><img src="./img/club25Nepal.jpg" alt=""></a>
+
+             </div>
+             <div class="images">
+                 <a href=""><img src="./img/blood inject.jpg" alt=""></a>
 
 
              </div>
@@ -123,13 +127,14 @@
                  </ul>
              </div>
              <div class="image_about">
-                 <img class="aboutImg_banner" src="../img/image-4.png" alt="blood donation picture" />
+                 <img class="aboutImg_banner" src="./img/image-4.png" alt="blood donation picture" />
              </div>
          </div>
      </section>
      <section class="messageUsInIndex">
          <div class="messageUSINText">
-             <p>We expect your loyal feedback to improve our standard.For more details and any subject related queries..
+             <p>We expect your loyal feedback to improve our standard.For more details and any subject related
+                 queries..
              </p>
          </div>
          <div class="redirectmessageUs">

@@ -43,8 +43,7 @@ if (isset($_COOKIE['password'])){
 <body>
     <div class="login_form_main">
         <form method="post" id="bloodBankForm">
-            <div class="closeButtonInSigninSignup"><a href="../Client/index.php"><i
-                        class="fa-solid fa-circle-xmark"></i></a>
+            <div class="closeButtonInSigninSignup"><a href="../index.php"><i class="fa-solid fa-circle-xmark"></i></a>
             </div>
             <div class="box-form">
                 <div class="left">
@@ -76,7 +75,7 @@ if (isset($_COOKIE['password'])){
                         <p> <a href="../forgotPassword/forgot-password.php">forgot password?</a></p>
                     </div>
                     <br>
-                    <div class="closeButtonInSigninSignupSmallScreen"><a href="../Client/index.php"><i
+                    <div class="closeButtonInSigninSignupSmallScreen"><a href="../../index.php"><i
                                 class="fa fa-arrow-left" style="font-size: 20px; color: black; "></i></a>
                     </div>
                     <button class="submitBtn" type="submit">Login</button>

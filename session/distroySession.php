@@ -6,6 +6,6 @@ session_destroy();
 
 // echo("session deleted");
 // header("location:../login/loginForm.php");
-header("location:../Client/index.php");
+header("location:../index.php");
 
 ?>

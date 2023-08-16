@@ -1,5 +1,4 @@
 <?php include "navbar.php";
-include "../database/dbConnect.php";
 ?>
 
 
@@ -31,7 +30,7 @@ include "../database/dbConnect.php";
             <h3><i class="fa-solid fa-phone"></i> 9812345678</h3>
             <h3><i class="fa-solid fa-envelope"></i> <a href="#"> bloodbank@gmail.com</a></h3>
             <h3><i class="fa-solid fa-clock"></i> 24/7</h3>
-            <h3><i class="fa-solid fa-globe"></i> <a href="../Client/index.php">www.blodbank.org.np</a></h3>
+            <h3><i class="fa-solid fa-globe"></i> <a href="../../index.php">www.blodbank.org.np</a></h3>
             <h1><a href=""><i class="fa-brands fa-facebook"></i></a> &nbsp;&nbsp;&nbsp;<a href=""><i
                         class="fa-brands fa-twitter"></i></a>
                 &nbsp;&nbsp;&nbsp;<a href=""><i class="fa-brands fa-square-instagram"></i></a>
@@ -63,7 +62,7 @@ $("#messagefromuser").submit(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: "../savedata/savemessage.php",
+        url: "savedata/savemessage.php",
         type: "post",
         data: new FormData(this),
         timeout: 20000,
