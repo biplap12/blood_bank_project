@@ -38,7 +38,7 @@ if($email == false){
                 </div>
             </div>
             <div class="right">
-                <div class="changePasswordTitle">Forgot Password</.>
+                <div class="changePasswordTitle">Forgot Password
                 </div>
                 <div class="login_inputs">
                     <?php 

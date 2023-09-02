@@ -21,7 +21,7 @@ $errors = array();
                 $message = "Your password reset code is $code";
                 $sender = "From: $senderName blood.bank.nepal11@gmail.com";
                 if(mail($email, $subject, $message, $sender)){
-                    $info = "We've sent a passwrod reset otp to your email - $email";
+                    $info = "We've sent a password reset otp to your email - $email";
                     $_SESSION['info'] = $info;
                     $_SESSION['email'] = $email;
                     header('location: reset-code.php');
